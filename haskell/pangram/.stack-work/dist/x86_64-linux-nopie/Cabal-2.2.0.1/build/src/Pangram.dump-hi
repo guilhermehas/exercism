@@ -1,0 +1,90 @@
+
+==================== FINAL INTERFACE ====================
+2018-10-21 23:35:07.983055486 UTC
+
+interface pangram-1.4.1.7-BUbCfPFkLPW18THWWKgUNn:Pangram 8043
+  interface hash: 4b01bdb0c196bf2437c9a439674035c1
+  ABI hash: fe520799b16061cc65e21b8e79b1e756
+  export-list hash: 372d885f9f7f298870270070794b8cdd
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: fcbe983cf44f4af398578b2c50989fd2
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Pangram.isPangram
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Char 3e89818e2b8ef1a2cc5393163484da72
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Unicode 8234c40b59f035e845832a42e8725a00
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+acb81b0e623dabb4c19b24cc18903a12
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Pangram.$trModule3
+                   Pangram.$trModule1) -}
+9e99f9919f1f47616aa7bc45554590ac
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Pangram.$trModule2) -}
+9bc8511c6ddb3b9e49fc64f10532facf
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Pangram"#) -}
+85ac9525c221bd9b11195fd8c754a680
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Pangram.$trModule4) -}
+7680b61f44dce8764213cb77f5a119e8
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("pangram-1.4.1.7-BUbCfPFkLPW18THWWKgUNn"#) -}
+3a5989cbf39d08150356041c3d373cb0
+  isPangram :: GHC.Base.String -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (text :: GHC.Base.String) ->
+                 let {
+                   v2 :: [GHC.Types.Char] = Pangram.isPangram_go text
+                 } in
+                 letrec {
+                   go :: GHC.Prim.Int# -> GHC.Types.Bool
+                     <join 1> {- Arity: 1, Strictness: <S,U> -}
+                   = \ (x :: GHC.Prim.Int#) ->
+                     case GHC.Prim.># x 122# of lwild {
+                       DEFAULT
+                       -> case Pangram.isPangram_isMember
+                                 (GHC.Types.C# (GHC.Prim.chr# x))
+                                 v2 of wild {
+                            GHC.Types.False -> GHC.Types.False
+                            GHC.Types.True -> go (GHC.Prim.+# x 1#) }
+                       1# -> GHC.Types.True }
+                 } in
+                 go 97#) -}
+41a4ae582f955ca04969a15fbfa9afbd
+  isPangram_go :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U> -}
+6aa0307472f9b742c2176f260947a005
+  isPangram_isMember ::
+    GHC.Types.Char -> [GHC.Types.Char] -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><S,1*U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

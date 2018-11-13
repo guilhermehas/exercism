@@ -1,0 +1,127 @@
+
+==================== FINAL INTERFACE ====================
+2018-10-22 03:04:09.442139802 UTC
+
+interface sum-of-multiples-1.4.1.8-KUgS7MqAtjD8wDGyLjm4Om:SumOfMultiples 8043
+  interface hash: 05ecf4ecf6adcc1fb37ac6fd4b62c832
+  ABI hash: 53bd195544657e9361eab706423afcfd
+  export-list hash: a191d226283fda068728b8944aeecf0b
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: fcbe983cf44f4af398578b2c50989fd2
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  SumOfMultiples.sumOfMultiples
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+import  -/  integer-gmp-1.0.2.0:GHC.Integer.Type f3d5169c3d3830854b19f6565b265403
+88246810ef6099251b3519c34ca00aae
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   SumOfMultiples.$trModule3
+                   SumOfMultiples.$trModule1) -}
+6ee523e03292014f6e4fe5fa35c9beb6
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS SumOfMultiples.$trModule2) -}
+6db71928ac7990ac000f3c763eab6bb1
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("SumOfMultiples"#) -}
+0b8da71b7bf759918b8237d88ff2c83b
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS SumOfMultiples.$trModule4) -}
+b623c875cbf890df1d8b006cd754bada
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("sum-of-multiples-1.4.1.8-KUgS7MqAtjD8wDGyLjm4Om"#) -}
+f76c7e4da310f3576b9f7abc7d780d90
+  sumOfMultiples ::
+    [GHC.Integer.Type.Integer]
+    -> GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer
+  {- Arity: 2, Strictness: <L,U><S,1*U>,
+     Unfolding: (\ (factors :: [GHC.Integer.Type.Integer])
+                   (limit :: GHC.Integer.Type.Integer) ->
+                 let {
+                   lim :: GHC.Integer.Type.Integer
+                   = GHC.Integer.Type.minusInteger
+                       limit
+                       SumOfMultiples.sumOfMultiples2
+                 } in
+                 letrec {
+                   go :: GHC.Integer.Type.Integer
+                         -> GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer
+                     <join 2> {- Arity: 2, Strictness: <S,U><S,U> -}
+                   = \ (x :: GHC.Integer.Type.Integer)
+                       (eta :: GHC.Integer.Type.Integer) ->
+                     case GHC.Integer.Type.gtInteger# x lim of wild {
+                       DEFAULT
+                       -> let {
+                            exit :: GHC.Integer.Type.Integer <join 0>
+                            = go
+                                (GHC.Integer.Type.plusInteger x SumOfMultiples.sumOfMultiples2)
+                                eta
+                          } in
+                          let {
+                            exit1 :: GHC.Integer.Type.Integer <join 0>
+                            = go
+                                (GHC.Integer.Type.plusInteger x SumOfMultiples.sumOfMultiples2)
+                                (GHC.Integer.Type.plusInteger eta x)
+                          } in
+                          letrec {
+                            go1 :: [GHC.Integer.Type.Integer] -> GHC.Integer.Type.Integer
+                              <join 1> {- Arity: 1, Strictness: <S,1*U> -}
+                            = \ (ds :: [GHC.Integer.Type.Integer]) ->
+                              case ds of wild1 {
+                                [] -> exit
+                                : y ys
+                                -> case GHC.Integer.Type.eqInteger#
+                                          y
+                                          SumOfMultiples.sumOfMultiples1 of wild2 {
+                                     DEFAULT
+                                     -> case GHC.Integer.Type.eqInteger#
+                                               (GHC.Integer.Type.modInteger x y)
+                                               SumOfMultiples.sumOfMultiples1 of wild3 {
+                                          DEFAULT -> go1 ys 1# -> exit1 }
+                                     1#
+                                     -> case GHC.Real.divZeroError
+                                        ret_ty GHC.Integer.Type.Integer
+                                        of {} } }
+                          } in
+                          go1 factors
+                       1# -> eta }
+                 } in
+                 go
+                   SumOfMultiples.sumOfMultiples2
+                   SumOfMultiples.sumOfMultiples1) -}
+a1506247af6d9e26ed29e76bad7bf9c3
+  sumOfMultiples1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+35a5af5f43dae746e83f5662f3bce3f2
+  sumOfMultiples2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

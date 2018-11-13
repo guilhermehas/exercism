@@ -1,0 +1,400 @@
+
+==================== FINAL INTERFACE ====================
+2018-11-13 18:08:23.679799002 UTC
+
+interface perfect-numbers-1.1.0.3-EchbNcVHyfU7al0og9xVyZ:PerfectNumbers 8043
+  interface hash: dfce015bfd571da6e531b94f21e3d41a
+  ABI hash: 9994f94ff609de730fb3e529e285e7c7
+  export-list hash: 650230f1d3b4b34039215cea180ff7b8
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  PerfectNumbers.classify
+  PerfectNumbers.Classification{PerfectNumbers.Abundant PerfectNumbers.Deficient PerfectNumbers.Perfect}
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+8335dfab7a74b76f6d067f6107ac9dc0
+  $fEqClassification :: GHC.Classes.Eq PerfectNumbers.Classification
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ PerfectNumbers.Classification
+                  PerfectNumbers.$fEqClassification_$c==
+                  PerfectNumbers.$fEqClassification_$c/= -}
+8335dfab7a74b76f6d067f6107ac9dc0
+  $fEqClassification_$c/= ::
+    PerfectNumbers.Classification
+    -> PerfectNumbers.Classification -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: PerfectNumbers.Classification)
+                   (y :: PerfectNumbers.Classification) ->
+                 case x of wild {
+                   PerfectNumbers.Deficient
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        PerfectNumbers.Deficient -> GHC.Types.False }
+                   PerfectNumbers.Perfect
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        PerfectNumbers.Perfect -> GHC.Types.False }
+                   PerfectNumbers.Abundant
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        PerfectNumbers.Abundant -> GHC.Types.False } }) -}
+8335dfab7a74b76f6d067f6107ac9dc0
+  $fEqClassification_$c== ::
+    PerfectNumbers.Classification
+    -> PerfectNumbers.Classification -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: PerfectNumbers.Classification)
+                   (ds1 :: PerfectNumbers.Classification) ->
+                 case ds of wild {
+                   PerfectNumbers.Deficient
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        PerfectNumbers.Deficient -> GHC.Types.True }
+                   PerfectNumbers.Perfect
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        PerfectNumbers.Perfect -> GHC.Types.True }
+                   PerfectNumbers.Abundant
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        PerfectNumbers.Abundant -> GHC.Types.True } }) -}
+8335dfab7a74b76f6d067f6107ac9dc0
+  $fShowClassification :: GHC.Show.Show PerfectNumbers.Classification
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ PerfectNumbers.Classification
+                  PerfectNumbers.$fShowClassification_$cshowsPrec
+                  PerfectNumbers.$fShowClassification_$cshow
+                  PerfectNumbers.$fShowClassification_$cshowList -}
+e474535a0e7d0c96c25769042226c366
+  $fShowClassification1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   PerfectNumbers.$fShowClassification2) -}
+0b042684588c296fc985ac4c5e68d6b1
+  $fShowClassification2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Abundant"#) -}
+323f99b950220fb858c08ef4a348fcbd
+  $fShowClassification3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   PerfectNumbers.$fShowClassification4) -}
+9f9bd60ad9b67e28a37c108be7f4e250
+  $fShowClassification4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Perfect"#) -}
+c54730e06ce853d2992c629f0ce3266d
+  $fShowClassification5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   PerfectNumbers.$fShowClassification6) -}
+c7b192285d245abe80357fffa1e2f840
+  $fShowClassification6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Deficient"#) -}
+8335dfab7a74b76f6d067f6107ac9dc0
+  $fShowClassification_$cshow ::
+    PerfectNumbers.Classification -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: PerfectNumbers.Classification) ->
+                 case x of wild {
+                   PerfectNumbers.Deficient -> PerfectNumbers.$fShowClassification5
+                   PerfectNumbers.Perfect -> PerfectNumbers.$fShowClassification3
+                   PerfectNumbers.Abundant
+                   -> PerfectNumbers.$fShowClassification1 }) -}
+8335dfab7a74b76f6d067f6107ac9dc0
+  $fShowClassification_$cshowList ::
+    [PerfectNumbers.Classification] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [PerfectNumbers.Classification])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ PerfectNumbers.Classification
+                   PerfectNumbers.$w$cshowsPrec
+                   ls
+                   s) -}
+8335dfab7a74b76f6d067f6107ac9dc0
+  $fShowClassification_$cshowsPrec ::
+    GHC.Types.Int -> PerfectNumbers.Classification -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: [0],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: PerfectNumbers.Classification)
+                   (w2 :: GHC.Base.String) ->
+                 PerfectNumbers.$w$cshowsPrec w1 w2) -}
+70ea3ee214f1f2236c127914b0b29202
+  $tc'Abundant :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7639980893838983455##
+                   9370975110045507334##
+                   PerfectNumbers.$trModule
+                   PerfectNumbers.$tc'Abundant2
+                   0#
+                   PerfectNumbers.$tc'Abundant1) -}
+439289899a5764b14ec9bed23cd29e17
+  $tc'Abundant1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+816a289b0e5fb7335327e8c591f3f42b
+  $tc'Abundant2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS PerfectNumbers.$tc'Abundant3) -}
+20c679a4aca8017a7efe555584476922
+  $tc'Abundant3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Abundant"#) -}
+0f23c7aea43074bad8ef192d9ae81c94
+  $tc'Deficient :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16213830775503974896##
+                   15968492356922632217##
+                   PerfectNumbers.$trModule
+                   PerfectNumbers.$tc'Deficient1
+                   0#
+                   PerfectNumbers.$tc'Abundant1) -}
+da1ec42a8e4db5d6a7831db3c0e97284
+  $tc'Deficient1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS PerfectNumbers.$tc'Deficient2) -}
+a246b98740abd25c409e8922d32ac191
+  $tc'Deficient2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Deficient"#) -}
+6d58b0a04396339f8ce57728ae2e7c1b
+  $tc'Perfect :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   672275954242027637##
+                   16665070297542093779##
+                   PerfectNumbers.$trModule
+                   PerfectNumbers.$tc'Perfect1
+                   0#
+                   PerfectNumbers.$tc'Abundant1) -}
+e2085be09802a286552d2c1bcbebcac1
+  $tc'Perfect1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS PerfectNumbers.$tc'Perfect2) -}
+373385f0d96cfb282612a7747b41e991
+  $tc'Perfect2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Perfect"#) -}
+f28ae0f8d0c2e0b95175511f5233262d
+  $tcClassification :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6013996325875029914##
+                   12120191422467672369##
+                   PerfectNumbers.$trModule
+                   PerfectNumbers.$tcClassification1
+                   0#
+                   GHC.Types.krep$*) -}
+66f490d8a87a0d422392c125f4cb241a
+  $tcClassification1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS PerfectNumbers.$tcClassification2) -}
+447640268df7a44b2d11729ca49c8204
+  $tcClassification2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Classification"#) -}
+18fae0fbacf1ddde5e9b0235b6460b79
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   PerfectNumbers.$trModule3
+                   PerfectNumbers.$trModule1) -}
+8f9c96e7ffffd5045114709c8d431854
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS PerfectNumbers.$trModule2) -}
+194c203405f1ca986b7db12d8d249388
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("PerfectNumbers"#) -}
+cb32044aba3b5f5644dca1908f655981
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS PerfectNumbers.$trModule4) -}
+38bdfc9500f8db4e359152f24730ca60
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("perfect-numbers-1.1.0.3-EchbNcVHyfU7al0og9xVyZ"#) -}
+8335dfab7a74b76f6d067f6107ac9dc0
+  $w$cshowsPrec ::
+    PerfectNumbers.Classification -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (w :: PerfectNumbers.Classification)
+                   (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   PerfectNumbers.Deficient
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        PerfectNumbers.$fShowClassification5
+                        w1
+                   PerfectNumbers.Perfect
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        PerfectNumbers.$fShowClassification3
+                        w1
+                   PerfectNumbers.Abundant
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        PerfectNumbers.$fShowClassification1
+                        w1 }) -}
+605ccf3b28ff92dafac2f5b5726ed849
+  $wclassify ::
+    GHC.Prim.Int# -> GHC.Base.Maybe PerfectNumbers.Classification
+  {- Arity: 1, Strictness: <S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) ->
+                 case GHC.Prim.<=# ww 0# of lwild {
+                   DEFAULT
+                   -> let {
+                        y :: GHC.Prim.Int# = GHC.Prim.-# ww 1#
+                      } in
+                      case GHC.Prim.># 1# y of lwild1 {
+                        DEFAULT
+                        -> let {
+                             exit :: GHC.Prim.Int#
+                                     -> GHC.Prim.Int#
+                                     -> GHC.Base.Maybe PerfectNumbers.Classification
+                               <join 2> {- Arity: 2, Strictness: <S,U><S,U> -}
+                             = \ (ww1 :: GHC.Prim.Int#)[OneShot]
+                                 (wild :: GHC.Prim.Int#)[OneShot] ->
+                               let {
+                                 x :: GHC.Prim.Int# = GHC.Prim.+# ww1 wild
+                               } in
+                               case GHC.Prim.<# x ww of lwild2 {
+                                 DEFAULT
+                                 -> case GHC.Prim.==# x ww of lwild3 {
+                                      DEFAULT
+                                      -> case GHC.Prim.># x ww of lwild4 {
+                                           DEFAULT -> PerfectNumbers.classify4
+                                           1# -> PerfectNumbers.classify3 }
+                                      1# -> PerfectNumbers.classify2 }
+                                 1# -> PerfectNumbers.classify1 }
+                           } in
+                           let {
+                             exit1 :: GHC.Prim.Int#
+                                      -> GHC.Base.Maybe PerfectNumbers.Classification
+                               <join 1> {- Arity: 1, Strictness: <S,U> -}
+                             = \ (ww1 :: GHC.Prim.Int#)[OneShot] ->
+                               let {
+                                 x :: GHC.Prim.Int# = GHC.Prim.+# ww1 -1#
+                               } in
+                               case GHC.Prim.<# x ww of lwild2 {
+                                 DEFAULT
+                                 -> case GHC.Prim.==# x ww of lwild3 {
+                                      DEFAULT
+                                      -> case GHC.Prim.># x ww of lwild4 {
+                                           DEFAULT -> PerfectNumbers.classify4
+                                           1# -> PerfectNumbers.classify3 }
+                                      1# -> PerfectNumbers.classify2 }
+                                 1# -> PerfectNumbers.classify1 }
+                           } in
+                           letrec {
+                             $wgo :: GHC.Prim.Int#
+                                     -> GHC.Prim.Int#
+                                     -> GHC.Base.Maybe PerfectNumbers.Classification
+                               <join 2> {- Arity: 2, Strictness: <S,1*U><S,U>, Inline: [0] -}
+                             = \ (w :: GHC.Prim.Int#) (ww1 :: GHC.Prim.Int#) ->
+                               case w of wild {
+                                 DEFAULT
+                                 -> case GHC.Classes.modInt# ww wild of ww2 {
+                                      DEFAULT
+                                      -> case GHC.Prim.==# wild y of lwild2 {
+                                           DEFAULT -> $wgo (GHC.Prim.+# wild 1#) ww1
+                                           1#
+                                           -> case GHC.Prim.<# ww1 ww of lwild3 {
+                                                DEFAULT
+                                                -> case GHC.Prim.==# ww1 ww of lwild4 {
+                                                     DEFAULT
+                                                     -> case GHC.Prim.># ww1 ww of lwild5 {
+                                                          DEFAULT -> PerfectNumbers.classify4
+                                                          1# -> PerfectNumbers.classify3 }
+                                                     1# -> PerfectNumbers.classify2 }
+                                                1# -> PerfectNumbers.classify1 } }
+                                      0#
+                                      -> case GHC.Prim.==# wild y of lwild2 {
+                                           DEFAULT
+                                           -> $wgo (GHC.Prim.+# wild 1#) (GHC.Prim.+# ww1 wild)
+                                           1# -> exit ww1 wild } }
+                                 -1#
+                                 -> case y of wild1 {
+                                      DEFAULT -> $wgo 0# (GHC.Prim.+# ww1 -1#) -1# -> exit1 ww1 }
+                                 0#
+                                 -> case GHC.Real.divZeroError
+                                    ret_ty (GHC.Base.Maybe PerfectNumbers.Classification)
+                                    of {} }
+                           } in
+                           $wgo 1# 0#
+                        1#
+                        -> case GHC.Prim.<# 0# ww of lwild2 {
+                             DEFAULT
+                             -> case ww of wild {
+                                  DEFAULT
+                                  -> case GHC.Prim.># 0# wild of lwild3 {
+                                       DEFAULT -> PerfectNumbers.classify4
+                                       1# -> PerfectNumbers.classify3 }
+                                  0# -> PerfectNumbers.classify2 }
+                             1# -> PerfectNumbers.classify1 } }
+                   1# -> GHC.Base.Nothing @ PerfectNumbers.Classification }) -}
+8335dfab7a74b76f6d067f6107ac9dc0
+  data Classification = Deficient | Perfect | Abundant
+7fcd657064984dacc07acb29540f20d8
+  classify ::
+    GHC.Types.Int -> GHC.Base.Maybe PerfectNumbers.Classification
+  {- Arity: 1, Strictness: <S(S),1*U(U)>, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Types.Int) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 PerfectNumbers.$wclassify ww1 }) -}
+619a1f24998a21dc7538805f06a62507
+  classify1 :: GHC.Base.Maybe PerfectNumbers.Classification
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ PerfectNumbers.Classification
+                   PerfectNumbers.Deficient) -}
+e94a59a2bc0627a96b07432434374587
+  classify2 :: GHC.Base.Maybe PerfectNumbers.Classification
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ PerfectNumbers.Classification
+                   PerfectNumbers.Perfect) -}
+b8b12798b2adf9b463fc710fcf599df5
+  classify3 :: GHC.Base.Maybe PerfectNumbers.Classification
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ PerfectNumbers.Classification
+                   PerfectNumbers.Abundant) -}
+e58fe17f88100d8a5c7b57739412418a
+  classify4 :: GHC.Base.Maybe PerfectNumbers.Classification
+  {- Strictness: x -}
+instance [safe] GHC.Classes.Eq [PerfectNumbers.Classification]
+  = PerfectNumbers.$fEqClassification
+instance [safe] GHC.Show.Show [PerfectNumbers.Classification]
+  = PerfectNumbers.$fShowClassification
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

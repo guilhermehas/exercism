@@ -1,0 +1,117 @@
+
+==================== FINAL INTERFACE ====================
+2018-11-08 20:04:49.425822645 UTC
+
+interface armstrong-numbers-1.0.0.1-JgDveaVKzRWRC1wfQVaY6:ArmstrongNumbers 8043
+  interface hash: 0c9276cc0feb6f692aa04633c90433b0
+  ABI hash: 9ef5871b40c9059653db398a3a47944f
+  export-list hash: 54493671ffa48a8987061eabb8619079
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  ArmstrongNumbers.armstrong
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Float 99c69d365bb2607725a22530ce1ca4b4
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+import  -/  integer-gmp-1.0.2.0:GHC.Integer.Type f3d5169c3d3830854b19f6565b265403
+30c220f282ab812b8d2550e2f32e380c
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   ArmstrongNumbers.$trModule3
+                   ArmstrongNumbers.$trModule1) -}
+955ced0a20c9ef20dbc11485b95fd7cf
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ArmstrongNumbers.$trModule2) -}
+6cee3ffe6c0ec29329558a9759e190ea
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("ArmstrongNumbers"#) -}
+036d358dcdfa52fd26e9484f96ee3771
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ArmstrongNumbers.$trModule4) -}
+de420c0f8ddc13ae407511173fac6ebf
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("armstrong-numbers-1.0.0.1-JgDveaVKzRWRC1wfQVaY6"#) -}
+613892cb94eb20edbfba2c9951a918c8
+  armstrong :: GHC.Real.Integral a => a -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <S(S(LS(S(C(C(S))L)LLLLLLL)L)LLLLLLLL),U(U(U(C(C1(U)),A,C(C1(U)),A,A,A,C(U)),U(U(C(C1(U)),A),A,A,A,A,A,A,A),A),A,A,A,C(C1(U)),C(C1(U)),A,A,A)><L,U>,
+     Unfolding: (\ @ a ($dIntegral :: GHC.Real.Integral a) (eta :: a) ->
+                 let {
+                   $dReal :: GHC.Real.Real a = GHC.Real.$p1Integral @ a $dIntegral
+                 } in
+                 GHC.Classes.==
+                   @ a
+                   (GHC.Classes.$p1Ord @ a (GHC.Real.$p2Real @ a $dReal))
+                   eta
+                   (let {
+                      digits :: [a] = ArmstrongNumbers.toDigits @ a $dIntegral eta
+                    } in
+                    let {
+                      lvl1 :: GHC.Types.Int
+                      = case GHC.List.$wlenAcc @ a digits 0# of ww2 { DEFAULT ->
+                        GHC.Types.I# ww2 }
+                    } in
+                    let {
+                      $dNum :: GHC.Num.Num a = GHC.Real.$p1Real @ a $dReal
+                    } in
+                    letrec {
+                      go :: [a] -> a -> a
+                        <join 2> {- Arity: 2, Strictness: <S,1*U><L,U> -}
+                      = \ (ds :: [a]) (eta1 :: a) ->
+                        case ds of wild {
+                          [] -> eta1
+                          : y ys
+                          -> go
+                               ys
+                               (GHC.Num.+
+                                  @ a
+                                  $dNum
+                                  eta1
+                                  (GHC.Real.^
+                                     @ a
+                                     @ GHC.Types.Int
+                                     $dNum
+                                     GHC.Real.$fIntegralInt
+                                     y
+                                     lvl1)) }
+                    } in
+                    go
+                      digits
+                      (GHC.Num.fromInteger @ a $dNum ArmstrongNumbers.armstrong1))) -}
+fa0b5cd9f1dae6494e48ead82cb770be
+  armstrong1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+c9a3d78e6b1d04d63f6c912afed14c0d
+  toDigits :: GHC.Real.Integral a => a -> [a]
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(LS(S(C(C(S))L)LLLLLLL)L)LLLLLLLL),U(U(U(A,A,A,A,A,A,C(U)),U(U(C(C1(U)),A),A,A,A,A,A,A,A),A),A,A,A,C(C1(U)),C(C1(U)),A,A,A)><L,U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

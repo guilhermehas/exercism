@@ -1,0 +1,92 @@
+
+==================== FINAL INTERFACE ====================
+2018-10-23 21:11:49.050925476 UTC
+
+interface grains-1.1.0.4-ALjzg2fx1uNEU3GEe30jzL:Grains 8043
+  interface hash: 1d2ac1f0d4a16609f62ffb9885e7566a
+  ABI hash: fa359eeef6855f9c9b0ef2c6ccd41a07
+  export-list hash: cd961f262bbacbc9748c2c0da2036d3f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: fcbe983cf44f4af398578b2c50989fd2
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Grains.square
+  Grains.total
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+import  -/  integer-gmp-1.0.2.0:GHC.Integer.Type f3d5169c3d3830854b19f6565b265403
+9787e1c4932cee46f2adeae48acb5d71
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Grains.$trModule3
+                   Grains.$trModule1) -}
+9e69769e78a5028bcf3c6db967dafaa1
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Grains.$trModule2) -}
+543605ce75ad89557e60fe7c21b4bba1
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Grains"#) -}
+0d50e722443c6d0f536eb74d1c54881b
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Grains.$trModule4) -}
+c0e912f42f4ccbbf6d1217ffc8e919a9
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("grains-1.1.0.4-ALjzg2fx1uNEU3GEe30jzL"#) -}
+4ba343cf2d9a39b52eb4b6e837b119bb
+  square ::
+    GHC.Integer.Type.Integer -> GHC.Base.Maybe GHC.Integer.Type.Integer
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (n :: GHC.Integer.Type.Integer) ->
+                 case GHC.Integer.Type.geInteger# n Grains.square3 of wild {
+                   DEFAULT -> GHC.Base.Nothing @ GHC.Integer.Type.Integer
+                   1#
+                   -> case GHC.Integer.Type.leInteger# n Grains.square2 of wild1 {
+                        DEFAULT -> GHC.Base.Nothing @ GHC.Integer.Type.Integer
+                        1#
+                        -> GHC.Base.Just
+                             @ GHC.Integer.Type.Integer
+                             (GHC.Real.^_$s^
+                                Grains.square1
+                                (GHC.Integer.Type.minusInteger n Grains.square3)) } }) -}
+02ca165b00fdbbee25dca8ed3e8b952f
+  square1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (2) -}
+fffd45bf51b2c6eff10515670914cada
+  square2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (64) -}
+fe3e7f19bb94024979ede66da0c7552c
+  square3 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+d2e2e8af74ce78e288e9a9c43dae27f6
+  total :: GHC.Integer.Type.Integer
+  {- Unfolding: (GHC.Integer.Type.minusInteger
+                   (GHC.Real.^_$s^ Grains.square1 Grains.square2)
+                   Grains.square3) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

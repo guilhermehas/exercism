@@ -1,0 +1,738 @@
+
+==================== FINAL INTERFACE ====================
+2018-11-22 18:40:15.033020828 UTC
+
+interface nucleotide-count-1.3.0.7-HxTtRmXA0dA4oDK74kfh7e:DNA 8043
+  interface hash: a4eabfb9a9da23412a062c0d1df935f4
+  ABI hash: 45e204d0c8e887574cf18483c7dd706f
+  export-list hash: 7442bbf3774c3d69b365cd4bcc21de9e
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  DNA.nucleotideCounts
+  DNA.Nucleotide{DNA.A DNA.C DNA.G DNA.T}
+module dependencies:
+package dependencies: array-0.5.2.0 base-4.11.1.0*
+                      containers-0.5.11.0 deepseq-1.4.3.0 ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Complex base-4.11.1.0:Data.Functor.Compose
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity
+                         base-4.11.1.0:Data.Functor.Product base-4.11.1.0:Data.Functor.Sum
+                         base-4.11.1.0:Data.Monoid base-4.11.1.0:Data.Semigroup
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:Data.Void base-4.11.1.0:GHC.Exts
+                         base-4.11.1.0:GHC.Generics base-4.11.1.0:GHC.IO.Exception
+                         containers-0.5.11.0:Data.Map.Internal
+                         containers-0.5.11.0:Data.Set.Internal
+import  -/  base-4.11.1.0:Data.Either 39d922b371c4c52d426e9ee66de8371a
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  containers-0.5.11.0:Data.Map f51b9cf04edd738eb6d014be576b3403
+import  -/  containers-0.5.11.0:Data.Map.Internal e02d23495520de11b8e9f3c9c93a4d11
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+import  -/  ghc-prim-0.5.2.0:GHC.Types d9b3023de7feae4a5308d643da5543f7
+1a2d62aad3c408632a48bb6671ea7536
+  $fEqNucleotide :: GHC.Classes.Eq DNA.Nucleotide
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ DNA.Nucleotide DNA.$fEqNucleotide_$c== DNA.$fEqNucleotide_$c/= -}
+1a2d62aad3c408632a48bb6671ea7536
+  $fEqNucleotide_$c/= ::
+    DNA.Nucleotide -> DNA.Nucleotide -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: DNA.Nucleotide) (y :: DNA.Nucleotide) ->
+                 case x of wild {
+                   DNA.A
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True DNA.A -> GHC.Types.False }
+                   DNA.C
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True DNA.C -> GHC.Types.False }
+                   DNA.G
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True DNA.G -> GHC.Types.False }
+                   DNA.T
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True DNA.T -> GHC.Types.False } }) -}
+1a2d62aad3c408632a48bb6671ea7536
+  $fEqNucleotide_$c== ::
+    DNA.Nucleotide -> DNA.Nucleotide -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: DNA.Nucleotide) (ds1 :: DNA.Nucleotide) ->
+                 case ds of wild {
+                   DNA.A
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False DNA.A -> GHC.Types.True }
+                   DNA.C
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False DNA.C -> GHC.Types.True }
+                   DNA.G
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False DNA.G -> GHC.Types.True }
+                   DNA.T
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False DNA.T -> GHC.Types.True } }) -}
+1a2d62aad3c408632a48bb6671ea7536
+  $fOrdNucleotide :: GHC.Classes.Ord DNA.Nucleotide
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ DNA.Nucleotide
+                  DNA.$fEqNucleotide
+                  DNA.$fOrdNucleotide_$ccompare
+                  DNA.$fOrdNucleotide_$c<
+                  DNA.$fOrdNucleotide_$c<=
+                  DNA.$fOrdNucleotide_$c>
+                  DNA.$fOrdNucleotide_$c>=
+                  DNA.$fOrdNucleotide_$cmax
+                  DNA.$fOrdNucleotide_$cmin -}
+1a2d62aad3c408632a48bb6671ea7536
+  $fOrdNucleotide_$c< ::
+    DNA.Nucleotide -> DNA.Nucleotide -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: DNA.Nucleotide) (b :: DNA.Nucleotide) ->
+                 case a of wild {
+                   DNA.A
+                   -> case b of wild1 {
+                        DNA.A -> GHC.Types.False
+                        DNA.C -> GHC.Types.True
+                        DNA.G -> GHC.Types.True
+                        DNA.T -> GHC.Types.True }
+                   DNA.C
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        DNA.G -> GHC.Types.True
+                        DNA.T -> GHC.Types.True }
+                   DNA.G
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False DNA.T -> GHC.Types.True }
+                   DNA.T -> case b of wild1 { DEFAULT -> GHC.Types.False } }) -}
+1a2d62aad3c408632a48bb6671ea7536
+  $fOrdNucleotide_$c<= ::
+    DNA.Nucleotide -> DNA.Nucleotide -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: DNA.Nucleotide) (b :: DNA.Nucleotide) ->
+                 case b of wild {
+                   DNA.A
+                   -> case a of wild1 {
+                        DNA.A -> GHC.Types.True
+                        DNA.C -> GHC.Types.False
+                        DNA.G -> GHC.Types.False
+                        DNA.T -> GHC.Types.False }
+                   DNA.C
+                   -> case a of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        DNA.G -> GHC.Types.False
+                        DNA.T -> GHC.Types.False }
+                   DNA.G
+                   -> case a of wild1 {
+                        DEFAULT -> GHC.Types.True DNA.T -> GHC.Types.False }
+                   DNA.T -> case a of wild1 { DEFAULT -> GHC.Types.True } }) -}
+1a2d62aad3c408632a48bb6671ea7536
+  $fOrdNucleotide_$c> ::
+    DNA.Nucleotide -> DNA.Nucleotide -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (a :: DNA.Nucleotide) (b :: DNA.Nucleotide) ->
+                 DNA.$fOrdNucleotide_$c< b a) -}
+1a2d62aad3c408632a48bb6671ea7536
+  $fOrdNucleotide_$c>= ::
+    DNA.Nucleotide -> DNA.Nucleotide -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: DNA.Nucleotide) (b :: DNA.Nucleotide) ->
+                 case a of wild {
+                   DNA.A
+                   -> case b of wild1 {
+                        DNA.A -> GHC.Types.True
+                        DNA.C -> GHC.Types.False
+                        DNA.G -> GHC.Types.False
+                        DNA.T -> GHC.Types.False }
+                   DNA.C
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        DNA.G -> GHC.Types.False
+                        DNA.T -> GHC.Types.False }
+                   DNA.G
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True DNA.T -> GHC.Types.False }
+                   DNA.T -> case b of wild1 { DEFAULT -> GHC.Types.True } }) -}
+1a2d62aad3c408632a48bb6671ea7536
+  $fOrdNucleotide_$ccompare ::
+    DNA.Nucleotide -> DNA.Nucleotide -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: DNA.Nucleotide) (b :: DNA.Nucleotide) ->
+                 case a of wild {
+                   DNA.A
+                   -> case b of wild1 {
+                        DNA.A -> GHC.Types.EQ
+                        DNA.C -> GHC.Types.LT
+                        DNA.G -> GHC.Types.LT
+                        DNA.T -> GHC.Types.LT }
+                   DNA.C
+                   -> case b of wild1 {
+                        DNA.A -> GHC.Types.GT
+                        DNA.C -> GHC.Types.EQ
+                        DNA.G -> GHC.Types.LT
+                        DNA.T -> GHC.Types.LT }
+                   DNA.G
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        DNA.G -> GHC.Types.EQ
+                        DNA.T -> GHC.Types.LT }
+                   DNA.T
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT DNA.T -> GHC.Types.EQ } }) -}
+1a2d62aad3c408632a48bb6671ea7536
+  $fOrdNucleotide_$cmax ::
+    DNA.Nucleotide -> DNA.Nucleotide -> DNA.Nucleotide
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (x :: DNA.Nucleotide) (y :: DNA.Nucleotide) ->
+                 case y of wild {
+                   DNA.A -> x
+                   DNA.C
+                   -> case x of wild1 {
+                        DEFAULT -> DNA.C DNA.G -> DNA.G DNA.T -> DNA.T }
+                   DNA.G -> case x of wild1 { DEFAULT -> DNA.G DNA.T -> DNA.T }
+                   DNA.T -> case x of wild1 { DEFAULT -> DNA.T } }) -}
+1a2d62aad3c408632a48bb6671ea7536
+  $fOrdNucleotide_$cmin ::
+    DNA.Nucleotide -> DNA.Nucleotide -> DNA.Nucleotide
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (x :: DNA.Nucleotide) (y :: DNA.Nucleotide) ->
+                 case y of wild {
+                   DNA.A -> case x of wild1 { DEFAULT -> DNA.A }
+                   DNA.C
+                   -> case x of wild1 {
+                        DEFAULT -> wild1 DNA.G -> DNA.C DNA.T -> DNA.C }
+                   DNA.G -> case x of wild1 { DEFAULT -> wild1 DNA.T -> DNA.G }
+                   DNA.T -> x }) -}
+1a2d62aad3c408632a48bb6671ea7536
+  $fShowNucleotide :: GHC.Show.Show DNA.Nucleotide
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ DNA.Nucleotide
+                  DNA.$fShowNucleotide_$cshowsPrec
+                  DNA.$fShowNucleotide_$cshow
+                  DNA.$fShowNucleotide_$cshowList -}
+c070c295ce55458ad4af9b392de2d005
+  $fShowNucleotide1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# DNA.$fShowNucleotide2) -}
+b2056a15a042f7dc638b388f7b87b888
+  $fShowNucleotide2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("T"#) -}
+5d7f4de2977a5b919f6a32d2671fb8de
+  $fShowNucleotide3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# DNA.$fShowNucleotide4) -}
+bab750e56c4ae51f8a89ce628d8e6ba1
+  $fShowNucleotide4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("G"#) -}
+aaf4c57c821e725acd38fd3ed574811f
+  $fShowNucleotide5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# DNA.$fShowNucleotide6) -}
+369d607d9fcf0260c2401b3647084a11
+  $fShowNucleotide6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("C"#) -}
+e857899aad0e33266fb568d1ee971623
+  $fShowNucleotide7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# DNA.$fShowNucleotide8) -}
+aef88345a736300cfce06fe1ce26aab0
+  $fShowNucleotide8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("A"#) -}
+1a2d62aad3c408632a48bb6671ea7536
+  $fShowNucleotide_$cshow :: DNA.Nucleotide -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: DNA.Nucleotide) ->
+                 case x of wild {
+                   DNA.A -> DNA.$fShowNucleotide7
+                   DNA.C -> DNA.$fShowNucleotide5
+                   DNA.G -> DNA.$fShowNucleotide3
+                   DNA.T -> DNA.$fShowNucleotide1 }) -}
+1a2d62aad3c408632a48bb6671ea7536
+  $fShowNucleotide_$cshowList :: [DNA.Nucleotide] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [DNA.Nucleotide]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ DNA.Nucleotide DNA.$w$cshowsPrec ls s) -}
+1a2d62aad3c408632a48bb6671ea7536
+  $fShowNucleotide_$cshowsPrec ::
+    GHC.Types.Int -> DNA.Nucleotide -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: [0],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: DNA.Nucleotide)
+                   (w2 :: GHC.Base.String) ->
+                 DNA.$w$cshowsPrec w1 w2) -}
+d0d6757e71b32bc5524bdfeb50c5851e
+  $s$fEqMaybe :: GHC.Classes.Eq (GHC.Base.Maybe DNA.Nucleotide)
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Base.Maybe DNA.Nucleotide)
+                  (\ (ds :: GHC.Base.Maybe DNA.Nucleotide)
+                     (ds1 :: GHC.Base.Maybe DNA.Nucleotide) ->
+                   case ds of wild {
+                     GHC.Base.Nothing
+                     -> case ds1 of wild1 {
+                          GHC.Base.Nothing -> GHC.Types.True
+                          GHC.Base.Just ipv -> GHC.Types.False }
+                     GHC.Base.Just a1
+                     -> case ds1 of wild1 {
+                          GHC.Base.Nothing -> GHC.Types.False
+                          GHC.Base.Just b1 -> DNA.$fEqNucleotide_$c== a1 b1 } })
+                  DNA.$s$fEqMaybe_$s$fEqMaybe_$c/= -}
+380641e29dfcc4c93f654c840b076ff3
+  $s$fEqMaybe_$c== ::
+    GHC.Base.Maybe DNA.Nucleotide
+    -> GHC.Base.Maybe DNA.Nucleotide -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: GHC.Base.Maybe DNA.Nucleotide)
+                   (ds1 :: GHC.Base.Maybe DNA.Nucleotide) ->
+                 case ds of wild {
+                   GHC.Base.Nothing
+                   -> case ds1 of wild1 {
+                        GHC.Base.Nothing -> GHC.Types.True
+                        GHC.Base.Just ipv -> GHC.Types.False }
+                   GHC.Base.Just a1
+                   -> case ds1 of wild1 {
+                        GHC.Base.Nothing -> GHC.Types.False
+                        GHC.Base.Just b1 -> DNA.$fEqNucleotide_$c== a1 b1 } }) -}
+5ac4d928b11f8178feb024730435a31b
+  $s$fEqMaybe_$s$fEqMaybe_$c/= ::
+    GHC.Base.Maybe DNA.Nucleotide
+    -> GHC.Base.Maybe DNA.Nucleotide -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: GHC.Base.Maybe DNA.Nucleotide)
+                   (y :: GHC.Base.Maybe DNA.Nucleotide) ->
+                 case x of wild {
+                   GHC.Base.Nothing
+                   -> case y of wild1 {
+                        GHC.Base.Nothing -> GHC.Types.False
+                        GHC.Base.Just ipv -> GHC.Types.True }
+                   GHC.Base.Just a1
+                   -> case y of wild1 {
+                        GHC.Base.Nothing -> GHC.Types.True
+                        GHC.Base.Just b1
+                        -> case a1 of wild2 {
+                             DNA.A
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True DNA.A -> GHC.Types.False }
+                             DNA.C
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True DNA.C -> GHC.Types.False }
+                             DNA.G
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True DNA.G -> GHC.Types.False }
+                             DNA.T
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True DNA.T -> GHC.Types.False } } } }) -}
+1bbc42108160f82d282945fa1d3bd4ac
+  $sfindWithDefault1 ::
+    a -> DNA.Nucleotide -> Data.Map.Internal.Map DNA.Nucleotide a -> a
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,1*U><S,1*U><S,1*U> -}
+c54be4ce582ecc4956896778be0b030e
+  $sfromList ::
+    [(DNA.Nucleotide, a)] -> Data.Map.Internal.Map DNA.Nucleotide a
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ a (ds :: [(DNA.Nucleotide, a)]) ->
+                 case ds of wild {
+                   [] -> Data.Map.Internal.Tip @ DNA.Nucleotide @ a
+                   : ds1 ds2
+                   -> case ds1 of wild1 { (,) kx x ->
+                      case ds2 of wild2 {
+                        []
+                        -> case kx of dt { DEFAULT ->
+                           Data.Map.Internal.Bin
+                             @ DNA.Nucleotide
+                             @ a
+                             1#
+                             dt
+                             x
+                             (Data.Map.Internal.Tip @ DNA.Nucleotide @ a)
+                             (Data.Map.Internal.Tip @ DNA.Nucleotide @ a) }
+                        : ipv ipv1
+                        -> case ipv of wild3 { (,) ky ds3 ->
+                           case kx of wild4 {
+                             DNA.A
+                             -> case ky of wild5 {
+                                  DNA.A
+                                  -> DNA.$sfromList1
+                                       @ a
+                                       (Data.Map.Internal.Bin
+                                          @ DNA.Nucleotide
+                                          @ a
+                                          1#
+                                          DNA.A
+                                          x
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a)
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a))
+                                       wild2
+                                  DNA.C
+                                  -> DNA.$wpoly_go13
+                                       @ a
+                                       1#
+                                       (Data.Map.Internal.Bin
+                                          @ DNA.Nucleotide
+                                          @ a
+                                          1#
+                                          DNA.A
+                                          x
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a)
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a))
+                                       wild2
+                                  DNA.G
+                                  -> DNA.$wpoly_go13
+                                       @ a
+                                       1#
+                                       (Data.Map.Internal.Bin
+                                          @ DNA.Nucleotide
+                                          @ a
+                                          1#
+                                          DNA.A
+                                          x
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a)
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a))
+                                       wild2
+                                  DNA.T
+                                  -> DNA.$wpoly_go13
+                                       @ a
+                                       1#
+                                       (Data.Map.Internal.Bin
+                                          @ DNA.Nucleotide
+                                          @ a
+                                          1#
+                                          DNA.A
+                                          x
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a)
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a))
+                                       wild2 }
+                             DNA.C
+                             -> case ky of wild5 {
+                                  DEFAULT
+                                  -> DNA.$sfromList1
+                                       @ a
+                                       (Data.Map.Internal.Bin
+                                          @ DNA.Nucleotide
+                                          @ a
+                                          1#
+                                          DNA.C
+                                          x
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a)
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a))
+                                       wild2
+                                  DNA.G
+                                  -> DNA.$wpoly_go13
+                                       @ a
+                                       1#
+                                       (Data.Map.Internal.Bin
+                                          @ DNA.Nucleotide
+                                          @ a
+                                          1#
+                                          DNA.C
+                                          x
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a)
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a))
+                                       wild2
+                                  DNA.T
+                                  -> DNA.$wpoly_go13
+                                       @ a
+                                       1#
+                                       (Data.Map.Internal.Bin
+                                          @ DNA.Nucleotide
+                                          @ a
+                                          1#
+                                          DNA.C
+                                          x
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a)
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a))
+                                       wild2 }
+                             DNA.G
+                             -> case ky of wild5 {
+                                  DEFAULT
+                                  -> DNA.$sfromList1
+                                       @ a
+                                       (Data.Map.Internal.Bin
+                                          @ DNA.Nucleotide
+                                          @ a
+                                          1#
+                                          DNA.G
+                                          x
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a)
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a))
+                                       wild2
+                                  DNA.T
+                                  -> DNA.$wpoly_go13
+                                       @ a
+                                       1#
+                                       (Data.Map.Internal.Bin
+                                          @ DNA.Nucleotide
+                                          @ a
+                                          1#
+                                          DNA.G
+                                          x
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a)
+                                          (Data.Map.Internal.Tip @ DNA.Nucleotide @ a))
+                                       wild2 }
+                             DNA.T
+                             -> case ky of wild5 { DEFAULT ->
+                                DNA.$sfromList1
+                                  @ a
+                                  (Data.Map.Internal.Bin
+                                     @ DNA.Nucleotide
+                                     @ a
+                                     1#
+                                     DNA.T
+                                     x
+                                     (Data.Map.Internal.Tip @ DNA.Nucleotide @ a)
+                                     (Data.Map.Internal.Tip @ DNA.Nucleotide @ a))
+                                  wild2 } } } } } }) -}
+45953bd2d3788dd33197ba1f52dfc52b
+  $sfromList1 ::
+    Data.Map.Internal.Map DNA.Nucleotide a
+    -> [(DNA.Nucleotide, a)] -> Data.Map.Internal.Map DNA.Nucleotide a
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+88d118f6736a366ff745c7838bced4ec
+  $sinsert_$sgo13 ::
+    DNA.Nucleotide
+    -> DNA.Nucleotide
+    -> a1
+    -> Data.Map.Internal.Map DNA.Nucleotide a1
+    -> Data.Map.Internal.Map DNA.Nucleotide a1
+  {- Arity: 4, Strictness: <L,U><S,1*U><L,U><S,1*U> -}
+380e500b455749faed4ef916c9270ae6
+  $tc'A :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6383130644373832353##
+                   7255188769412791036##
+                   DNA.$trModule
+                   DNA.$tc'A2
+                   0#
+                   DNA.$tc'A1) -}
+0313a3535cd2ac2455faefc404a4145e
+  $tc'A1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+1842407d88483dbb2b88a03c2e0566d7
+  $tc'A2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS DNA.$tc'A3) -}
+54768994e62b1dc7f34085bf8884f00b
+  $tc'A3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'A"#) -}
+ed33ad7877242488ad5381713ee50959
+  $tc'C :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1061339104735311252##
+                   17434490030417261397##
+                   DNA.$trModule
+                   DNA.$tc'C1
+                   0#
+                   DNA.$tc'A1) -}
+2f916bc7733d966470b3d6ad8800c7b1
+  $tc'C1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS DNA.$tc'C2) -}
+f36c4319efaafcae3c01000a3f78beaa
+  $tc'C2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'C"#) -}
+7fb9035c187febaff154e8a4ad624b5e
+  $tc'G :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8723148665161102671##
+                   12539673065497167489##
+                   DNA.$trModule
+                   DNA.$tc'G1
+                   0#
+                   DNA.$tc'A1) -}
+8a230ea742cd14e31a481bbcddd1b21d
+  $tc'G1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS DNA.$tc'G2) -}
+8c5adf59641183625242a01b3aea3a12
+  $tc'G2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'G"#) -}
+489aaeb49e6b6e2afb3aa3882a5dfb15
+  $tc'T :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13755690352890720505##
+                   7513080301790847377##
+                   DNA.$trModule
+                   DNA.$tc'T1
+                   0#
+                   DNA.$tc'A1) -}
+011b854919681c11133cff0e147babc0
+  $tc'T1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS DNA.$tc'T2) -}
+5ebacda653778b95e4e0c5d4138437a2
+  $tc'T2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'T"#) -}
+69f5f088e2c8ff836b580f9e6caffa5c
+  $tcNucleotide :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9894163332975263862##
+                   1387250561001874174##
+                   DNA.$trModule
+                   DNA.$tcNucleotide1
+                   0#
+                   GHC.Types.krep$*) -}
+4c1972866c6e2bb64117af9134ea9295
+  $tcNucleotide1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS DNA.$tcNucleotide2) -}
+47063c5fe004ef7cac2f441e18f4eeaa
+  $tcNucleotide2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Nucleotide"#) -}
+62cd9dd1ad68cf20118a4881d56db60f
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module DNA.$trModule3 DNA.$trModule1) -}
+4c72b72757c616ed13987f76be49dfa9
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS DNA.$trModule2) -}
+28b8983f62a4904779e6ca066418d707
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("DNA"#) -}
+ef3b05505daa36206310087bc071b703
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS DNA.$trModule4) -}
+cd8f1cb6d7c43e19c1c76e884df05276
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("nucleotide-count-1.3.0.7-HxTtRmXA0dA4oDK74kfh7e"#) -}
+1a2d62aad3c408632a48bb6671ea7536
+  $w$cshowsPrec ::
+    DNA.Nucleotide -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (w :: DNA.Nucleotide) (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   DNA.A -> GHC.Base.++ @ GHC.Types.Char DNA.$fShowNucleotide7 w1
+                   DNA.C -> GHC.Base.++ @ GHC.Types.Char DNA.$fShowNucleotide5 w1
+                   DNA.G -> GHC.Base.++ @ GHC.Types.Char DNA.$fShowNucleotide3 w1
+                   DNA.T
+                   -> GHC.Base.++ @ GHC.Types.Char DNA.$fShowNucleotide1 w1 }) -}
+21d06e83392ae121b3ea0243238472aa
+  $wpoly_go13 ::
+    GHC.Prim.Int#
+    -> Data.Map.Internal.Map DNA.Nucleotide a
+    -> [(DNA.Nucleotide, a)]
+    -> Data.Map.Internal.Map DNA.Nucleotide a
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
+1a2d62aad3c408632a48bb6671ea7536
+  data Nucleotide = A | C | G | T
+df237e7800259c909826fc69fffd341d
+  count ::
+    [GHC.Base.Maybe DNA.Nucleotide]
+    -> Data.Map.Internal.Map DNA.Nucleotide GHC.Types.Int
+  {- Arity: 1, Strictness: <S,1*U> -}
+db1a944dee659991ffc8f70dd19fb37f
+  nucleotideCounts ::
+    GHC.Base.String
+    -> Data.Either.Either
+         GHC.Base.String
+         (Data.Map.Internal.Map DNA.Nucleotide GHC.Types.Int)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (xs :: GHC.Base.String) ->
+                 let {
+                   nucleotides :: [GHC.Base.Maybe DNA.Nucleotide]
+                   = GHC.Base.map
+                       @ GHC.Types.Char
+                       @ (GHC.Base.Maybe DNA.Nucleotide)
+                       DNA.toNucleotide
+                       xs
+                 } in
+                 case GHC.List.elem
+                        @ (GHC.Base.Maybe DNA.Nucleotide)
+                        DNA.$s$fEqMaybe
+                        (GHC.Base.Nothing @ DNA.Nucleotide)
+                        nucleotides of wild {
+                   GHC.Types.False
+                   -> Data.Either.Right
+                        @ GHC.Base.String
+                        @ (Data.Map.Internal.Map DNA.Nucleotide GHC.Types.Int)
+                        (DNA.count nucleotides)
+                   GHC.Types.True
+                   -> Data.Either.Left
+                        @ GHC.Base.String
+                        @ (Data.Map.Internal.Map DNA.Nucleotide GHC.Types.Int)
+                        xs }) -}
+ec412e7b908c5cedd04cae330b3a0f35
+  nucleotideCounts1 :: GHC.Base.Maybe DNA.Nucleotide
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just @ DNA.Nucleotide DNA.T) -}
+7159ce75e22d8dd748240f9e207155eb
+  nucleotideCounts2 :: GHC.Base.Maybe DNA.Nucleotide
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just @ DNA.Nucleotide DNA.G) -}
+8ba9881197ac1e719fdd1643068c200c
+  nucleotideCounts3 :: GHC.Base.Maybe DNA.Nucleotide
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just @ DNA.Nucleotide DNA.C) -}
+8600e835745f271883011ba9fe4fa957
+  nucleotideCounts4 :: GHC.Base.Maybe DNA.Nucleotide
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just @ DNA.Nucleotide DNA.A) -}
+8e9e56c4321498b24d83c1733a7a8b6c
+  toNucleotide :: GHC.Types.Char -> GHC.Base.Maybe DNA.Nucleotide
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: GHC.Types.Char) ->
+                 case x of wild { GHC.Types.C# x1 ->
+                 case x1 of wild1 {
+                   DEFAULT -> GHC.Base.Nothing @ DNA.Nucleotide
+                   'A'# -> DNA.nucleotideCounts4
+                   'C'# -> DNA.nucleotideCounts3
+                   'G'# -> DNA.nucleotideCounts2
+                   'T'# -> DNA.nucleotideCounts1 } }) -}
+instance [safe] GHC.Classes.Eq [DNA.Nucleotide]
+  = DNA.$fEqNucleotide
+instance [safe] GHC.Classes.Ord [DNA.Nucleotide]
+  = DNA.$fOrdNucleotide
+instance [safe] GHC.Show.Show [DNA.Nucleotide]
+  = DNA.$fShowNucleotide
+"SPEC/DNA $fEqMaybe @ Nucleotide" forall (v :: GHC.Classes.Eq
+                                                 DNA.Nucleotide)
+  GHC.Base.$fEqMaybe @ DNA.Nucleotide v = DNA.$s$fEqMaybe
+"SPEC/DNA $fEqMaybe_$c/= @ Nucleotide" forall ($dEq :: GHC.Classes.Eq
+                                                         DNA.Nucleotide)
+  GHC.Base.$fEqMaybe_$c/= @ DNA.Nucleotide $dEq
+  = DNA.$s$fEqMaybe_$s$fEqMaybe_$c/=
+"SPEC/DNA $fEqMaybe_$c== @ Nucleotide" forall ($dEq :: GHC.Classes.Eq
+                                                         DNA.Nucleotide)
+  GHC.Base.$fEqMaybe_$c== @ DNA.Nucleotide $dEq
+  = DNA.$s$fEqMaybe_$c==
+"SPEC/DNA fromList @ Nucleotide _" forall @ a
+                                          ($dOrd :: GHC.Classes.Ord DNA.Nucleotide)
+  Data.Map.Internal.fromList @ DNA.Nucleotide @ a $dOrd
+  = DNA.$sfromList @ a
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

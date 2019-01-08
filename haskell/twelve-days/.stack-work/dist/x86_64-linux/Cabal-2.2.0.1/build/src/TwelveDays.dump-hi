@@ -1,0 +1,257 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-08 03:15:27.020515995 UTC
+
+interface twelve-days-1.2.0.4-CyovkgdJ9YhHiTvbDHIdxe:TwelveDays 8043
+  interface hash: 6068b1f38b40ecb2b735fa6e5e11ac36
+  ABI hash: b29e9fb6e7e095f464be366a7f3891fe
+  export-list hash: fd3ce1b7b09cba48c92b0de4f1cf313b
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  TwelveDays.recite
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+930bba3a4332ff0ccafa2326b74af9ac
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   TwelveDays.$trModule3
+                   TwelveDays.$trModule1) -}
+b152075e79ba73af1d75ae1fa91e8fc6
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS TwelveDays.$trModule2) -}
+576e42a6ce6c39bf678aeb89d2d1d828
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("TwelveDays"#) -}
+cf3851455e1d197834c9006d1716cd95
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS TwelveDays.$trModule4) -}
+30cd1ceae7432ad9557552faf845c5ee
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("twelve-days-1.2.0.4-CyovkgdJ9YhHiTvbDHIdxe"#) -}
+18d9a91edec504de947be7e76e1e4b8c
+  $wrecite :: GHC.Prim.Int# -> GHC.Prim.Int# -> [GHC.Base.String]
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) (ww1 :: GHC.Prim.Int#) ->
+                 case GHC.Prim.># ww ww1 of lwild {
+                   DEFAULT
+                   -> letrec {
+                        go :: GHC.Prim.Int# -> [GHC.Base.String]
+                          {- Arity: 1, Strictness: <L,U> -}
+                        = \ (x :: GHC.Prim.Int#) ->
+                          GHC.Types.:
+                            @ GHC.Base.String
+                            (GHC.List.$w!!
+                               @ GHC.Base.String
+                               TwelveDays.strings
+                               (GHC.Prim.-# x 1#))
+                            (case GHC.Prim.==# x ww1 of lwild1 {
+                               DEFAULT -> go (GHC.Prim.+# x 1#)
+                               1# -> GHC.Types.[] @ GHC.Base.String })
+                      } in
+                      go ww
+                   1# -> GHC.Types.[] @ GHC.Base.String }) -}
+0eb1ca36fc036c8cbfd5f668da93729c
+  recite :: GHC.Types.Int -> GHC.Types.Int -> [GHC.Base.String]
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S(S),1*U(U)>, Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Types.Int) (w1 :: GHC.Types.Int) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { GHC.Types.I# ww3 ->
+                 TwelveDays.$wrecite ww1 ww3 } }) -}
+f5ffc6d1201bd2cb7581d0e637732a31
+  recite1 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   TwelveDays.recite32
+                   TwelveDays.recite2) -}
+52ce7a887f131ab4800256edf90434c7
+  recite10 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   TwelveDays.recite14
+                   TwelveDays.recite11) -}
+03fa83f10f2794104b14447a3734cffd
+  recite11 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   TwelveDays.recite12
+                   (GHC.Types.[] @ [GHC.Types.Char])) -}
+cf8ee7e98cc45dc8d16a745ef0e143f1
+  recite12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# TwelveDays.recite13) -}
+b9238143e92630f968c88bd7d0680bbe
+  recite13 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("On the twelfth day of Christmas my true love gave to me: twelve Drummers Drumming, eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."#) -}
+1beffbb120face734bee02e843a3679e
+  recite14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# TwelveDays.recite15) -}
+37a47fc0273c63e3b6830baa8977b76e
+  recite15 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("On the eleventh day of Christmas my true love gave to me: eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."#) -}
+c86a982760d4a42fd668666a95f87b08
+  recite16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# TwelveDays.recite17) -}
+a97109bf43acf35208e6f6a74bf173ae
+  recite17 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("On the tenth day of Christmas my true love gave to me: ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."#) -}
+9bcada1e02b8492574c9612d6c978d57
+  recite18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# TwelveDays.recite19) -}
+f6dd4be7109e57df76dfa5bd0a1552b5
+  recite19 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("On the ninth day of Christmas my true love gave to me: nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."#) -}
+42a64f751c61d83051924fc22ffd6e5e
+  recite2 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   TwelveDays.recite30
+                   TwelveDays.recite3) -}
+32a246aadb01d4abb9557bd589a1a604
+  recite20 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# TwelveDays.recite21) -}
+8e18c5bcf6b14df140204024273eb05b
+  recite21 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("On the eighth day of Christmas my true love gave to me: eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."#) -}
+6af40017ad9679d17c7dd87fdafc58b6
+  recite22 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# TwelveDays.recite23) -}
+2ccd91f8c7213e465bf8e75b6967ad59
+  recite23 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("On the seventh day of Christmas my true love gave to me: seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."#) -}
+806cab6fa9d9365912001af35cbd082c
+  recite24 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# TwelveDays.recite25) -}
+2294ed89c2f9f54805360a69d1fab48e
+  recite25 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("On the sixth day of Christmas my true love gave to me: six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."#) -}
+f1dd19b12880e80168d7859f639ee01e
+  recite26 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# TwelveDays.recite27) -}
+6f49385bc4425343904bc85f1cad836a
+  recite27 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."#) -}
+645b8f752fb05bc46543859eba60e1af
+  recite28 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# TwelveDays.recite29) -}
+86842c73b60659ede4f06aea321500a2
+  recite29 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("On the fourth day of Christmas my true love gave to me: four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."#) -}
+a2b4bf879eb81639725e42c7fcbca0f6
+  recite3 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   TwelveDays.recite28
+                   TwelveDays.recite4) -}
+e6315d4988465614db43448b33fe6709
+  recite30 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# TwelveDays.recite31) -}
+69a8c97de8e0108fc322781f8bb0d500
+  recite31 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."#) -}
+4f9da1cabc09d558a29c870513695bbf
+  recite32 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# TwelveDays.recite33) -}
+b82d066f798a0d00391c3124e684163d
+  recite33 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree."#) -}
+96ca16563fc70a5494ac767778dc4ad9
+  recite34 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# TwelveDays.recite35) -}
+d3e2594a88244c5f45803268b5dbdc0e
+  recite35 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree."#) -}
+514816b940c4e10bac59cb8620275f1a
+  recite4 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   TwelveDays.recite26
+                   TwelveDays.recite5) -}
+321d4091c08ff9983dda4912d995fd49
+  recite5 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   TwelveDays.recite24
+                   TwelveDays.recite6) -}
+60860b940c482c270c291b1a9989e3fd
+  recite6 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   TwelveDays.recite22
+                   TwelveDays.recite7) -}
+9d0596314f6bfcf8e71fa5e1cd024fbc
+  recite7 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   TwelveDays.recite20
+                   TwelveDays.recite8) -}
+b5fd49fa2cd68070c0083daa0febd927
+  recite8 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   TwelveDays.recite18
+                   TwelveDays.recite9) -}
+060ea4d5b6db2dbe2dff165c70970bee
+  recite9 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   TwelveDays.recite16
+                   TwelveDays.recite10) -}
+0ef90cf55aa6f786672e37c0dd21bc6f
+  strings :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   TwelveDays.recite34
+                   TwelveDays.recite1) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

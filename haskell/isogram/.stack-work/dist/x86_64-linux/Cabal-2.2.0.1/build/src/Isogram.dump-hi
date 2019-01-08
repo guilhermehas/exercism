@@ -1,0 +1,88 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-07 00:07:26.2382916 UTC
+
+interface isogram-1.7.0.7-K3vzrJwvSIWJiP33RMcjUQ:Isogram 8043
+  interface hash: 237c949b439fc8f658b3182c8d5c150b
+  ABI hash: 4b40b7cb5aff8be59024ec9a601ccdce
+  export-list hash: 2778196367f1dc6e7b5f84928934d027
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Isogram.isIsogram
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Char 3e89818e2b8ef1a2cc5393163484da72
+import  -/  base-4.11.1.0:Data.List 83dc843e47bfc0c5af51e19c6f3476d5
+import  -/  base-4.11.1.0:Data.OldList 1b35aa3c6805ff7c8887a35a866fe006
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Unicode 8234c40b59f035e845832a42e8725a00
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+b63caf092fb6d0f84cdba88f43833354
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Isogram.$trModule3
+                   Isogram.$trModule1) -}
+c016993dc9e259326be8bb561f3069c8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Isogram.$trModule2) -}
+e6d025abe7782393e36f067a2c60628b
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Isogram"#) -}
+a301e2948b3dc183f146b3cef5ac06b2
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Isogram.$trModule4) -}
+3a7738278580bff0dd6d3d8c3a97ffd5
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("isogram-1.7.0.7-K3vzrJwvSIWJiP33RMcjUQ"#) -}
+2a99da0f4b334950bd05e309898f6799
+  isIsogram :: GHC.Base.String -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (sn :: GHC.Base.String) ->
+                 let {
+                   s :: [GHC.Types.Char]
+                   = GHC.List.filter
+                       @ GHC.Types.Char
+                       Data.Char.isLetter
+                       (Data.OldList.sortBy
+                          @ GHC.Types.Char
+                          GHC.Classes.$fOrdChar_$ccompare
+                          (GHC.Base.map
+                             @ GHC.Types.Char
+                             @ GHC.Types.Char
+                             GHC.Unicode.toLower
+                             sn))
+                 } in
+                 GHC.Base.eqString
+                   (GHC.Base.map
+                      @ [GHC.Types.Char]
+                      @ GHC.Types.Char
+                      (GHC.List.head @ GHC.Types.Char)
+                      (Data.OldList.groupBy @ GHC.Types.Char GHC.Classes.eqChar s))
+                   s) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

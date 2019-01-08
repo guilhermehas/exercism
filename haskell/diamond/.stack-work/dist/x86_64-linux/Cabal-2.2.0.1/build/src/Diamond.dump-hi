@@ -1,0 +1,209 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-07 01:53:04.702525989 UTC
+
+interface diamond-1.1.0.4-FP0Ofv8vRYFJUDBar3BeUa:Diamond 8043
+  interface hash: 79c702d08397ce66dbbcd140bc41a23e
+  ABI hash: f08c559f64b10af09b0fff09538b1e71
+  export-list hash: 7ac7f491aa0f2fa6ffe2fc1ce3dee9c6
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Diamond.diamond
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Char 3e89818e2b8ef1a2cc5393163484da72
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+1a3dabe46d18cf4c7f16024c7b80c451
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Diamond.$trModule3
+                   Diamond.$trModule1) -}
+3425e7b1c1002db6f6343f4dac6ef747
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Diamond.$trModule2) -}
+4a9f42dbe137bfaf166442867db35607
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Diamond"#) -}
+53c8b10e27396144b806fc06797ed440
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Diamond.$trModule4) -}
+ebd09a716a4d18c1261a514c13fcf31c
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("diamond-1.1.0.4-FP0Ofv8vRYFJUDBar3BeUa"#) -}
+20a8f35caff690ba526d50258b7bd6d9
+  $wdiamond :: GHC.Types.Char -> (# [GHC.Base.String] #)
+  {- Arity: 1, Strictness: <L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (w :: GHC.Types.Char) ->
+                 (# case w of wild1 { GHC.Types.C# y ->
+                    let {
+                      y1 :: GHC.Prim.Int# = GHC.Prim.ord# y
+                    } in
+                    let {
+                      size :: GHC.Prim.Int# = GHC.Prim.-# y1 65#
+                    } in
+                    let {
+                      lvl :: [GHC.Types.Char]
+                      = case GHC.Prim.># 1# size of lwild {
+                          DEFAULT
+                          -> letrec {
+                               go :: GHC.Prim.Int# -> [GHC.Types.Char]
+                                 {- Arity: 1, Strictness: <L,U> -}
+                               = \ (x :: GHC.Prim.Int#) ->
+                                 GHC.Types.:
+                                   @ GHC.Types.Char
+                                   Diamond.diamond4
+                                   (case GHC.Prim.==# x size of lwild1 {
+                                      DEFAULT -> go (GHC.Prim.+# x 1#)
+                                      1# -> GHC.Types.[] @ GHC.Types.Char })
+                             } in
+                             let {
+                               spaceBefore :: GHC.Base.String = go 1#
+                             } in
+                             GHC.Base.++
+                               @ GHC.Types.Char
+                               spaceBefore
+                               (GHC.Types.: @ GHC.Types.Char Diamond.diamond3 spaceBefore)
+                          1# -> Diamond.diamond1 }
+                    } in
+                    letrec {
+                      go :: GHC.Prim.Int# -> [GHC.Base.String]
+                        {- Arity: 1, Strictness: <S,U> -}
+                      = \ (x :: GHC.Prim.Int#) ->
+                        case GHC.Prim.># x y1 of lwild {
+                          DEFAULT
+                          -> GHC.Types.:
+                               @ GHC.Base.String
+                               (case GHC.Prim.chr# x of ds {
+                                  DEFAULT
+                                  -> let {
+                                       sizeSpaceBefore :: GHC.Prim.Int#
+                                       = GHC.Prim.-# size (GHC.Prim.-# (GHC.Prim.ord# ds) 65#)
+                                     } in
+                                     let {
+                                       $j :: GHC.Base.String -> GHC.Base.String
+                                         <join 1> {- Arity: 1, Strictness: <S,U> -}
+                                       = \ (spaceBefore :: GHC.Base.String)[OneShot] ->
+                                         let {
+                                           wild :: GHC.Types.Char = GHC.Types.C# ds
+                                         } in
+                                         GHC.Base.++
+                                           @ GHC.Types.Char
+                                           spaceBefore
+                                           (GHC.Types.:
+                                              @ GHC.Types.Char
+                                              wild
+                                              (let {
+                                                 y2 :: GHC.Prim.Int#
+                                                 = GHC.Prim.-#
+                                                     (GHC.Prim.*#
+                                                        2#
+                                                        (GHC.Prim.-# size sizeSpaceBefore))
+                                                     1#
+                                               } in
+                                               let {
+                                                 n :: [GHC.Types.Char]
+                                                 = GHC.Types.: @ GHC.Types.Char wild spaceBefore
+                                               } in
+                                               case GHC.Prim.># 1# y2 of lwild1 {
+                                                 DEFAULT
+                                                 -> letrec {
+                                                      go1 :: GHC.Prim.Int# -> [GHC.Types.Char]
+                                                        {- Arity: 1, Strictness: <L,U> -}
+                                                      = \ (x1 :: GHC.Prim.Int#) ->
+                                                        GHC.Types.:
+                                                          @ GHC.Types.Char
+                                                          Diamond.diamond4
+                                                          (case GHC.Prim.==# x1 y2 of lwild2 {
+                                                             DEFAULT -> go1 (GHC.Prim.+# x1 1#)
+                                                             1# -> n })
+                                                    } in
+                                                    go1 1#
+                                                 1# -> n }))
+                                     } in
+                                     case GHC.Prim.># 1# sizeSpaceBefore of lwild1 {
+                                       DEFAULT
+                                       -> $j
+                                            (letrec {
+                                               go1 :: GHC.Prim.Int# -> [GHC.Types.Char]
+                                                 {- Arity: 1, Strictness: <L,U> -}
+                                               = \ (x1 :: GHC.Prim.Int#) ->
+                                                 GHC.Types.:
+                                                   @ GHC.Types.Char
+                                                   Diamond.diamond4
+                                                   (case GHC.Prim.==# x1 sizeSpaceBefore of lwild2 {
+                                                      DEFAULT -> go1 (GHC.Prim.+# x1 1#)
+                                                      1# -> GHC.Types.[] @ GHC.Types.Char })
+                                             } in
+                                             go1 1#)
+                                       1# -> $j (GHC.Types.[] @ GHC.Types.Char) }
+                                  'A'# -> lvl })
+                               (go (GHC.Prim.+# x 1#))
+                          1# -> GHC.Types.[] @ GHC.Base.String }
+                    } in
+                    let {
+                      lines :: [GHC.Base.String] = go 65#
+                    } in
+                    GHC.Base.++
+                      @ [GHC.Types.Char]
+                      lines
+                      (case lines of wild {
+                         [] -> case GHC.List.init2 ret_ty [[GHC.Types.Char]] of {}
+                         : x xs
+                         -> GHC.List.reverse1
+                              @ GHC.Base.String
+                              (GHC.List.init1 @ GHC.Base.String x xs)
+                              (GHC.Types.[] @ GHC.Base.String) }) } #)) -}
+43d4b7ef967d83c047dc3c406ce5d793
+  diamond :: GHC.Types.Char -> GHC.Base.Maybe [GHC.Base.String]
+  {- Arity: 1, Strictness: <L,1*U(U)>m2, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Types.Char) ->
+                 case Diamond.$wdiamond w of ww { Unit# ww1 ->
+                 GHC.Base.Just @ [GHC.Base.String] ww1 }) -}
+c25ffac0b130cc393bb9f7ce2feb71ce
+  diamond1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Diamond.diamond2) -}
+4347729097d66858796af065c3289a3d
+  diamond2 :: [GHC.Types.Char]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Diamond.diamond3
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+00d131dab7f5994ba52fd54ac1a28439
+  diamond3 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'A'#) -}
+71e3b75dd758a4012f14e3bcb6d317d1
+  diamond4 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# ' '#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

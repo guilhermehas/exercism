@@ -1,0 +1,144 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-08 02:54:05.706047257 UTC
+
+interface phone-number-1.6.1.8-E4pB7M6VV0D5aP02kEQM3Y:Phone 8043
+  interface hash: 1d4d9399dd60ee70248fcf088d9226aa
+  ABI hash: feed8e11ac263b1d36dc0f1c64bedf0b
+  export-list hash: 8839f4d108cb04b22c7440289834d02f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Phone.number
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Char 3e89818e2b8ef1a2cc5393163484da72
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Unicode 8234c40b59f035e845832a42e8725a00
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+aad6e66d94ccc2420b3c1e6b71f0bcaf
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Phone.$trModule3 Phone.$trModule1) -}
+cf6c696193369bba2e961a68cdf36fb1
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Phone.$trModule2) -}
+100d85847ac7bf309d67c8325f4de00d
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Phone"#) -}
+91368277554e39d9417972f3d0b4f2e4
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Phone.$trModule4) -}
+44ba81d93d50dd7d990ca6d21ef4b4cc
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("phone-number-1.6.1.8-E4pB7M6VV0D5aP02kEQM3Y"#) -}
+8c939f866cc3b11cf4f1e9b416d2beed
+  number :: GHC.Base.String -> GHC.Base.Maybe GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (xs :: GHC.Base.String) ->
+                 let {
+                   noPont :: [GHC.Types.Char]
+                   = GHC.List.filter @ GHC.Types.Char Phone.number1 xs
+                 } in
+                 let {
+                   $j :: GHC.Base.Maybe GHC.Base.String <join 0>
+                   = let {
+                       $j1 :: GHC.Base.Maybe GHC.Base.String <join 0>
+                       = let {
+                           nxs :: [GHC.Types.Char]
+                           = case GHC.List.$wlenAcc @ GHC.Types.Char noPont 0# of ww2 {
+                               DEFAULT -> noPont
+                               11#
+                               -> case noPont of wild {
+                                    [] -> GHC.List.scanl2 @ GHC.Types.Char : ds1 xs1 -> xs1 } }
+                         } in
+                         case GHC.List.elem
+                                @ GHC.Types.Char
+                                GHC.Classes.$fEqChar
+                                (GHC.List.$w!! @ GHC.Types.Char nxs 0#)
+                                Phone.number_x of wild {
+                           GHC.Types.False -> GHC.Base.Nothing @ GHC.Base.String
+                           GHC.Types.True
+                           -> case GHC.List.elem
+                                     @ GHC.Types.Char
+                                     GHC.Classes.$fEqChar
+                                     (GHC.List.$w!! @ GHC.Types.Char nxs 3#)
+                                     Phone.number_x of wild1 {
+                                GHC.Types.False -> GHC.Base.Nothing @ GHC.Base.String
+                                GHC.Types.True -> GHC.Base.Just @ [GHC.Types.Char] nxs } }
+                     } in
+                     case GHC.List.$wlenAcc @ GHC.Types.Char noPont 0# of ww2 {
+                       DEFAULT -> GHC.Base.Nothing @ GHC.Base.String
+                       10# -> $j1
+                       11#
+                       -> case noPont of wild {
+                            []
+                            -> case GHC.List.badHead
+                               ret_ty (GHC.Base.Maybe GHC.Base.String)
+                               of {}
+                            : x ds1
+                            -> case x of wild1 { GHC.Types.C# x1 ->
+                               case x1 of wild2 {
+                                 DEFAULT -> GHC.Base.Nothing @ GHC.Base.String '1'# -> $j1 } } } }
+                 } in
+                 letrec {
+                   go :: [GHC.Types.Char] -> GHC.Base.Maybe GHC.Base.String
+                     <join 1> {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [GHC.Types.Char]) ->
+                     case ds of wild {
+                       [] -> $j
+                       : y ys
+                       -> case y of wild1 { GHC.Types.C# c# ->
+                          case GHC.Prim.leWord#
+                                 (GHC.Prim.int2Word# (GHC.Prim.-# (GHC.Prim.ord# c#) 48#))
+                                 9## of lwild {
+                            DEFAULT -> GHC.Base.Nothing @ GHC.Base.String 1# -> go ys } } }
+                 } in
+                 go noPont) -}
+abfa899257e45d021daa7931f037ae1a
+  number1 :: GHC.Types.Char -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: GHC.Types.Char) ->
+                 case GHC.List.elem
+                        @ GHC.Types.Char
+                        GHC.Classes.$fEqChar
+                        x
+                        Phone.number_x1 of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+5853db48d123ac2f2899d86e8b6f3abe
+  number2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" ()-+."#) -}
+d171026e652f13c888faa8b33429d631
+  number_x :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Enum.eftChar 50# 57#) -}
+04e00b115c69974bb8ac9c0d09ee15b5
+  number_x1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Phone.number2) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

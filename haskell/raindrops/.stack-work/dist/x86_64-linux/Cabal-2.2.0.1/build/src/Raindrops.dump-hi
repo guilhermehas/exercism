@@ -1,0 +1,138 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-08 01:51:05.598556631 UTC
+
+interface raindrops-1.1.0.5-7owmCzZVBl9921kL3ENxYP:Raindrops 8043
+  interface hash: ba2ec1573beb68d146a40dc9283be9e0
+  ABI hash: 28a86fd70b40b8ff4cdc66fb073a6968
+  export-list hash: dfea13e98a60dcebf70bdfb2d64a3037
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Raindrops.convert
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+bcc7006824f460be114d363eff117c5c
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Raindrops.$trModule3
+                   Raindrops.$trModule1) -}
+f8f78c3cc23e21a676e98d41a235bafa
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Raindrops.$trModule2) -}
+ff52efe57d40d3631f01247ccf6d7b68
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Raindrops"#) -}
+f10c4c95cdb24205a74f7aad29dab7c5
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Raindrops.$trModule4) -}
+aa82e12562e6e872574be0f3cdb36490
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("raindrops-1.1.0.5-7owmCzZVBl9921kL3ENxYP"#) -}
+f25e70253ac2e22e3aeae1e636b28791
+  convert :: GHC.Types.Int -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,U(U)>,
+     Unfolding: (\ (n :: GHC.Types.Int) ->
+                 let {
+                   message :: GHC.Base.String
+                   = Raindrops.showMessage n Raindrops.convert1
+                 } in
+                 case GHC.Base.eqString
+                        message
+                        (GHC.Types.[] @ GHC.Types.Char) of wild {
+                   GHC.Types.False -> message
+                   GHC.Types.True -> GHC.Show.$fShowInt_$cshow n }) -}
+233ed11b5ba6a4ab754167c771a71812
+  convert1 :: [(GHC.Types.Int, GHC.Base.String)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Int, GHC.Base.String)
+                   Raindrops.convert12
+                   Raindrops.convert2) -}
+9f81344eb3e2e13f9a1fc6edf715a92c
+  convert10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Plang"#) -}
+f865cc3ada204b0fa21f000e8eda1084
+  convert11 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5#) -}
+aa88cdfc876be774269dcf276e6aa1b0
+  convert12 :: (GHC.Types.Int, [GHC.Types.Char])
+  {- Strictness: m,
+     Unfolding: ((Raindrops.convert15, Raindrops.convert13)) -}
+58fd12cc2ee117276d6151e18a884448
+  convert13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Raindrops.convert14) -}
+642373e9ccebb083335264806b4e684f
+  convert14 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Pling"#) -}
+416c74a259428519cca0f24f986092ea
+  convert15 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
+0f7197dbaa77c70058f86798a2e4c24b
+  convert2 :: [(GHC.Types.Int, GHC.Base.String)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Int, GHC.Base.String)
+                   Raindrops.convert8
+                   Raindrops.convert3) -}
+c146bb0fa1a3eca6fb990888bcb5f37f
+  convert3 :: [(GHC.Types.Int, GHC.Base.String)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Int, GHC.Base.String)
+                   Raindrops.convert4
+                   (GHC.Types.[] @ (GHC.Types.Int, GHC.Base.String))) -}
+bc9554b526c343a21f7b8e6fe3eec557
+  convert4 :: (GHC.Types.Int, [GHC.Types.Char])
+  {- Strictness: m,
+     Unfolding: ((Raindrops.convert7, Raindrops.convert5)) -}
+89463a6482eccf579539feb48e91edcb
+  convert5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Raindrops.convert6) -}
+de1ee3c108f495e2ed7682ccc2e3547d
+  convert6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Plong"#) -}
+89abb43b301462edecdfc7acbc3062c0
+  convert7 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 7#) -}
+cdba81ea0715226675765b99b12be0b1
+  convert8 :: (GHC.Types.Int, [GHC.Types.Char])
+  {- Strictness: m,
+     Unfolding: ((Raindrops.convert11, Raindrops.convert9)) -}
+fa8d6a698f9b45092fde112f23454461
+  convert9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Raindrops.convert10) -}
+a60f9aac75b55637dcd5e7f8eb7776b6
+  showMessage ::
+    GHC.Types.Int
+    -> [(GHC.Types.Int, GHC.Base.String)] -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U(U)><S,1*U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

@@ -1,0 +1,70 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-10 03:01:36.144866211 UTC
+
+interface triangle-0.1.0.3-DiNrYvo3AFqGJNP9Qn3iA7:Triangle 8043
+  interface hash: 5c959c4d4448e5752fbe228f4960ab49
+  ABI hash: 1d552fde1eb377ef517ac35194e96713
+  export-list hash: 82cadd9bcc678953ef9e2d481f49ac34
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 45d5e266c9ab751696f96731a7429711
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Triangle.triangleType
+  Triangle.TriangleType{Triangle.Equilateral Triangle.Illegal Triangle.Isosceles Triangle.Scalene}
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.List 83dc843e47bfc0c5af51e19c6f3476d5
+import  -/  base-4.11.1.0:Data.OldList 1b35aa3c6805ff7c8887a35a866fe006
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+09c0b0657ad19dfcd016379ed1f5c2ab
+  $fEqTriangleType :: GHC.Classes.Eq Triangle.TriangleType
+  DFunId
+09c0b0657ad19dfcd016379ed1f5c2ab
+  $fShowTriangleType :: GHC.Show.Show Triangle.TriangleType
+  DFunId
+7f2805b6152667efb2668062fca23583
+  $tc'Equilateral :: GHC.Types.TyCon
+5a43d1a1659f513b045d4eb9b6571247
+  $tc'Illegal :: GHC.Types.TyCon
+398b40e6c1b76e1899f8b8d3175228e2
+  $tc'Isosceles :: GHC.Types.TyCon
+614c40cb1e8c9e56ca26eed5f6b2315e
+  $tc'Scalene :: GHC.Types.TyCon
+40b25a8ecca212ab977c0fd7c0be94a4
+  $tcTriangleType :: GHC.Types.TyCon
+e38fe13ba53903f1bf97222da0eca318
+  $trModule :: GHC.Types.Module
+09c0b0657ad19dfcd016379ed1f5c2ab
+  data TriangleType = Equilateral | Isosceles | Scalene | Illegal
+65197a6ad1d5e0263a6aa1d81331cf92
+  triangleType ::
+    (GHC.Num.Num a, GHC.Classes.Ord a) =>
+    a -> a -> a -> Triangle.TriangleType
+instance [safe] GHC.Classes.Eq [Triangle.TriangleType]
+  = Triangle.$fEqTriangleType
+instance [safe] GHC.Show.Show [Triangle.TriangleType]
+  = Triangle.$fShowTriangleType
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

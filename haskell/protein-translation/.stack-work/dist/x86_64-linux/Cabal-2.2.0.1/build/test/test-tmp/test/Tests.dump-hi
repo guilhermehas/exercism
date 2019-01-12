@@ -1,0 +1,1623 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-12 01:58:18.063840168 UTC
+
+interface main:Main 8043
+  interface hash: 3dcc43455b611b06c2546c5baa665c79
+  ABI hash: 3f626bc5fdc9cba4462740de57396ab2
+  export-list hash: 9a26b6ffc36e0d0fe0daa377a590a8b6
+  orphan hash: 4c591c2371f6c7adf077aa0a172c67a8
+  flag hash: 1112a7f9467054741c0cbe735a99fd58
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+module dependencies:
+package dependencies: HUnit-1.6.0.0 QuickCheck-2.11.3
+                      ansi-terminal-0.8.0.4 array-0.5.2.0 base-4.11.1.0 call-stack-0.1.0
+                      clock-0.7.2 colour-2.3.4 containers-0.5.11.0 deepseq-1.4.3.0
+                      directory-1.3.1.5 filepath-1.4.2 ghc-boot-th-8.4.3 ghc-prim-0.5.2.0
+                      hspec-2.5.5 hspec-core-2.5.5 hspec-expectations-0.8.2
+                      integer-gmp-1.0.2.0 pretty-1.1.3.6 primitive-0.6.3.0
+                      protein-translation-1.1.1.3 quickcheck-io-0.2.0 random-1.1
+                      setenv-0.1.1.3 stm-2.4.5.0 template-haskell-2.13.0.0 tf-random-0.5
+                      time-1.8.0.2 transformers-0.5.5.0 unix-2.7.2.2
+orphans: colour-2.3.4:Data.Colour
+         quickcheck-io-0.2.0:Test.QuickCheck.IO
+         transformers-0.5.5.0:Control.Monad.Trans.Error
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         stm-2.4.5.0:Control.Monad.STM base-4.11.1.0:GHC.Float
+         base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Complex base-4.11.1.0:Data.Functor.Compose
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity
+                         base-4.11.1.0:Data.Functor.Product base-4.11.1.0:Data.Functor.Sum
+                         base-4.11.1.0:Data.Monoid base-4.11.1.0:Data.Semigroup
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:Data.Void base-4.11.1.0:GHC.Exts
+                         base-4.11.1.0:GHC.Generics base-4.11.1.0:GHC.IO.Exception
+                         clock-0.7.2:System.Clock containers-0.5.11.0:Data.IntMap.Internal
+                         containers-0.5.11.0:Data.IntSet.Internal
+                         containers-0.5.11.0:Data.Map.Internal
+                         containers-0.5.11.0:Data.Sequence.Internal
+                         containers-0.5.11.0:Data.Set.Internal
+                         ghc-boot-th-8.4.3:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.4.3:GHC.LanguageExtensions.Type
+                         hspec-core-2.5.5:Test.Hspec.Core.Example
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         primitive-0.6.3.0:Data.Primitive.ByteArray
+                         template-haskell-2.13.0.0:Language.Haskell.TH.Syntax
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Types d9b3023de7feae4a5308d643da5543f7
+import  -/  hspec-2.5.5:Test.Hspec 2be16cf670d31c941cf3c2e9020b9f19
+import  -/  hspec-2.5.5:Test.Hspec.Runner fc3975763ef747ba5b312af6c0fa997c
+import  -/  hspec-core-2.5.5:Test.Hspec.Core.Config.Options 46e8473cd69d1d02b94a5aff383c0b5a
+import  -/  hspec-core-2.5.5:Test.Hspec.Core.Runner 05e438b360ed244fedd330a757c1204b
+import  -/  hspec-core-2.5.5:Test.Hspec.Core.Spec c05383235153ad38308e55e581976171
+import  -/  hspec-core-2.5.5:Test.Hspec.Core.Spec.Monad eabb239f4fb08d8c7ff65e7e9206738b
+import  -/  hspec-expectations-0.8.2:Test.Hspec.Expectations 713f0c8581412c4b3ae306dbada3ec4b
+import  -/  protein-translation-1.1.1.3:ProteinTranslation 2f9d7b1ee61d27b46d0504b9e33b55cc
+4b0335f0c95434b0a47a1dc919ba1eab
+  $s$fEqMaybe :: GHC.Classes.Eq (GHC.Base.Maybe [GHC.Base.String])
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Base.Maybe [GHC.Base.String])
+                  (\ (ds :: GHC.Base.Maybe [GHC.Base.String])
+                     (ds1 :: GHC.Base.Maybe [GHC.Base.String]) ->
+                   case ds of wild {
+                     GHC.Base.Nothing
+                     -> case ds1 of wild1 {
+                          GHC.Base.Nothing -> GHC.Types.True
+                          GHC.Base.Just ipv -> GHC.Types.False }
+                     GHC.Base.Just a1
+                     -> case ds1 of wild1 {
+                          GHC.Base.Nothing -> GHC.Types.False
+                          GHC.Base.Just b1 -> GHC.Classes.$fEq[]_$s$c==1 a1 b1 } })
+                  Main.$s$fEqMaybe_$s$fEqMaybe_$c/= -}
+4217a22eae465b036ca1ed5e1fc96cf9
+  $s$fEqMaybe_$c== ::
+    GHC.Base.Maybe [GHC.Base.String]
+    -> GHC.Base.Maybe [GHC.Base.String] -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: GHC.Base.Maybe [GHC.Base.String])
+                   (ds1 :: GHC.Base.Maybe [GHC.Base.String]) ->
+                 case ds of wild {
+                   GHC.Base.Nothing
+                   -> case ds1 of wild1 {
+                        GHC.Base.Nothing -> GHC.Types.True
+                        GHC.Base.Just ipv -> GHC.Types.False }
+                   GHC.Base.Just a1
+                   -> case ds1 of wild1 {
+                        GHC.Base.Nothing -> GHC.Types.False
+                        GHC.Base.Just b1 -> GHC.Classes.$fEq[]_$s$c==1 a1 b1 } }) -}
+11cc8a79371210531da2c08570e86f87
+  $s$fEqMaybe_$s$fEqMaybe_$c/= ::
+    GHC.Base.Maybe [GHC.Base.String]
+    -> GHC.Base.Maybe [GHC.Base.String] -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: GHC.Base.Maybe [GHC.Base.String])
+                   (y :: GHC.Base.Maybe [GHC.Base.String]) ->
+                 case x of wild {
+                   GHC.Base.Nothing
+                   -> case y of wild1 {
+                        GHC.Base.Nothing -> GHC.Types.False
+                        GHC.Base.Just ipv -> GHC.Types.True }
+                   GHC.Base.Just a1
+                   -> case y of wild1 {
+                        GHC.Base.Nothing -> GHC.Types.True
+                        GHC.Base.Just b1
+                        -> case GHC.Classes.$fEq[]_$s$c==1 a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False } } }) -}
+8fa4d705459ecae2271ee31b9fe41575
+  $s$fShowMaybe :: GHC.Show.Show (GHC.Base.Maybe [GHC.Base.String])
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Base.Maybe [GHC.Base.String])
+                  (GHC.Show.$fShowMaybe_$cshowsPrec
+                     @ [GHC.Base.String]
+                     GHC.Show.$fShow[]_$s$fShow[]2)
+                  (\ (x :: GHC.Base.Maybe [GHC.Base.String]) ->
+                   case x of wild {
+                     GHC.Base.Nothing -> GHC.Show.$fShowMaybe4
+                     GHC.Base.Just b1
+                     -> GHC.Base.augment
+                          @ GHC.Types.Char
+                          (\ @ b
+                             (c :: GHC.Types.Char -> b -> b)[OneShot]
+                             (n :: b)[OneShot] ->
+                           GHC.Base.foldr @ GHC.Types.Char @ b c n GHC.Show.$fShowMaybe1)
+                          (case b1 of wild1 {
+                             []
+                             -> GHC.CString.unpackAppendCString#
+                                  GHC.Show.showList__4
+                                  (GHC.Types.[] @ GHC.Types.Char)
+                             : x1 xs
+                             -> GHC.Types.:
+                                  @ GHC.Types.Char
+                                  GHC.Show.showList__3
+                                  (GHC.Types.:
+                                     @ GHC.Types.Char
+                                     GHC.Show.$fShow(,)3
+                                     (GHC.Show.showLitString
+                                        x1
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.$fShow(,)3
+                                           (let {
+                                              lvl4 :: [GHC.Types.Char]
+                                              = GHC.Types.:
+                                                  @ GHC.Types.Char
+                                                  GHC.Show.showList__2
+                                                  (GHC.Types.[] @ GHC.Types.Char)
+                                            } in
+                                            letrec {
+                                              showl1 :: [[GHC.Types.Char]] -> GHC.Base.String
+                                                {- Arity: 1, Strictness: <S,1*U> -}
+                                              = \ (ds2 :: [[GHC.Types.Char]]) ->
+                                                case ds2 of wild2 {
+                                                  [] -> lvl4
+                                                  : y ys
+                                                  -> GHC.Types.:
+                                                       @ GHC.Types.Char
+                                                       GHC.Show.showList__1
+                                                       (GHC.Types.:
+                                                          @ GHC.Types.Char
+                                                          GHC.Show.$fShow(,)3
+                                                          (GHC.Show.showLitString
+                                                             y
+                                                             (GHC.Types.:
+                                                                @ GHC.Types.Char
+                                                                GHC.Show.$fShow(,)3
+                                                                (showl1 ys)))) }
+                                            } in
+                                            showl1 xs)))) }) })
+                  (\ (ls :: [GHC.Base.Maybe [GHC.Base.String]])
+                     (s :: GHC.Base.String) ->
+                   GHC.Show.showList__
+                     @ (GHC.Base.Maybe [GHC.Base.String])
+                     (GHC.Show.$fShowMaybe_$cshowsPrec
+                        @ [GHC.Base.String]
+                        GHC.Show.$fShow[]_$s$fShow[]2
+                        GHC.Show.$fShow(,)1)
+                     ls
+                     s) -}
+c799104ed0daa458d3e281ac5ffd77d9
+  $s$fShowMaybe_$cshowList ::
+    [GHC.Base.Maybe [GHC.Base.String]] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [GHC.Base.Maybe [GHC.Base.String]])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (GHC.Base.Maybe [GHC.Base.String])
+                   (GHC.Show.$fShowMaybe_$cshowsPrec
+                      @ [GHC.Base.String]
+                      GHC.Show.$fShow[]_$s$fShow[]2
+                      GHC.Show.$fShow(,)1)
+                   ls
+                   s) -}
+8f470deca0048d02e6fc8121ab8abb17
+  $tc'Case :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8197111133229858407##
+                   13847006553897280588##
+                   Main.$trModule
+                   Main.$tc'Case2
+                   0#
+                   Main.$tc'Case1) -}
+6fc21dd8b35ae7df9abfcd56a3c1f8ad
+  $tc'Case1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+0c0299238ee13fbc2e14231d59357ec9
+  $tc'Case2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'Case3) -}
+b70b9a2f50a01b383c0fc203a93b45f6
+  $tc'Case3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Case"#) -}
+9f9427b68a1c0df6b95c3a3d566064e4
+  $tcCase :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   990021888930651814##
+                   4262142848388084561##
+                   Main.$trModule
+                   Main.$tcCase1
+                   0#
+                   GHC.Types.krep$*) -}
+b0dff1fba9a2e1fbd8ccfcfdc7bfd5cc
+  $tcCase1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tcCase2) -}
+7179be3aa9b5f07778c569f16b1ed2bf
+  $tcCase2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Case"#) -}
+be86c9d078d3acbf19ba91fe74a24273
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule3 Main.$trModule1) -}
+b09d86f2c49dd5176b544d8d13ddb6c5
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule2) -}
+e5875966b74dad2d29772660b8a75e33
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Main"#) -}
+23b03bd7d075a00f5ad1ee10e6add7b8
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule4) -}
+d026be77cb9ced20e35a61514e0458aa
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+47ebceffb1a1194062ac34dc2f96f95a
+  $wc ::
+    GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.Maybe [GHC.Base.String]
+    -> Control.Monad.Trans.Writer.Lazy.WriterT
+         [Test.Hspec.Core.Tree.SpecTree ()] GHC.Types.IO ()
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 5,
+     Strictness: <L,1*U><L,U><L,U><C(S(SL)),1*C1(U(U,U(1*U,1*U)))><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.Maybe [GHC.Base.String])
+                   (w :: Control.Monad.Trans.Writer.Lazy.WriterT
+                           [Test.Hspec.Core.Tree.SpecTree ()] GHC.Types.IO ())
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w `cast`
+                      (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                           <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                           <GHC.Types.IO>_R
+                           <()>_N ; GHC.Types.N:IO[0]
+                                        <((), [Test.Hspec.Core.Tree.SpecTree ()])>_R)
+                        w1 of ds1 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    (case ipv3 of wild1 { (,) b1 w' -> b1 },
+                     GHC.Base.++
+                       @ (Test.Hspec.Core.Tree.Tree
+                            (Test.Hspec.Core.Example.ActionWith ())
+                            (Test.Hspec.Core.Tree.Item ()))
+                       (GHC.Types.:
+                          @ (Test.Hspec.Core.Tree.SpecTree
+                               (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                          (Test.Hspec.Core.Tree.Leaf
+                             @ (Test.Hspec.Core.Example.ActionWith
+                                  (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                             @ (Test.Hspec.Core.Tree.Item
+                                  (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                             (Test.Hspec.Core.Tree.Item
+                                @ (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                                (case ww of wild {
+                                   []
+                                   -> case Main.main65 of wild1 {
+                                        GHC.Base.Nothing -> Test.Hspec.Core.Tree.specItem1
+                                        GHC.Base.Just v -> v }
+                                   : ds2 ds3 -> wild })
+                                Main.main55
+                                (GHC.Base.Nothing @ GHC.Types.Bool)
+                                (Test.Hspec.Core.Example.safeEvaluateExample1
+                                   @ Test.Hspec.Expectations.Expectation
+                                   Test.Hspec.Core.Example.$fExampleIO1
+                                     `cast`
+                                   ((<Test.Hspec.Expectations.Expectation>_R
+                                     ->_R <Test.Hspec.Core.Example.Params>_R
+                                     ->_R <(Test.Hspec.Core.Example.Arg
+                                              Test.Hspec.Expectations.Expectation
+                                            -> GHC.Types.IO ())
+                                           -> GHC.Types.IO ()>_R
+                                     ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                                     ->_R Sym (GHC.Types.N:IO[0]
+                                                   <Test.Hspec.Core.Example.Result>_R)) ; Sym (Test.Hspec.Core.Example.N:Example[0]
+                                                                                                   <Test.Hspec.Expectations.Expectation>_N))
+                                   (\ (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                                    Test.HUnit.Lang.assertEqual1
+                                      @ (GHC.Base.Maybe [GHC.Base.String])
+                                      Main.main42
+                                        `cast`
+                                      (Sym (GHC.Classes.N:IP[0]
+                                                <"callStack">_N <GHC.Stack.Types.CallStack>_N))
+                                      Main.$s$fEqMaybe
+                                      Main.$s$fShowMaybe
+                                      (GHC.Types.[] @ GHC.Types.Char)
+                                      ww2
+                                      (ProteinTranslation.proteins ww1)
+                                      eta2)
+                                     `cast`
+                                   (Sym (GHC.Types.N:IO[0] <()>_R)))
+                                  `cast`
+                                (<Test.Hspec.Core.Example.Params>_R
+                                 ->_R <Test.Hspec.Core.Example.ActionWith
+                                         (Test.Hspec.Core.Example.Arg
+                                            Test.Hspec.Expectations.Expectation)
+                                       -> GHC.Types.IO ()>_R
+                                 ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                                 ->_R Sym (GHC.Types.N:IO[0] <Test.Hspec.Core.Example.Result>_R))))
+                          (GHC.Types.[]
+                             @ (Test.Hspec.Core.Tree.SpecTree
+                                  (Test.Hspec.Core.Example.Arg
+                                     Test.Hspec.Expectations.Expectation))))
+                         `cast`
+                       ([(Test.Hspec.Core.Tree.Tree
+                            (Sub (Test.Hspec.Core.Example.D:R:ArgIO[0])
+                             ->_R <GHC.Types.IO ()>_R)
+                            (Test.Hspec.Core.Tree.Item
+                               (Sub (Test.Hspec.Core.Example.D:R:ArgIO[0])))_R)_R])_R
+                       (case ipv3 of wild { (,) b1 w' -> w' })) #) }) -}
+35d7f374eaf73c8b83dd642ce570afaf
+  data Case
+    = Case {description :: GHC.Base.String,
+            input :: GHC.Base.String,
+            expected :: GHC.Base.Maybe [GHC.Base.String]}
+35d7f374eaf73c8b83dd642ce570afaf
+  description :: Main.Case -> GHC.Base.String
+  RecSel Left Main.Case
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Case) ->
+                 case ds of wild { Main.Case ds1 ds2 ds3 -> ds1 }) -}
+35d7f374eaf73c8b83dd642ce570afaf
+  expected :: Main.Case -> GHC.Base.Maybe [GHC.Base.String]
+  RecSel Left Main.Case
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Case) ->
+                 case ds of wild { Main.Case ds1 ds2 ds3 -> ds3 }) -}
+35d7f374eaf73c8b83dd642ce570afaf
+  input :: Main.Case -> GHC.Base.String
+  RecSel Left Main.Case
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Case) ->
+                 case ds of wild { Main.Case ds1 ds2 ds3 -> ds2 }) -}
+b7fb52b6f2cd6e3cb05237381cedf124
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+504013ce10918ab1c7b10418ed3aec52
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case Test.Hspec.Core.Runner.hspec2
+                        Main.main194
+                        Main.main2
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild { Test.Hspec.Core.Runner.Summary ds ds2 ->
+                 case ds2 of wild1 { GHC.Types.I# x ->
+                 case x of wild2 {
+                   DEFAULT -> System.Exit.exitFailure1 @ () ipv
+                   0# -> (# ipv, GHC.Tuple.() #) } } } }) -}
+08e99b71796c8605167dede96506016c
+  main10 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main147
+                   Main.main145
+                   Main.main137
+                   Main.main11
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+7d41fe3fa2a996b525be92dbcc2aae95
+  main100 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main101) -}
+1561dad2ade059365191a65366ec2b1f
+  main101 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("Translate RNA strand into correct protein list"#) -}
+d2dc96ee7e0fdd1dc4f25afa983c7f2b
+  main102 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main103) -}
+dd0821a6c73c0f7e255bcd19f464f251
+  main103 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UGA"#) -}
+596d50ab35478b18b36a79e917d0ccbb
+  main104 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main105) -}
+ae399fe3a22f3b4e7efda364880950c3
+  main105 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("STOP codon RNA sequence 3"#) -}
+8a032b7547de0de28e57f4c4799f645a
+  main106 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main107) -}
+1c889bc76f13387ae1e3c8677bdbd3cb
+  main107 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UAG"#) -}
+9ff12b8f6c929ea2c26a7ba17bd2c9eb
+  main108 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main109) -}
+75a402e12a501204beeb7b7a0230698e
+  main109 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("STOP codon RNA sequence 2"#) -}
+a1c8329397f07dacb97eb7508f303d9f
+  main11 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main143
+                   Main.main141
+                   Main.main137
+                   Main.main12
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+39613c521b7feaa9680ffeac7a3fce1d
+  main110 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main111) -}
+c2ee17f3c538a32a84aa4527df5bcf24
+  main111 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UAA"#) -}
+8414ef7ab501a0432697cdb3d5fd2066
+  main112 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main113) -}
+ed4151673b15b39fce8a928942e9afb3
+  main113 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("STOP codon RNA sequence 1"#) -}
+33fa9da248851ac30de6bd1b700639a8
+  main114 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main115) -}
+7fce4c93c5765c2f58d1e76f83751d52
+  main115 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UGG"#) -}
+dfbcdecec4c4d969d039bd4c50e7111a
+  main116 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main117) -}
+0569585e3a433a2210eed598726f2578
+  main117 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Tryptophan RNA sequence"#) -}
+94b11a01f6f9dcf08621785c93c40c21
+  main118 :: GHC.Base.Maybe [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Base.Just @ [[GHC.Types.Char]] Main.main119) -}
+b89274cbd703f4b5bbfa8b811d668e3b
+  main119 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.main34
+                   (GHC.Types.[] @ [GHC.Types.Char])) -}
+f0b3f7d69872310b1e09573a766cdded
+  main12 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main135
+                   Main.main133
+                   Main.main128
+                   Main.main13
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+a04826708acaa47bb8f432d40dcaa28b
+  main120 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main121) -}
+b11ce05ccb40943aea3d8acfd9eb8c19
+  main121 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UGC"#) -}
+22a71d1c81f154958b749d0d01c7d2e8
+  main122 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main123) -}
+b1509501514e3d8848fc1cc964090bec
+  main123 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Cysteine RNA sequence 2"#) -}
+8e8e56f0a1b28cd351ee385e63cd2936
+  main124 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main125) -}
+8ce313638523674aa1a5d5458a440214
+  main125 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UGU"#) -}
+3e45a45cdf9dc02f6f7eca5d711bce3f
+  main126 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main127) -}
+1368ee2266612958e796336bf4d90cc7
+  main127 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Cysteine RNA sequence 1"#) -}
+8fec79d1a3811e9a4de5fe637045f3dc
+  main128 :: GHC.Base.Maybe [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Base.Just @ [[GHC.Types.Char]] Main.main31) -}
+c2efdb2524a098851c2c06c2042e53a8
+  main129 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main130) -}
+8166824df415cc44031fe05bb4b202e8
+  main13 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main131
+                   Main.main129
+                   Main.main128
+                   Main.main14
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+b3677a324287a2ac1bb5aa5e57a0f7c6
+  main130 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UAC"#) -}
+d5f36861a6af516a86feeb1f9c19ca70
+  main131 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main132) -}
+2a6a56a39ca5721befd24abb039d461a
+  main132 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Tyrosine RNA sequence 2"#) -}
+08486feeb49270fc3afc0df8df3095f2
+  main133 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main134) -}
+c462b88d7195f7d73dcb01303b9df685
+  main134 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UAU"#) -}
+a5b2c23579e6f0920b310cfd83f127b2
+  main135 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main136) -}
+e23cbaa1f1952a48035ed5a30722bd56
+  main136 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Tyrosine RNA sequence 1"#) -}
+e9ecfbc9e3fc78fcb9011314c13c4e20
+  main137 :: GHC.Base.Maybe [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Base.Just @ [[GHC.Types.Char]] Main.main138) -}
+15f65ea39d3701c547fcae0ca89f1b83
+  main138 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.main139
+                   (GHC.Types.[] @ [GHC.Types.Char])) -}
+079dc56d2eea1426cfbbc7dd2f23d882
+  main139 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main140) -}
+75b4612eba5edab90de29b546a5e5cf7
+  main14 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main126
+                   Main.main124
+                   Main.main118
+                   Main.main15
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+1beed5aec22ebddbb19c1dafaf8c5b9d
+  main140 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Serine"#) -}
+ecf91a5078445ba40bb278c3071ac787
+  main141 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main142) -}
+8254c8b13f8e9ebd76e27167d604dadd
+  main142 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UCG"#) -}
+a330507fa07ef0fef9aad17706bcdb2b
+  main143 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main144) -}
+75b5dcf3fff5ca450c8d5f24f1f8a8c1
+  main144 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Serine RNA sequence 4"#) -}
+1c79570f45f7a9a13255a7e729a135cf
+  main145 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main146) -}
+a3bdb3f83221bfd597df03ee4a160776
+  main146 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UCA"#) -}
+67a7b63dad48385d49cee1846449d730
+  main147 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main148) -}
+95c6fa26e92dfc95db13e0934315728e
+  main148 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Serine RNA sequence 3"#) -}
+49ca9c62fedd443e09d0f1be349d7d6e
+  main149 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main150) -}
+0127f13a32c8b45b3f44d47b8d4acde3
+  main15 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main122
+                   Main.main120
+                   Main.main118
+                   Main.main16
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+754033f2f2cf0aecc631e51498bb650a
+  main150 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UCC"#) -}
+3e222a8cbd1c3fdf0faab5f68bf1a64b
+  main151 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main152) -}
+a35e8622854b0e4fdf05e743181d40e4
+  main152 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Serine RNA sequence 2"#) -}
+320d2b7ddf3d098e8e56a9f819a5c54c
+  main153 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main154) -}
+f90c844d76daa6ae3f7c786249577f59
+  main154 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UCU"#) -}
+8476d2682d331ed554fee1f7b359853e
+  main155 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main156) -}
+4085a162ac4c50fcb72f1f4354da6c2b
+  main156 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Serine RNA sequence 1"#) -}
+a987db5977d04cd656c2839b97c08592
+  main157 :: GHC.Base.Maybe [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Base.Just @ [[GHC.Types.Char]] Main.main158) -}
+892b6696e3b75afc6d1ed5dc009f8350
+  main158 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.main159
+                   (GHC.Types.[] @ [GHC.Types.Char])) -}
+a824a936a3d352a0c4c2e28ddaacba7a
+  main159 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main160) -}
+7956000aa34807533673c0905ea39f04
+  main16 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main116
+                   Main.main114
+                   Main.main69
+                   Main.main17
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+685ae70344f13b264ae0d36f3dc60ec9
+  main160 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Leucine"#) -}
+b408a89ebf0e45643c4c9eb6a47276e6
+  main161 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main162) -}
+6027883f72d11b3caf46be7a78dd2312
+  main162 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UUG"#) -}
+f8a4645393ff7880008ac739d7c12236
+  main163 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main164) -}
+5b941b087b75756cf84df86a5c17e6f8
+  main164 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Leucine RNA sequence 2"#) -}
+3534afbbad17cabb4e7254e662c5309b
+  main165 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main166) -}
+90b2e6e02c787d72677c031ce5794692
+  main166 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UUA"#) -}
+ff4046d38b49d40b18888d79e536d45f
+  main167 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main168) -}
+af8d5e310dbf041be863a08625506369
+  main168 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Leucine RNA sequence 1"#) -}
+17138568d66a94c824fdba9fb68e3da8
+  main169 :: GHC.Base.Maybe [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Base.Just @ [[GHC.Types.Char]] Main.main77) -}
+1a3982feedc5c57f08836bf9c9c0768c
+  main17 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main112
+                   Main.main110
+                   Main.main90
+                   Main.main18
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+d68158b5e19845beeb1ac77ffeaff8c2
+  main170 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main171) -}
+b6e17fc1fdd998a20e8b5f67f3a0ef24
+  main171 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UUC"#) -}
+5b46310c03d06ebcf5e8c5d4b3d58d8f
+  main172 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main173) -}
+585e9e3122c71d77eb925c87bfef0e21
+  main173 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Phenylalanine RNA sequence 2"#) -}
+69d5be34b4cc47bb2292823b1f464801
+  main174 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main175) -}
+724bb77d472fe38726f74ae60227226f
+  main175 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UUU"#) -}
+be7870cc51e5505d636c2b14e322dd31
+  main176 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main177) -}
+f6abc08ba53547516fa6a0ec9b8b3da0
+  main177 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Phenylalanine RNA sequence 1"#) -}
+db84c9aa52b483282a280f00614ad8b0
+  main178 :: GHC.Base.Maybe [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Base.Just @ [[GHC.Types.Char]] Main.main179) -}
+b388d785ff29caef4adee7b45af937bc
+  main179 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.main80
+                   (GHC.Types.[] @ [GHC.Types.Char])) -}
+4268928d133b2883e8603216c53249b8
+  main18 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main108
+                   Main.main106
+                   Main.main90
+                   Main.main19
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+7afb6bead441ac28065b118444843c79
+  main180 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main181) -}
+8a91a264ad3f4ff7bce5453e263b0b0d
+  main181 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("AUG"#) -}
+45e611ceea10bd716c9666c96e1283be
+  main182 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main183) -}
+21fcc629c79e0db92fc2f8f0c26ea1da
+  main183 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Methionine RNA sequence"#) -}
+136df10af07d284f95b79d22a8fa85ea
+  main184 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main185) -}
+8024aab62cd01c2ee58b723455f61821
+  main185 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("proteins"#) -}
+3420d20426d12bf9acf200b7701a4b96
+  main186 ::
+    GHC.Base.String
+    -> Test.Hspec.Core.Spec.Monad.SpecWith ()
+    -> Test.Hspec.Core.Spec.Monad.SpecWith ()
+  {- Unfolding: (Test.Hspec.Core.Spec.describe
+                   @ ()
+                   Main.main187
+                     `cast`
+                   (Sym (GHC.Classes.N:IP[0]
+                             <"callStack">_N <GHC.Stack.Types.CallStack>_N))) -}
+aed26df2036a992a3aefb12de339a333
+  main187 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Main.main192
+                   Main.main188
+                   GHC.Stack.Types.EmptyCallStack) -}
+b7f4546baea2ff494462ef41031b83e8
+  main188 :: GHC.Stack.Types.SrcLoc
+  {- Strictness: m,
+     Unfolding: (GHC.Stack.Types.SrcLoc
+                   Main.main52
+                   Main.main51
+                   Main.main49
+                   Main.main191
+                   Main.main190
+                   Main.main191
+                   Main.main189) -}
+b9a82b94ef018ac9f6ee258b0e3cc9ff
+  main189 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 28#) -}
+0083595847e2432c1397abe8ad5c4a10
+  main19 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main104
+                   Main.main102
+                   Main.main90
+                   Main.main20
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+a1d9f2a146e4c443531b36fc59fb8bb7
+  main190 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 9#) -}
+5d6c17fe6e93fb7617b21cc06d9c830b
+  main191 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 13#) -}
+c5bf536d46a5986dbcca0079750eda6e
+  main192 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main193) -}
+cfa23f10d25438b33f10df7d3e62d92c
+  main193 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("describe"#) -}
+6c37ab6acace55a11ef6fd610e192607
+  main194 :: Test.Hspec.Core.Config.Options.Config
+  {- Unfolding: (Test.Hspec.Core.Config.Options.Config
+                   GHC.Types.False
+                   GHC.Types.False
+                   GHC.Types.False
+                   GHC.Types.True
+                   (GHC.Base.Nothing @ GHC.IO.FilePath)
+                   GHC.Types.False
+                   GHC.Types.False
+                   (GHC.Base.Nothing @ (Test.Hspec.Core.Util.Path -> GHC.Types.Bool))
+                   (GHC.Base.Nothing @ (Test.Hspec.Core.Util.Path -> GHC.Types.Bool))
+                   (GHC.Base.Nothing @ GHC.Integer.Type.Integer)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   Test.Hspec.Core.Example.defaultParams1
+                   Test.Hspec.Core.Config.Options.ColorAuto
+                   GHC.Types.True
+                   (GHC.Base.Nothing @ Test.Hspec.Core.Formatters.Monad.Formatter)
+                   GHC.Types.False
+                   Test.Hspec.Core.Config.Options.defaultConfig1
+                   (GHC.Base.Nothing @ GHC.Types.Int)) -}
+a6652ee82b8f9951518338de459c6b4b
+  main195 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+58c11e7a5457b9c46859e0916195b046
+  main2 :: Test.Hspec.Core.Spec.Monad.SpecWith ()
+  {- Unfolding: (Main.main186
+                   Main.main184
+                   Main.main3
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                       <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                       <GHC.Types.IO>_R
+                                                       <()>_N) ; Sym (Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                          <()>_N) <()>_N))) -}
+8c48c4cc413e070ef9f89182600a05d7
+  main20 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main100
+                   Main.main98
+                   Main.main95
+                   Main.main21
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+f44139461f1ace9e58b0c1bb3091a149
+  main21 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main93
+                   Main.main91
+                   Main.main90
+                   Main.main22
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+3671ff9a66f26d164ec8b25fb2225bc8
+  main22 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main88
+                   Main.main86
+                   Main.main69
+                   Main.main23
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+3435cf4b4f314f4a4d21a66d75d0bbd9
+  main23 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main84
+                   Main.main82
+                   Main.main75
+                   Main.main24
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+6fcb044a3260cd20ae5d5537fdfae6e7
+  main24 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main73
+                   Main.main71
+                   Main.main69
+                   Main.main25
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+af5c582cc2de0a2f830e8c737afd42c1
+  main25 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main40
+                   Main.main38
+                   Main.main28
+                   Main.main26
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+4312159c4dc80f1394c743df62d411fe
+  main26 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s, Main.main27 #)) -}
+3965076b6227fc7e1d3b3386a64013ce
+  main27 :: ((), [Test.Hspec.Core.Tree.SpecTree ()])
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((GHC.Tuple.(),
+                  GHC.Types.[]
+                    @ (Test.Hspec.Core.Tree.Tree
+                         (Test.Hspec.Core.Example.ActionWith ())
+                         (Test.Hspec.Core.Tree.Item ())))) -}
+150ad05997db71d163cd8d5b4e09be09
+  main28 :: GHC.Base.Maybe [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Base.Just @ [[GHC.Types.Char]] Main.main29) -}
+4fa2438b7ef7e5627325f89fd063dae0
+  main29 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.main36
+                   Main.main30) -}
+05b3dfebedb6ecdda38dd47ae293f1fe
+  main3 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 Main.$wc
+                   Main.main182
+                   Main.main180
+                   Main.main178
+                   Main.main4
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+6c95181832dfac7a3a91b3099ea8e057
+  main30 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.main34
+                   Main.main31) -}
+5f72054a88a97af1916dad8ae0a943c4
+  main31 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.main32
+                   (GHC.Types.[] @ [GHC.Types.Char])) -}
+6493c81380a93bf33e23ce4f82a43cbb
+  main32 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main33) -}
+11ec767468df9c6c8b3d212228341886
+  main33 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Tyrosine"#) -}
+4de50ac126f5ede80ee447de96e484e6
+  main34 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main35) -}
+5eb23696f4846c97379845893e01f0f5
+  main35 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Cysteine"#) -}
+bc4df6202601d15a4be3cd6fbda80a6c
+  main36 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main37) -}
+fb5146589465201c832580f0c0b33a48
+  main37 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Tryptophan"#) -}
+e749d287482382d2d2543b228623a031
+  main38 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main39) -}
+92705be253a064756ead6678d4901b71
+  main39 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UGGUGUUAUUAAUGGUUU"#) -}
+8ec745143cf0953203ae9e0c68a5db26
+  main4 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main176
+                   Main.main174
+                   Main.main169
+                   Main.main5
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+18cade53c7322266d21eddfe1a9dc209
+  main40 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main41) -}
+0eb7ce8bdd5979375b557716bccc6d22
+  main41 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("Translation stops if STOP codon in middle of six-codon sequence"#) -}
+7f8ae1212a7be9fad5f380a0c09d8670
+  main42 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.HUnit.Base.@=?6
+                   Test.HUnit.Base.@?=2
+                   Main.main43) -}
+31af8a6bdb5a5e39fe7c248a56e1d0ed
+  main43 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Expectations.shouldBe6
+                   Test.Hspec.Expectations.shouldBe2
+                   Main.main44) -}
+94cf5163f6f23f263acf229abe726888
+  main44 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Main.main53
+                   Main.main45
+                   GHC.Stack.Types.EmptyCallStack) -}
+8e13325e10f216758eac89407144a4fe
+  main45 :: GHC.Stack.Types.SrcLoc
+  {- Strictness: m,
+     Unfolding: (GHC.Stack.Types.SrcLoc
+                   Main.main52
+                   Main.main51
+                   Main.main49
+                   Main.main48
+                   Main.main47
+                   Main.main48
+                   Main.main46) -}
+d1b916d6983004ee25e3cc6f78246b99
+  main46 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 55#) -}
+e5aefc2943ba5ef60975ea036fd7c2c0
+  main47 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 21#) -}
+6269594f839b7705de9e3dbc8f11d5f2
+  main48 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 18#) -}
+f8e493f4acb73d33a73db700ea74960b
+  main49 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main50) -}
+7edbde04a4ee3ebd364e507cc726926b
+  main5 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main172
+                   Main.main170
+                   Main.main169
+                   Main.main6
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+6cf0da4af6ea3a8bfab27f8f3641da2d
+  main50 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("test/Tests.hs"#) -}
+f8d752fc7cdebe6a612e38cbd25a8fbb
+  main51 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$trModule2) -}
+c120e3a9574908292c5fec3f67cfddd2
+  main52 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$trModule4) -}
+9453fd76a8f7d8c264c9f6641fb89f3b
+  main53 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main54) -}
+4511714203b212f28197f819361a3e29
+  main54 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("shouldBe"#) -}
+fa85f833bb40a820f7009274405be211
+  main55 :: GHC.Base.Maybe Test.Hspec.Core.Example.Location.Location
+  {- Unfolding: (Test.Hspec.Core.Tree.location11 Main.main56) -}
+ddd4a3733190578e09e4abdeee881d96
+  main56 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.location9
+                   Test.Hspec.Core.Tree.location1
+                   Main.main57) -}
+7b07b6951a64c6e949fe6d18e6c030ec
+  main57 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.specItem14
+                   Test.Hspec.Core.Tree.specItem11
+                   Main.main58) -}
+f8ae793292a7e6a7b8d12c9309c1065f
+  main58 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Spec.it6
+                   Test.Hspec.Core.Spec.it2
+                   Main.main59) -}
+31e6d8026e5cb80de8047ffd6dfe453f
+  main59 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Main.main63
+                   Main.main60
+                   GHC.Stack.Types.EmptyCallStack) -}
+033c78ba12cd2271062126b856fa3666
+  main6 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main167
+                   Main.main165
+                   Main.main157
+                   Main.main7
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+9a1e751528f4834b457e0dad4e3cc79b
+  main60 :: GHC.Stack.Types.SrcLoc
+  {- Strictness: m,
+     Unfolding: (GHC.Stack.Types.SrcLoc
+                   Main.main52
+                   Main.main51
+                   Main.main49
+                   Main.main62
+                   Main.main47
+                   Main.main62
+                   Main.main61) -}
+dca19b01f8a4a853cfd55c4b95b390a0
+  main61 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 45#) -}
+4be7b75c6d74caf122752a33c31faf2b
+  main62 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 16#) -}
+4a2a1ebc0bc5b9b23db268e04ce6ef15
+  main63 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main64) -}
+7b702f3c061b275fd9579cef5a1c356e
+  main64 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("it"#) -}
+cc5b00a8f3d8c3ffcd4f8b982b30ecb9
+  main65 :: GHC.Base.Maybe GHC.Base.String
+  {- Unfolding: (Test.Hspec.Core.Tree.specGroup19 Main.main66) -}
+9a242dbd694ca508ae9988ae058e4b93
+  main66 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.location9
+                   Test.Hspec.Core.Tree.specGroup15
+                   Main.main67) -}
+dd04fa6707760c386c9ecef856f3305e
+  main67 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.specGroup13
+                   Test.Hspec.Core.Tree.specItem9
+                   Main.main68) -}
+bfa50a06f2d3a969f568ad4746ad5f2c
+  main68 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.specItem7
+                   Test.Hspec.Core.Tree.specItem3
+                   Main.main58) -}
+48fd866cbf1d336cc128c3a51ead86af
+  main69 :: GHC.Base.Maybe [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Base.Just @ [[GHC.Types.Char]] Main.main70) -}
+b7a09906fda5a74038cbbe9b34150aef
+  main7 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main163
+                   Main.main161
+                   Main.main157
+                   Main.main8
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+697669b8841e7b5f2bf5bca8b163da23
+  main70 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.main36
+                   (GHC.Types.[] @ [GHC.Types.Char])) -}
+7ef9366e6710558a7126a0ec1e605bae
+  main71 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main72) -}
+468c18039f7eb618f12b14cd1c8e708d
+  main72 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UGGUAGUGG"#) -}
+a4cd985a988763982f81d83e1b836b18
+  main73 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main74) -}
+e85909254934976528f7788e50563d6d
+  main74 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("Translation stops if STOP codon in middle of three-codon sequence"#) -}
+7a09ea877a746abe0fe6b339d1a24cb8
+  main75 :: GHC.Base.Maybe [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Base.Just @ [[GHC.Types.Char]] Main.main76) -}
+a0cf2d1c573a27efe17d312770517fea
+  main76 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.main80
+                   Main.main77) -}
+9001da1464acd8472a80d1a4a7c8ed56
+  main77 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.main78
+                   (GHC.Types.[] @ [GHC.Types.Char])) -}
+4263df02bf600bedcd726d54af3823c7
+  main78 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main79) -}
+c34fc65a8228bf8148107b03b3b90bf6
+  main79 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Phenylalanine"#) -}
+55ae02764d820ec91f4d1be3c9ed31de
+  main8 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main155
+                   Main.main153
+                   Main.main137
+                   Main.main9
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+a15019daf244133ab9c7fec76cfa9bc0
+  main80 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main81) -}
+6933fddcdd3b9e7417485827c04da376
+  main81 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Methionine"#) -}
+52c2199160505e24f5da66e5065ed2ff
+  main82 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main83) -}
+68667e795995c2f0e3e3232cf0ba3024
+  main83 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("AUGUUUUAA"#) -}
+e47590816e85f625ffe21bbdb0452722
+  main84 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main85) -}
+fc15ac9d407c8aab21800ea886f64591
+  main85 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("Translation stops if STOP codon at end of three-codon sequence"#) -}
+f88a74c67ae9d723a9178088ece938a6
+  main86 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main87) -}
+95528e009910ef80be156668f584a53a
+  main87 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UGGUAG"#) -}
+e52a130f5adae1bc5bd863b3e20e7576
+  main88 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main89) -}
+84844c231efbe4b31043ff80ce5b02fa
+  main89 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("Translation stops if STOP codon at end of two-codon sequence"#) -}
+ecaf27322f4b121599b6a54d81bcd275
+  main9 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wc
+                   Main.main151
+                   Main.main149
+                   Main.main137
+                   Main.main10
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <((),
+                               [Test.Hspec.Core.Tree.SpecTree
+                                  ()])>_R) ; Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                   w) -}
+bdb3cd27c42a1b8cc2ce6e88cd63eab0
+  main90 :: GHC.Base.Maybe [GHC.Base.String]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ [GHC.Base.String]
+                   (GHC.Types.[] @ GHC.Base.String)) -}
+a4952b9241e5b065e970afe2c30c5069
+  main91 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main92) -}
+c51d117126a797e44f1ad56febcc6bf2
+  main92 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("UAGUGG"#) -}
+0f8ffc376c8506694ea9bb75865b3e16
+  main93 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main94) -}
+b303887cdf9ac26b79ff4ffe218ec7c1
+  main94 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("Translation stops if STOP codon at beginning of sequence"#) -}
+1b77068e5340f82fc116a871a69a59c0
+  main95 :: GHC.Base.Maybe [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Base.Just @ [[GHC.Types.Char]] Main.main96) -}
+04aa738f6b215f3b1cf42bb5ac56e2b8
+  main96 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.main80
+                   Main.main97) -}
+350fcb5c1a395c4c48d9bd3212e1f747
+  main97 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.main78
+                   Main.main70) -}
+6bea68e510b9e0a322e6d3795f4a2980
+  main98 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main99) -}
+ca75072c87c22d5d466ff33776d15712
+  main99 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("AUGUUUUGG"#) -}
+"SPEC/Main $fEqMaybe @ [String]" [orphan] forall (v :: GHC.Classes.Eq
+                                                         [GHC.Base.String])
+  GHC.Base.$fEqMaybe @ [GHC.Base.String] v = Main.$s$fEqMaybe
+"SPEC/Main $fEqMaybe_$c/= @ [String]" [orphan] forall ($dEq :: GHC.Classes.Eq
+                                                                 [GHC.Base.String])
+  GHC.Base.$fEqMaybe_$c/= @ [GHC.Base.String] $dEq
+  = Main.$s$fEqMaybe_$s$fEqMaybe_$c/=
+"SPEC/Main $fEqMaybe_$c== @ [String]" [orphan] forall ($dEq :: GHC.Classes.Eq
+                                                                 [GHC.Base.String])
+  GHC.Base.$fEqMaybe_$c== @ [GHC.Base.String] $dEq
+  = Main.$s$fEqMaybe_$c==
+"SPEC/Main $fShowMaybe @ [String]" [orphan] forall (v :: GHC.Show.Show
+                                                           [GHC.Base.String])
+  GHC.Show.$fShowMaybe @ [GHC.Base.String] v = Main.$s$fShowMaybe
+"SPEC/Main $fShowMaybe_$cshowList @ [String]" [orphan] forall ($dShow :: GHC.Show.Show
+                                                                           [GHC.Base.String])
+  GHC.Show.$fShowMaybe_$cshowList @ [GHC.Base.String] $dShow
+  = Main.$s$fShowMaybe_$cshowList
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

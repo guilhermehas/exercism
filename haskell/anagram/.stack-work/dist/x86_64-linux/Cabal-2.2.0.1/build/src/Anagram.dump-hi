@@ -1,0 +1,111 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-12 04:42:58.628090216 UTC
+
+interface anagram-1.4.0.8-9be11hOJmVdKnWxiXDlbFp:Anagram 8043
+  interface hash: 311077b619ab81f5c86badb4f7f142cd
+  ABI hash: c4ac459236e4ef6bd843088b129b02fa
+  export-list hash: 29386fdd3918b9f095aca13227163ce7
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Anagram.anagramsFor
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Char 3e89818e2b8ef1a2cc5393163484da72
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:Data.List 83dc843e47bfc0c5af51e19c6f3476d5
+import  -/  base-4.11.1.0:Data.OldList 1b35aa3c6805ff7c8887a35a866fe006
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Unicode 8234c40b59f035e845832a42e8725a00
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+12f1e015446cb759fb8cf1a5c5ec0e86
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Anagram.$trModule3
+                   Anagram.$trModule1) -}
+9de18890749a48d46370971bb5083006
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Anagram.$trModule2) -}
+ea22ed898c696e0416978542cb5392c3
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Anagram"#) -}
+24d6b81df1478afdfc0efc41f5dec1ef
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Anagram.$trModule4) -}
+47ba8de86d7bbad51376a1e3451937c0
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("anagram-1.4.0.8-9be11hOJmVdKnWxiXDlbFp"#) -}
+2b397ee8ea1663ad474725a93458c304
+  anagramsFor ::
+    GHC.Base.String -> [GHC.Base.String] -> [GHC.Base.String]
+  {- Arity: 2, Strictness: <L,1*U><S,1*U>,
+     Unfolding: (\ (xs :: GHC.Base.String) (eta :: [GHC.Base.String]) ->
+                 let {
+                   s :: [GHC.Types.Char]
+                   = GHC.Base.map
+                       @ GHC.Types.Char
+                       @ GHC.Types.Char
+                       GHC.Unicode.toLower
+                       xs
+                 } in
+                 let {
+                   lvl :: [GHC.Types.Char]
+                   = Data.OldList.sortBy
+                       @ GHC.Types.Char
+                       GHC.Classes.$fOrdChar_$ccompare
+                       s
+                 } in
+                 letrec {
+                   go :: [GHC.Base.String] -> [GHC.Base.String]
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [GHC.Base.String]) ->
+                     case ds of wild {
+                       [] -> GHC.Types.[] @ GHC.Base.String
+                       : y ys
+                       -> let {
+                            sx :: [GHC.Types.Char]
+                            = GHC.Base.map
+                                @ GHC.Types.Char
+                                @ GHC.Types.Char
+                                GHC.Unicode.toLower
+                                y
+                          } in
+                          case GHC.Classes.$fEqModule_$s$c== s sx of wild1 {
+                            GHC.Types.False
+                            -> case GHC.Base.eqString
+                                      lvl
+                                      (Data.OldList.sortBy
+                                         @ GHC.Types.Char
+                                         GHC.Classes.$fOrdChar_$ccompare
+                                         sx) of wild2 {
+                                 GHC.Types.False -> go ys
+                                 GHC.Types.True -> GHC.Types.: @ GHC.Base.String y (go ys) }
+                            GHC.Types.True -> go ys } }
+                 } in
+                 go eta) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

@@ -1,0 +1,419 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-13 19:31:25.366373616 UTC
+
+interface all-your-base-2.3.0.8:Base 8043
+  interface hash: 8a8416f655b81441fc89e8e25e319704
+  ABI hash: 1874728bb849c628ba1efcf4570f4170
+  export-list hash: 87c07ca9d6cd770bf36f45823ca43fc6
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Base.rebase
+  Base.Error{Base.InvalidDigit Base.InvalidInputBase Base.InvalidOutputBase}
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Either 39d922b371c4c52d426e9ee66de8371a
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:Data.List 83dc843e47bfc0c5af51e19c6f3476d5
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+e9a433657ec07ea43d6dec37245e643b
+  $fEqError :: GHC.Classes.Eq a => GHC.Classes.Eq (Base.Error a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: GHC.Classes.Eq a).
+                  @ (Base.Error a)
+                  (Base.$fEqError_$c== @ a v)
+                  (Base.$fEqError_$c/= @ a v) -}
+e9a433657ec07ea43d6dec37245e643b
+  $fEqError_$c/= ::
+    GHC.Classes.Eq a => Base.Error a -> Base.Error a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (x :: Base.Error a)
+                   (y :: Base.Error a) ->
+                 case x of wild {
+                   Base.InvalidInputBase
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Base.InvalidInputBase -> GHC.Types.False }
+                   Base.InvalidOutputBase
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Base.InvalidOutputBase -> GHC.Types.False }
+                   Base.InvalidDigit a1
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Base.InvalidDigit b1
+                        -> case GHC.Classes.== @ a $dEq a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False } } }) -}
+e9a433657ec07ea43d6dec37245e643b
+  $fEqError_$c== ::
+    GHC.Classes.Eq a => Base.Error a -> Base.Error a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (ds :: Base.Error a)
+                   (ds1 :: Base.Error a) ->
+                 case ds of wild {
+                   Base.InvalidInputBase
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Base.InvalidInputBase -> GHC.Types.True }
+                   Base.InvalidOutputBase
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Base.InvalidOutputBase -> GHC.Types.True }
+                   Base.InvalidDigit a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Base.InvalidDigit b1 -> GHC.Classes.== @ a $dEq a1 b1 } }) -}
+e9a433657ec07ea43d6dec37245e643b
+  $fShowError :: GHC.Show.Show a => GHC.Show.Show (Base.Error a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(C(U))),A,A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: GHC.Show.Show a).
+                  @ (Base.Error a)
+                  (Base.$fShowError_$cshowsPrec @ a v)
+                  (Base.$fShowError_$cshow @ a v)
+                  (Base.$fShowError_$cshowList @ a v) -}
+02259c014e7e42789cfd50944198d51a
+  $fShowError1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+8f68131143d7b2e56cc63b0f3c2e42cf
+  $fShowError10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("InvalidInputBase"#) -}
+c7c09867aa23411acdb9de56fef492d4
+  $fShowError2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Base.$fShowError3) -}
+e8743b18cf64cec6217ce81550b72962
+  $fShowError3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("InvalidDigit "#) -}
+7ab07013bd43c0f8eb516b322dc8eef4
+  $fShowError4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11#) -}
+f9baa107957ebabb86a7b55662ac65c7
+  $fShowError5 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Base.$fShowError6) -}
+f59c3169487ab9ddc2b96bd26bd46620
+  $fShowError6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Base.$fShowError7) -}
+f6a95d63cba1d94a8971198a3479755e
+  $fShowError7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("InvalidOutputBase"#) -}
+a42e1b89b2b884220acc31e5e2e4982b
+  $fShowError8 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Base.$fShowError9) -}
+7e3bb17c2e1d44addb8d47d3d36aa074
+  $fShowError9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Base.$fShowError10) -}
+e9a433657ec07ea43d6dec37245e643b
+  $fShowError_$cshow ::
+    GHC.Show.Show a => Base.Error a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U(1*C1(C1(C1(U))),A,A)><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (x :: Base.Error a) ->
+                 case x of wild {
+                   Base.InvalidInputBase -> Base.$fShowError9
+                   Base.InvalidOutputBase -> Base.$fShowError6
+                   Base.InvalidDigit b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Base.$fShowError2
+                        (GHC.Show.showsPrec
+                           @ a
+                           $dShow
+                           Base.$fShowError4
+                           b1
+                           (GHC.Types.[] @ GHC.Types.Char)) }) -}
+e9a433657ec07ea43d6dec37245e643b
+  $fShowError_$cshowList ::
+    GHC.Show.Show a => [Base.Error a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(C(U))),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (ls :: [Base.Error a])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Base.Error a)
+                   (Base.$fShowError_$cshowsPrec @ a $dShow Base.$fShowError1)
+                   ls
+                   s) -}
+e9a433657ec07ea43d6dec37245e643b
+  $fShowError_$cshowsPrec ::
+    GHC.Show.Show a => GHC.Types.Int -> Base.Error a -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(U)><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (ds :: GHC.Types.Int)
+                   (ds1 :: Base.Error a) ->
+                 case ds1 of wild {
+                   Base.InvalidInputBase -> Base.$fShowError8
+                   Base.InvalidOutputBase -> Base.$fShowError5
+                   Base.InvalidDigit b1
+                   -> case ds of wild1 { GHC.Types.I# x ->
+                      let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                        = GHC.Show.showsPrec @ a $dShow Base.$fShowError4 b1
+                      } in
+                      case GHC.Prim.>=# x 11# of lwild {
+                        DEFAULT
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Base.++ @ GHC.Types.Char Base.$fShowError2 (g x1)
+                        1#
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Base.$fShowError2
+                                (g (GHC.Types.:
+                                      @ GHC.Types.Char
+                                      GHC.Show.$fShow(,)2
+                                      x1))) } } }) -}
+dff43cf45782cdb46935764cce8e2fa1
+  $tc'InvalidDigit :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3417941633483550516##
+                   8197845096114477853##
+                   Base.$trModule
+                   Base.$tc'InvalidDigit2
+                   1#
+                   Base.$tc'InvalidDigit1) -}
+4d4d863c0b9e9962e165d51775cd0e50
+  $tc'InvalidDigit1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+8da177fd8688ca13494897cc9546fe14
+  $tc'InvalidDigit2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Base.$tc'InvalidDigit3) -}
+5c91506bda9fb3cc8e31221568a0e7ef
+  $tc'InvalidDigit3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'InvalidDigit"#) -}
+d16a7a8991176f397775a8e978fd50bf
+  $tc'InvalidInputBase :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13487053025651611847##
+                   4631075999959978734##
+                   Base.$trModule
+                   Base.$tc'InvalidInputBase2
+                   1#
+                   Base.$tc'InvalidInputBase1) -}
+a62002f1248416a558a7c0386f65b2e1
+  $tc'InvalidInputBase1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+8358b9bace818c546169768512273e77
+  $tc'InvalidInputBase2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Base.$tc'InvalidInputBase3) -}
+7b044009a45157fad3b20adac3c02774
+  $tc'InvalidInputBase3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'InvalidInputBase"#) -}
+19de56fd0a43729fd6e9d47038b2deaf
+  $tc'InvalidOutputBase :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9304856233904840565##
+                   10991412619245087737##
+                   Base.$trModule
+                   Base.$tc'InvalidOutputBase1
+                   1#
+                   Base.$tc'InvalidInputBase1) -}
+07bbdd149cf2a23e129b5a7db4abf304
+  $tc'InvalidOutputBase1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Base.$tc'InvalidOutputBase2) -}
+e6eb9643440a4f03515c4f4e43ad446e
+  $tc'InvalidOutputBase2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'InvalidOutputBase"#) -}
+c77a217a5aaf128484d04306a95bb5d9
+  $tcError :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8712107033579262531##
+                   13832922401814338330##
+                   Base.$trModule
+                   Base.$tcError1
+                   0#
+                   GHC.Types.krep$*Arr*) -}
+33c987507708a3ac5568bfa051634082
+  $tcError1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Base.$tcError2) -}
+9064e293841a96f74fad310b501d2506
+  $tcError2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Error"#) -}
+da66686083165efcd146d2df5b67be56
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Base.$trModule3 Base.$trModule1) -}
+95b76b79aab36725aa75300bbae78e6a
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Base.$trModule2) -}
+58e52a6c3ffcf27f2e253de8993c7f20
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Base"#) -}
+6b0b79fbc0e66ff4bca4f2e55370acec
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Base.$trModule4) -}
+f69396593d4e8b83940678d3a86a4f38
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("all-your-base-2.3.0.8-Li3vOXdDQRb1jFOpuQCE0n"#) -}
+e9a433657ec07ea43d6dec37245e643b
+  data Error a
+    = InvalidInputBase | InvalidOutputBase | InvalidDigit a
+76cbcfa936755b73baaeab08f454a5b9
+  rebase ::
+    GHC.Real.Integral a =>
+    a -> a -> [a] -> Data.Either.Either (Base.Error a) [a]
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(S(LS(LLLC(C(S))LLLL)L)LLLLLLLL),U(U(U(C(C1(U)),A,C(C1(U)),A,A,A,C(U)),U(U(C(C1(U)),A),A,C(C1(U)),C(C1(U)),A,C(C1(U)),A,A),A),A,A,A,C(C1(U)),C(C1(U)),A,A,A)><L,U><L,U><L,U>,
+     Unfolding: (\ @ a
+                   ($dIntegral :: GHC.Real.Integral a)
+                   (eta :: a)
+                   (eta1 :: a)
+                   (eta2 :: [a]) ->
+                 let {
+                   $dReal :: GHC.Real.Real a = GHC.Real.$p1Integral @ a $dIntegral
+                 } in
+                 let {
+                   $dNum :: GHC.Num.Num a = GHC.Real.$p1Real @ a $dReal
+                 } in
+                 let {
+                   $dOrd :: GHC.Classes.Ord a = GHC.Real.$p2Real @ a $dReal
+                 } in
+                 case GHC.Classes.<=
+                        @ a
+                        $dOrd
+                        eta
+                        (GHC.Num.fromInteger @ a $dNum Base.rebase4) of wild {
+                   GHC.Types.False
+                   -> case GHC.Classes.<=
+                             @ a
+                             $dOrd
+                             eta1
+                             (GHC.Num.fromInteger @ a $dNum Base.rebase4) of wild1 {
+                        GHC.Types.False
+                        -> let {
+                             lvl :: a = GHC.Num.fromInteger @ a $dNum Base.rebase3
+                           } in
+                           let {
+                             $j :: Data.Either.Either (Base.Error a) [a] <join 0>
+                             = Data.Either.Right
+                                 @ (Base.Error a)
+                                 @ [a]
+                                 (GHC.List.reverse1
+                                    @ a
+                                    (Base.toVet'
+                                       @ a
+                                       $dIntegral
+                                       eta1
+                                       (Base.toNum'
+                                          @ a
+                                          $dIntegral
+                                          eta
+                                          (GHC.Num.fromInteger @ a $dNum Base.rebase4)
+                                          (GHC.List.reverse1 @ a eta2 (GHC.Types.[] @ a))))
+                                    (GHC.Types.[] @ a))
+                           } in
+                           letrec {
+                             go :: [a] -> Data.Either.Either (Base.Error a) [a]
+                               <join 1> {- Arity: 1, Strictness: <S,1*U> -}
+                             = \ (ds :: [a]) ->
+                               case ds of wild2 {
+                                 [] -> $j
+                                 : y ys
+                                 -> case GHC.Classes.< @ a $dOrd y lvl of wild3 {
+                                      GHC.Types.False
+                                      -> case GHC.Classes.>= @ a $dOrd y eta of wild4 {
+                                           GHC.Types.False -> go ys
+                                           GHC.Types.True
+                                           -> Data.Either.Left
+                                                @ (Base.Error a)
+                                                @ [a]
+                                                (Base.InvalidDigit @ a y) }
+                                      GHC.Types.True
+                                      -> Data.Either.Left
+                                           @ (Base.Error a)
+                                           @ [a]
+                                           (Base.InvalidDigit @ a y) } }
+                           } in
+                           go eta2
+                        GHC.Types.True -> Base.rebase2 @ a }
+                   GHC.Types.True -> Base.rebase1 @ a }) -}
+1ea44b067a4d94f286b5c10ac12c3ed0
+  rebase1 :: Data.Either.Either (Base.Error a) [a]
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (\ @ a ->
+                 Data.Either.Left
+                   @ (Base.Error a)
+                   @ [a]
+                   (Base.InvalidInputBase @ a)) -}
+9c458b39d66b84dd3e0ffc93179346df
+  rebase2 :: Data.Either.Either (Base.Error a) [a]
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (\ @ a ->
+                 Data.Either.Left
+                   @ (Base.Error a)
+                   @ [a]
+                   (Base.InvalidOutputBase @ a)) -}
+27d3b6317d4cfe9fed285869a1235e96
+  rebase3 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+df808ef499addfeb5fc8d218e896297a
+  rebase4 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+309f49f730c0e01c67c2991d584a4f7a
+  toNum' :: GHC.Real.Integral a => a -> a -> [a] -> a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(S(SLL)LLLLLLLL),U(U(U(C(C1(U)),A,C(C1(U)),A,A,A,C(U)),A,A),A,A,A,A,A,A,A,A)><L,U><L,U><S,1*U> -}
+dbaf793900fcd79790c6b86eb9e076fd
+  toVet' :: GHC.Real.Integral a => a -> a -> [a]
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(S(LS(S(C(C(S))L)LLLLLLL)L)LLLLLLLL),U(U(U(A,A,A,A,A,A,C(U)),U(U(C(C1(U)),A),A,A,A,A,A,A,A),A),A,A,A,C(C1(U)),C(C1(U)),A,A,A)><L,U><L,U> -}
+instance [safe] GHC.Classes.Eq [Base.Error] = Base.$fEqError
+instance [safe] GHC.Show.Show [Base.Error] = Base.$fShowError
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

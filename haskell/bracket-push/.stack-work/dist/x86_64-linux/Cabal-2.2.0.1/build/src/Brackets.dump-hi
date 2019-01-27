@@ -1,0 +1,241 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-20 22:56:34.674823686 UTC
+
+interface bracket-push-1.5.0.7-GpKLYaCLKD2FA1PGFP6gyr:Brackets 8043
+  interface hash: e6b1db2284519554db32e3ba697b82a2
+  ABI hash: 0987bdb32e97992f98893bdb3a5c2f8f
+  export-list hash: 8f4ea7f50c3c5cda8321a3aebb7012d4
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Brackets.arePaired
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:Data.List 83dc843e47bfc0c5af51e19c6f3476d5
+import  -/  base-4.11.1.0:Data.Maybe 409c3da2b142470b68be39ce1d97a9f7
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+0f5926f100cabf0fda105cf6e66f3c9a
+  $fShowBracket :: GHC.Show.Show Brackets.Bracket
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Brackets.Bracket
+                  Brackets.$fShowBracket_$cshowsPrec
+                  Brackets.$fShowBracket_$cshow
+                  Brackets.$fShowBracket_$cshowList -}
+0f5926f100cabf0fda105cf6e66f3c9a
+  $fShowBracket1 :: Brackets.Bracket -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (w :: Brackets.Bracket) (w1 :: GHC.Base.String) ->
+                 Brackets.$w$cshowsPrec 0# w w1) -}
+1d036bc1b2b1400157ab4edbd3fb5475
+  $fShowBracket2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("End "#) -}
+0fba3538d7c672b1e6e61f0d8520bac0
+  $fShowBracket3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Start "#) -}
+0f5926f100cabf0fda105cf6e66f3c9a
+  $fShowBracket_$cshow :: Brackets.Bracket -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: Brackets.Bracket) ->
+                 case x of wild {
+                   Brackets.Start b1
+                   -> GHC.CString.unpackAppendCString#
+                        Brackets.$fShowBracket3
+                        (case b1 of ww { GHC.Types.C# ww1 ->
+                         GHC.Show.$w$cshowsPrec3 ww1 (GHC.Types.[] @ GHC.Types.Char) })
+                   Brackets.End b1
+                   -> GHC.CString.unpackAppendCString#
+                        Brackets.$fShowBracket2
+                        (case b1 of ww { GHC.Types.C# ww1 ->
+                         GHC.Show.$w$cshowsPrec3
+                           ww1
+                           (GHC.Types.[] @ GHC.Types.Char) }) }) -}
+0f5926f100cabf0fda105cf6e66f3c9a
+  $fShowBracket_$cshowList :: [Brackets.Bracket] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Brackets.Bracket]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ Brackets.Bracket
+                   Brackets.$fShowBracket1
+                   ls
+                   s) -}
+0f5926f100cabf0fda105cf6e66f3c9a
+  $fShowBracket_$cshowsPrec ::
+    GHC.Types.Int -> Brackets.Bracket -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U><L,U>, Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Brackets.Bracket)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Brackets.$w$cshowsPrec ww1 w1 w2 }) -}
+6c583236ab18b4e1aa9f62d8a392a32f
+  $tc'End :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4557750048597618252##
+                   4396498707247247965##
+                   Brackets.$trModule
+                   Brackets.$tc'End2
+                   0#
+                   Brackets.$tc'End1) -}
+a23404956b1e83295277c25b6c4f2ff4
+  $tc'End1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+d55ea58fb8c9ca1253f78d6ad7dd4302
+  $tc'End2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Brackets.$tc'End3) -}
+85246cce612240bda168ccb094f336e7
+  $tc'End3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'End"#) -}
+55d9598523a7c27fa4ba29d944e63964
+  $tc'Start :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5279753972558007050##
+                   14177235157900743074##
+                   Brackets.$trModule
+                   Brackets.$tc'Start1
+                   0#
+                   Brackets.$tc'End1) -}
+43df5f34750d6d0f15a3bebea0eaf032
+  $tc'Start1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Brackets.$tc'Start2) -}
+f691bd2a68f0b2387a2f214f1703393f
+  $tc'Start2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Start"#) -}
+82aee8b0a6f8c33e0c776eefefaaa581
+  $tcBracket :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15363622512540827314##
+                   13445470056499630460##
+                   Brackets.$trModule
+                   Brackets.$tcBracket1
+                   0#
+                   GHC.Types.krep$*) -}
+a52927b12c352d7702779b5597c82bc5
+  $tcBracket1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Brackets.$tcBracket2) -}
+ca243402ca8e068af735daecd3afa36d
+  $tcBracket2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Bracket"#) -}
+c6761d9932693ebb090686ac865130b8
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Brackets.$trModule3
+                   Brackets.$trModule1) -}
+831a87f1cfd3867ca291a7b560ad56c4
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Brackets.$trModule2) -}
+8a6d66ca0b4dcc2e6b8fea4f41b4247e
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Brackets"#) -}
+fe51d5fb2a2e9a511b4b1c104cc0ccb7
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Brackets.$trModule4) -}
+58dc5b85a07db3531fe1885ebabe1cef
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("bracket-push-1.5.0.7-GpKLYaCLKD2FA1PGFP6gyr"#) -}
+0f5926f100cabf0fda105cf6e66f3c9a
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> Brackets.Bracket -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Brackets.Bracket)
+                   (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   Brackets.Start b1
+                   -> case GHC.Prim.>=# ww 11# of lwild {
+                        DEFAULT
+                        -> GHC.CString.unpackAppendCString#
+                             Brackets.$fShowBracket3
+                             (case b1 of ww1 { GHC.Types.C# ww2 ->
+                              GHC.Show.$w$cshowsPrec3 ww2 w1 })
+                        1#
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.CString.unpackAppendCString#
+                                Brackets.$fShowBracket3
+                                (case b1 of ww1 { GHC.Types.C# ww2 ->
+                                 GHC.Show.$w$cshowsPrec3
+                                   ww2
+                                   (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1) })) }
+                   Brackets.End b1
+                   -> case GHC.Prim.>=# ww 11# of lwild {
+                        DEFAULT
+                        -> GHC.CString.unpackAppendCString#
+                             Brackets.$fShowBracket2
+                             (case b1 of ww1 { GHC.Types.C# ww2 ->
+                              GHC.Show.$w$cshowsPrec3 ww2 w1 })
+                        1#
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.CString.unpackAppendCString#
+                                Brackets.$fShowBracket2
+                                (case b1 of ww1 { GHC.Types.C# ww2 ->
+                                 GHC.Show.$w$cshowsPrec3
+                                   ww2
+                                   (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1) })) } }) -}
+0f5926f100cabf0fda105cf6e66f3c9a
+  data Bracket = Start GHC.Types.Char | End GHC.Types.Char
+fdc4739fb8716c908137dad7f669472c
+  arePaired :: GHC.Base.String -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: [GHC.Types.Char]) ->
+                 case Brackets.arePaired_go x Brackets.arePaired1 of wild {
+                   GHC.Base.Nothing -> GHC.Types.False
+                   GHC.Base.Just ds
+                   -> case ds of wild1 {
+                        [] -> GHC.Types.True : ipv ipv1 -> GHC.Types.False } }) -}
+5ac59b46209d3ddfb549eb7a16ba2038
+  arePaired1 :: GHC.Base.Maybe [GHC.Types.Char]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ [GHC.Types.Char]
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+c4381e82a262d72fb6f7c4267e2fad74
+  arePaired_go ::
+    [GHC.Types.Char]
+    -> GHC.Base.Maybe GHC.Base.String -> GHC.Base.Maybe GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+instance [safe] GHC.Show.Show [Brackets.Bracket]
+  = Brackets.$fShowBracket
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

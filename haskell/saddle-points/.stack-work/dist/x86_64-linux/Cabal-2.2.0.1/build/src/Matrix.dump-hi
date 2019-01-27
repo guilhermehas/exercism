@@ -1,0 +1,294 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-16 01:36:02.945277086 UTC
+
+interface saddle-points-1.3.0.7-BL0Jj6sAXnFFXJRrDsRcvp:Matrix 8043
+  interface hash: 825b2a183e9ffc0b446c141c85ad5e2d
+  ABI hash: 887ae9b4cf47aab564c8c917294f5b58
+  export-list hash: 1c3172a78dbe7c56c8a97102cb8f739a
+  orphan hash: 58560404763ee38cabd441d552d04f3d
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Matrix.saddlePoints
+module dependencies:
+package dependencies: array-0.5.2.0* base-4.11.1.0*
+                      containers-0.5.11.0 deepseq-1.4.3.0 ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Complex base-4.11.1.0:Data.Functor.Compose
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity
+                         base-4.11.1.0:Data.Functor.Product base-4.11.1.0:Data.Functor.Sum
+                         base-4.11.1.0:Data.Monoid base-4.11.1.0:Data.Semigroup
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:Data.Void base-4.11.1.0:GHC.Exts
+                         base-4.11.1.0:GHC.Generics base-4.11.1.0:GHC.IO.Exception
+                         containers-0.5.11.0:Data.Set.Internal
+import  -/  array-0.5.2.0:Data.Array bfee801ad06ff76eb68c9cfdd261cdd6
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:Data.Maybe 409c3da2b142470b68be39ce1d97a9f7
+import  -/  base-4.11.1.0:GHC.Arr d23cf0c05ccc71fede1c7a517b85126a
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  containers-0.5.11.0:Data.Set 7d3c64a641be4cacbcd8119445bab919
+import  -/  containers-0.5.11.0:Data.Set.Internal 7c23d64c612d25581166e736f62b7377
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+d024d0d8ff7f8e87e129423fb414861a
+  $s$fEq(,) :: GHC.Classes.Eq (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Int, GHC.Types.Int)
+                  (GHC.Classes.$fEq(,)_$c==
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fEqInt
+                     GHC.Classes.$fEqInt)
+                  Matrix.$s$fEq(,)_$s$fEq(,)_$c/= -}
+eb8c9c8060e9c2f87085e361a6814d7c
+  $s$fEq(,)_$s$fEq(,)_$c/= ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> (GHC.Types.Int, GHC.Types.Int) -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U(U))><S(S(S)L),1*U(1*U(U),1*U(U))>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: (GHC.Types.Int, GHC.Types.Int))
+                   (y :: (GHC.Types.Int, GHC.Types.Int)) ->
+                 case x of wild { (,) a1 a2 ->
+                 case y of wild1 { (,) b1 b2 ->
+                 case GHC.Classes.eqInt a1 b1 of wild2 {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case GHC.Classes.eqInt a2 b2 of wild3 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True -> GHC.Types.False } } } }) -}
+b67582cd058bc78f7c662095b5d3d43c
+  $s$fOrd(,) :: GHC.Classes.Ord (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Int, GHC.Types.Int)
+                  Matrix.$s$fEq(,)
+                  (GHC.Classes.$fOrd(,)_$ccompare
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$c<
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$c<=
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (\ (a1 :: (GHC.Types.Int, GHC.Types.Int))
+                     (b1 :: (GHC.Types.Int, GHC.Types.Int)) ->
+                   GHC.Classes.$fOrd(,)_$c<
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt
+                     b1
+                     a1)
+                  (GHC.Classes.$fOrd(,)_$c>=
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$cmax
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$cmin
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt) -}
+4b2b6e166a80de12f2db3af9e67fb2d3
+  $sfromList ::
+    [(GHC.Types.Int, GHC.Types.Int)]
+    -> Data.Set.Internal.Set (GHC.Types.Int, GHC.Types.Int)
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: [(GHC.Types.Int, GHC.Types.Int)]) ->
+                 case ds of wild {
+                   [] -> Data.Set.Internal.Tip @ (GHC.Types.Int, GHC.Types.Int)
+                   : x ds1
+                   -> case ds1 of wild1 {
+                        []
+                        -> case x of dt { (,) ipv ipv1 ->
+                           Data.Set.Internal.Bin
+                             @ (GHC.Types.Int, GHC.Types.Int)
+                             1#
+                             dt
+                             (Data.Set.Internal.Tip @ (GHC.Types.Int, GHC.Types.Int))
+                             (Data.Set.Internal.Tip @ (GHC.Types.Int, GHC.Types.Int)) }
+                        : ipv ipv1
+                        -> case x of ww { (,) ww1 ww2 ->
+                           case ipv of ww3 { (,) ww4 ww5 ->
+                           case ww1 of wild2 { GHC.Types.I# x# ->
+                           case ww4 of wild3 { GHC.Types.I# y# ->
+                           case GHC.Prim.<# x# y# of lwild {
+                             DEFAULT
+                             -> case GHC.Prim.==# x# y# of lwild1 {
+                                  DEFAULT
+                                  -> Matrix.$sfromList_go4
+                                       (Data.Set.Internal.Bin
+                                          @ (GHC.Types.Int, GHC.Types.Int)
+                                          1#
+                                          ww
+                                          (Data.Set.Internal.Tip @ (GHC.Types.Int, GHC.Types.Int))
+                                          (Data.Set.Internal.Tip @ (GHC.Types.Int, GHC.Types.Int)))
+                                       wild1
+                                  1#
+                                  -> case ww2 of wild4 { GHC.Types.I# x1 ->
+                                     case ww5 of wild5 { GHC.Types.I# y ->
+                                     case GHC.Prim.<# x1 y of lwild2 {
+                                       DEFAULT
+                                       -> Matrix.$sfromList_go4
+                                            (Data.Set.Internal.Bin
+                                               @ (GHC.Types.Int, GHC.Types.Int)
+                                               1#
+                                               ww
+                                               (Data.Set.Internal.Tip
+                                                  @ (GHC.Types.Int, GHC.Types.Int))
+                                               (Data.Set.Internal.Tip
+                                                  @ (GHC.Types.Int, GHC.Types.Int)))
+                                            wild1
+                                       1#
+                                       -> Matrix.$wgo3
+                                            1#
+                                            (Data.Set.Internal.Bin
+                                               @ (GHC.Types.Int, GHC.Types.Int)
+                                               1#
+                                               ww
+                                               (Data.Set.Internal.Tip
+                                                  @ (GHC.Types.Int, GHC.Types.Int))
+                                               (Data.Set.Internal.Tip
+                                                  @ (GHC.Types.Int, GHC.Types.Int)))
+                                            wild1 } } } }
+                             1#
+                             -> Matrix.$wgo3
+                                  1#
+                                  (Data.Set.Internal.Bin
+                                     @ (GHC.Types.Int, GHC.Types.Int)
+                                     1#
+                                     ww
+                                     (Data.Set.Internal.Tip @ (GHC.Types.Int, GHC.Types.Int))
+                                     (Data.Set.Internal.Tip @ (GHC.Types.Int, GHC.Types.Int)))
+                                  wild1 } } } } } } }) -}
+6f7deda958ebeedd819b75be9e3a4b8d
+  $sfromList_go4 ::
+    Data.Set.Internal.Set (GHC.Types.Int, GHC.Types.Int)
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+    -> Data.Set.Internal.Set (GHC.Types.Int, GHC.Types.Int)
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+b8eb7b94e204e0185748693e8ffebf1a
+  $sintersection ::
+    Data.Set.Internal.Set (GHC.Types.Int, GHC.Types.Int)
+    -> Data.Set.Internal.Set (GHC.Types.Int, GHC.Types.Int)
+    -> Data.Set.Internal.Set (GHC.Types.Int, GHC.Types.Int)
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [~] -}
+22561d85d48d08b96bf2065c3cbdc921
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Matrix.$trModule3
+                   Matrix.$trModule1) -}
+b440928fedd7d0a795099d59f3006362
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Matrix.$trModule2) -}
+c1f791c948dcd30d96f2cf06740622af
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Matrix"#) -}
+6a4eb6ba563e9172446073d539702b67
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Matrix.$trModule4) -}
+29413abae2a1734fa505dd3d31d341dc
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("saddle-points-1.3.0.7-BL0Jj6sAXnFFXJRrDsRcvp"#) -}
+136c0a2d98b07149777daca4ef660c40
+  $w$sgo3 ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Data.Set.Internal.Set (GHC.Types.Int, GHC.Types.Int)
+    -> Data.Set.Internal.Set (GHC.Types.Int, GHC.Types.Int)
+  {- Arity: 4, Strictness: <L,U><L,1*U(U)><L,U(U)><S,1*U>,
+     Inline: [0] -}
+7c1b2999b6d12207eec3a98fa158d7e7
+  $wgo3 ::
+    GHC.Prim.Int#
+    -> Data.Set.Internal.Set (GHC.Types.Int, GHC.Types.Int)
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+    -> Data.Set.Internal.Set (GHC.Types.Int, GHC.Types.Int)
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
+a99cfa55905a3400a7feb2d913341d7f
+  $wsaddlePoints ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Prim.Array# GHC.Types.Int
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 5, Strictness: <S,U><L,U(U)><S,U><L,U(U)><L,U>,
+     Inline: [0] -}
+ef9435f0c41d2f33982439ae4cd0ec5f
+  saddlePoints ::
+    GHC.Arr.Array (GHC.Types.Int, GHC.Types.Int) GHC.Types.Int
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 1,
+     Strictness: <S(S(S(S)L)S(S(S)L)LS),1*U(U(1*U(U),U(U)),U(1*U(U),U(U)),A,U)>,
+     Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Arr.Array
+                           (GHC.Types.Int, GHC.Types.Int) GHC.Types.Int) ->
+                 case w of ww { GHC.Arr.Array ww1 ww2 ww3 ww4 ->
+                 case ww1 of ww5 { (,) ww6 ww7 ->
+                 case ww6 of ww8 { GHC.Types.I# ww9 ->
+                 case ww2 of ww10 { (,) ww11 ww12 ->
+                 case ww11 of ww13 { GHC.Types.I# ww14 ->
+                 Matrix.$wsaddlePoints ww9 ww7 ww14 ww12 ww4 } } } } }) -}
+"SPEC/Matrix $fEq(,) @ Int @ Int" [orphan] forall (v1 :: GHC.Classes.Eq
+                                                           GHC.Types.Int)
+                                                  (v :: GHC.Classes.Eq GHC.Types.Int)
+  GHC.Classes.$fEq(,) @ GHC.Types.Int @ GHC.Types.Int v v1
+  = Matrix.$s$fEq(,)
+"SPEC/Matrix $fEq(,)_$c/= @ Int @ Int" [orphan] forall ($dEq1 :: GHC.Classes.Eq
+                                                                   GHC.Types.Int)
+                                                       ($dEq :: GHC.Classes.Eq GHC.Types.Int)
+  GHC.Classes.$fEq(,)_$c/= @ GHC.Types.Int @ GHC.Types.Int $dEq $dEq1
+  = Matrix.$s$fEq(,)_$s$fEq(,)_$c/=
+"SPEC/Matrix $fOrd(,) @ Int @ Int" [orphan] forall (v1 :: GHC.Classes.Ord
+                                                            GHC.Types.Int)
+                                                   (v :: GHC.Classes.Ord GHC.Types.Int)
+  GHC.Classes.$fOrd(,) @ GHC.Types.Int @ GHC.Types.Int v v1
+  = Matrix.$s$fOrd(,)
+"SPEC/Matrix fromList @ (Int, Int)" [orphan] forall ($dOrd :: GHC.Classes.Ord
+                                                                (GHC.Types.Int, GHC.Types.Int))
+  Data.Set.Internal.fromList @ (GHC.Types.Int, GHC.Types.Int) $dOrd
+  = Matrix.$sfromList
+"SPEC/Matrix intersection @ (Int, Int)" [orphan] forall ($dOrd :: GHC.Classes.Ord
+                                                                    (GHC.Types.Int, GHC.Types.Int))
+  Data.Set.Internal.intersection @ (GHC.Types.Int, GHC.Types.Int)
+                                 $dOrd
+  = Matrix.$sintersection
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

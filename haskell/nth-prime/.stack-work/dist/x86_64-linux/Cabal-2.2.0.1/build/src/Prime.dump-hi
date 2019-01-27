@@ -1,0 +1,147 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-24 03:30:42.465400656 UTC
+
+interface nth-prime-2.1.0.6-5fI1UF9wGw1FJcbzm3IBNk:Prime 8043
+  interface hash: 498e427d0d7ca28a61283bf9412ce12a
+  ABI hash: 660b64a04535f2e3a04e2a7cb91e11df
+  export-list hash: 40e09bc9c76d10f99ff8b853eebf9e2e
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Prime.nth
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+import  -/  integer-gmp-1.0.2.0:GHC.Integer.Type f3d5169c3d3830854b19f6565b265403
+854df8abc2e861f9bdff6cb74ddd0200
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Prime.$trModule3 Prime.$trModule1) -}
+e1b0e487be39524bc0a84804dadb24c5
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Prime.$trModule2) -}
+f77377e539c2b6ad115a0238c87d89b7
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Prime"#) -}
+15f4b0474eb4b73f0b1a16e43da592e3
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Prime.$trModule4) -}
+5fefb3284aba32e3f7b8c45ca300cc4e
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("nth-prime-2.1.0.6-5fI1UF9wGw1FJcbzm3IBNk"#) -}
+01cb2c6138df52ad7147c44a553654c9
+  $wnth :: GHC.Prim.Int# -> GHC.Base.Maybe GHC.Integer.Type.Integer
+  {- Arity: 1, Strictness: <S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) ->
+                 case GHC.Prim.<=# ww 0# of lwild {
+                   DEFAULT
+                   -> GHC.Base.Just
+                        @ GHC.Integer.Type.Integer
+                        (case GHC.List.$w!!
+                                @ [GHC.Integer.Type.Integer]
+                                Prime.nth1
+                                ww of wild {
+                           [] -> GHC.List.badHead @ GHC.Integer.Type.Integer : x ds1 -> x })
+                   1# -> GHC.Base.Nothing @ GHC.Integer.Type.Integer }) -}
+3c804fcc2d22b166dd8cb0c1d532c9ef
+  nth :: GHC.Types.Int -> GHC.Base.Maybe GHC.Integer.Type.Integer
+  {- Arity: 1, Strictness: <S(S),1*U(U)>, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Types.Int) ->
+                 case w of ww { GHC.Types.I# ww1 -> Prime.$wnth ww1 }) -}
+d684e7b2dffa02bf60e35b5495f24445
+  nth1 :: [[GHC.Integer.Type.Integer]]
+  {- Unfolding: (case GHC.List.$witerate
+                        @ [GHC.Integer.Type.Integer]
+                        Prime.nth2
+                        (GHC.Types.[] @ GHC.Integer.Type.Integer) of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ [GHC.Integer.Type.Integer] ww1 ww2 }) -}
+1482fb606cec53bbb9d7a6528f00b2c5
+  nth2 :: [GHC.Integer.Type.Integer] -> [GHC.Integer.Type.Integer]
+  {- Arity: 1, Strictness: <L,U>m2,
+     Unfolding: (\ (xs :: [GHC.Integer.Type.Integer]) ->
+                 GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   (case xs of wild {
+                      [] -> Prime.nth5
+                      : ipv ipv1
+                      -> let {
+                           hxs :: GHC.Integer.Type.Integer
+                           = GHC.Integer.Type.plusInteger ipv Prime.nth4
+                         } in
+                         letrec {
+                           go :: GHC.Integer.Type.Integer
+                                 -> GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer
+                             <join 2> {- Arity: 2, Strictness: <S,1*U><L,U> -}
+                           = \ (x :: GHC.Integer.Type.Integer)
+                               (eta :: GHC.Integer.Type.Integer) ->
+                             case x of x1 { DEFAULT ->
+                             let {
+                               exit :: GHC.Integer.Type.Integer <join 0>
+                               = GHC.Integer.Type.plusInteger eta Prime.nth4
+                             } in
+                             let {
+                               exit1 :: GHC.Integer.Type.Integer <join 0>
+                               = go (GHC.Integer.Type.plusInteger x1 Prime.nth4) x1
+                             } in
+                             letrec {
+                               go1 :: [GHC.Integer.Type.Integer] -> GHC.Integer.Type.Integer
+                                 <join 1> {- Arity: 1, Strictness: <S,1*U> -}
+                               = \ (ds :: [GHC.Integer.Type.Integer]) ->
+                                 case ds of wild1 {
+                                   [] -> exit
+                                   : y ys
+                                   -> case GHC.Integer.Type.eqInteger# y Prime.nth3 of wild2 {
+                                        DEFAULT
+                                        -> case GHC.Integer.Type.neqInteger#
+                                                  (GHC.Integer.Type.modInteger x1 y)
+                                                  Prime.nth3 of wild3 {
+                                             DEFAULT -> exit1 1# -> go1 ys }
+                                        1#
+                                        -> case GHC.Real.divZeroError
+                                           ret_ty GHC.Integer.Type.Integer
+                                           of {} } }
+                             } in
+                             go1 wild }
+                         } in
+                         go hxs (GHC.Integer.Type.minusInteger hxs Prime.nth4) })
+                   xs) -}
+8abeb10b82eb384a754c7fe8a13282a7
+  nth3 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+b20249934bcb8de702f0c195bebdf4ab
+  nth4 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+3bce8c6ba61b680241fb60d3b7973f4a
+  nth5 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (2) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

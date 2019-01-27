@@ -1,0 +1,2491 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-17 02:16:50.559307055 UTC
+
+interface main:Main 8043
+  interface hash: efa2fe178a36107af3a084ef8b60889a
+  ABI hash: 73b0f583659216bb432495af1cf7354a
+  export-list hash: 48ef6b198cb315422ba4cf8f79cc8084
+  orphan hash: 2881941af25ac41da46036ba4753b556
+  flag hash: d7352f6a0c9d51a330bb6044c59b9213
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+module dependencies:
+package dependencies: HUnit-1.6.0.0 QuickCheck-2.11.3
+                      ansi-terminal-0.8.0.4 array-0.5.2.0 base-4.11.1.0 call-stack-0.1.0
+                      clock-0.7.2 colour-2.3.4 containers-0.5.11.0 deepseq-1.4.3.0
+                      directory-1.3.1.5 filepath-1.4.2 ghc-boot-th-8.4.3 ghc-prim-0.5.2.0
+                      hspec-2.5.5 hspec-core-2.5.5 hspec-expectations-0.8.2
+                      integer-gmp-1.0.2.0 pretty-1.1.3.6 primitive-0.6.3.0
+                      quickcheck-io-0.2.0 random-1.1 series-1.0.0.4 setenv-0.1.1.3
+                      stm-2.4.5.0 template-haskell-2.13.0.0 tf-random-0.5 time-1.8.0.2
+                      transformers-0.5.5.0 unix-2.7.2.2
+orphans: colour-2.3.4:Data.Colour
+         quickcheck-io-0.2.0:Test.QuickCheck.IO
+         transformers-0.5.5.0:Control.Monad.Trans.Error
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         stm-2.4.5.0:Control.Monad.STM base-4.11.1.0:GHC.Float
+         base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Complex base-4.11.1.0:Data.Functor.Compose
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity
+                         base-4.11.1.0:Data.Functor.Product base-4.11.1.0:Data.Functor.Sum
+                         base-4.11.1.0:Data.Monoid base-4.11.1.0:Data.Semigroup
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:Data.Void base-4.11.1.0:GHC.Exts
+                         base-4.11.1.0:GHC.Generics base-4.11.1.0:GHC.IO.Exception
+                         clock-0.7.2:System.Clock containers-0.5.11.0:Data.IntMap.Internal
+                         containers-0.5.11.0:Data.IntSet.Internal
+                         containers-0.5.11.0:Data.Map.Internal
+                         containers-0.5.11.0:Data.Sequence.Internal
+                         containers-0.5.11.0:Data.Set.Internal
+                         ghc-boot-th-8.4.3:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.4.3:GHC.LanguageExtensions.Type
+                         hspec-core-2.5.5:Test.Hspec.Core.Example
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         primitive-0.6.3.0:Data.Primitive.ByteArray
+                         template-haskell-2.13.0.0:Language.Haskell.TH.Syntax
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Exts 7199528d266b07eb217e45473fc18c9d
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Types d9b3023de7feae4a5308d643da5543f7
+import  -/  hspec-2.5.5:Test.Hspec 2be16cf670d31c941cf3c2e9020b9f19
+import  -/  hspec-2.5.5:Test.Hspec.Runner fc3975763ef747ba5b312af6c0fa997c
+import  -/  hspec-core-2.5.5:Test.Hspec.Core.Config.Options 46e8473cd69d1d02b94a5aff383c0b5a
+import  -/  hspec-core-2.5.5:Test.Hspec.Core.Runner 05e438b360ed244fedd330a757c1204b
+import  -/  hspec-core-2.5.5:Test.Hspec.Core.Spec c05383235153ad38308e55e581976171
+import  -/  hspec-core-2.5.5:Test.Hspec.Core.Spec.Monad eabb239f4fb08d8c7ff65e7e9206738b
+import  -/  hspec-expectations-0.8.2:Test.Hspec.Expectations 713f0c8581412c4b3ae306dbada3ec4b
+import  -/  series-1.0.0.4:Series 387395cd5e9a739cb76b4136acc8109c
+1f2667b2b6f14e49f433d403c44d3919
+  $s$fEq[] ::
+    GHC.Classes.Eq [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                  (GHC.Classes.$fEq[]_$c==
+                     @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                     GHC.Classes.$fEqInt
+                       `cast`
+                     (GHC.Classes.Eq
+                        (Sym (GHC.Exts.D:R:Item[][0] <GHC.Types.Int>_N) ; (GHC.Exts.Item
+                                                                             (Sym (GHC.Exts.D:R:Item[][0]
+                                                                                       <[GHC.Types.Int]>_N)))_N))_R)
+                  Main.$s$fEq[]_$s$fEq[]_$c/= -}
+c880db67481ddf426393b2ba6518b09e
+  $s$fEq[]_$s$fEq[]_$c/= ::
+    [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+    -> [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])])
+                   (y :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]) ->
+                 case GHC.Classes.$fEq[]_$c==
+                        @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                        GHC.Classes.$fEqInt
+                          `cast`
+                        (GHC.Classes.Eq
+                           (Sym (GHC.Exts.D:R:Item[][0] <GHC.Types.Int>_N) ; (GHC.Exts.Item
+                                                                                (Sym (GHC.Exts.D:R:Item[][0]
+                                                                                          <[GHC.Types.Int]>_N)))_N))_R
+                        x
+                        y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+38fcab07f18f90b955bbb570eeba7fa8
+  $s$fShow[] ::
+    GHC.Show.Show [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                  (\ (ds :: GHC.Types.Int) -> GHC.Show.$fShowInt_$cshowList)
+                    `cast`
+                  (<GHC.Types.Int>_R
+                   ->_R ([Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                        <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                                 (Sym (GHC.Exts.D:R:Item[][0]
+                                                                           <[GHC.Types.Int]>_N)))_R])_R
+                   ->_R <[GHC.Types.Char] -> [GHC.Types.Char]>_R)
+                  (\ (x :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]) ->
+                   GHC.Show.showList__
+                     @ GHC.Types.Int
+                     GHC.Show.$fShowInt1
+                     x `cast`
+                     ([(GHC.Exts.Item
+                          (GHC.Exts.D:R:Item[][0]
+                               <[GHC.Types.Int]>_N))_R ; Sub (GHC.Exts.D:R:Item[][0]
+                                                                  <GHC.Types.Int>_N)])_R
+                     (GHC.Types.[] @ GHC.Types.Char))
+                  (\ (ls :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]])
+                     (s1 :: GHC.Base.String) ->
+                   GHC.Show.showList__
+                     @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                     GHC.Show.$fShowInt_$cshowList
+                       `cast`
+                     (([Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                      <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                               (Sym (GHC.Exts.D:R:Item[][0]
+                                                                         <[GHC.Types.Int]>_N)))_R])_R
+                      ->_R <[GHC.Types.Char] -> [GHC.Types.Char]>_R)
+                     ls
+                     s1) -}
+e06f660bffea23238495749bb5e617a9
+  $s$fShow[]_$cshow ::
+    [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+    -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]) ->
+                 GHC.Show.showList__
+                   @ GHC.Types.Int
+                   GHC.Show.$fShowInt1
+                   x `cast`
+                   ([(GHC.Exts.Item
+                        (GHC.Exts.D:R:Item[][0]
+                             <[GHC.Types.Int]>_N))_R ; Sub (GHC.Exts.D:R:Item[][0]
+                                                                <GHC.Types.Int>_N)])_R
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+1d76a40ae7261640a876b35d15c9d366
+  $s$fShow[]_$cshowList ::
+    [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+    -> GHC.Show.ShowS
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]])
+                   (s1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   GHC.Show.$fShowInt_$cshowList
+                     `cast`
+                   (([Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                    <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                             (Sym (GHC.Exts.D:R:Item[][0]
+                                                                       <[GHC.Types.Int]>_N)))_R])_R
+                    ->_R <[GHC.Types.Char] -> [GHC.Types.Char]>_R)
+                   ls
+                   s1) -}
+be86c9d078d3acbf19ba91fe74a24273
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule3 Main.$trModule1) -}
+b09d86f2c49dd5176b544d8d13ddb6c5
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule2) -}
+e5875966b74dad2d29772660b8a75e33
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Main"#) -}
+23b03bd7d075a00f5ad1ee10e6add7b8
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule4) -}
+d026be77cb9ced20e35a61514e0458aa
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+5b50a388d712aa682f0a05c0daf117d1
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+12ccca733b496c88bcce7082248f3bf3
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case Test.Hspec.Core.Runner.hspec2
+                        Main.main223
+                        Main.main2
+                          `cast`
+                        (Sym (GHC.Types.N:IO[0]
+                                  <((),
+                                    [Test.Hspec.Core.Tree.SpecTree
+                                       ()])>_R) ; (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                            <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                                            <GHC.Types.IO>_R
+                                                            <()>_N) ; Sym (Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                               <()>_N) <()>_N))
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild { Test.Hspec.Core.Runner.Summary ds ds2 ->
+                 case ds2 of wild1 { GHC.Types.I# x ->
+                 case x of wild2 {
+                   DEFAULT -> System.Exit.exitFailure1 @ () ipv
+                   0# -> (# ipv, GHC.Tuple.() #) } } } }) -}
+bbae04409fba4dd4113dffcb7decffcb
+  main10 ::
+    Test.Hspec.Core.Tree.Tree
+      (Test.Hspec.Core.Example.ActionWith
+         (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+      (Test.Hspec.Core.Tree.Item
+         (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+  {- Strictness: m3,
+     Unfolding: (Test.Hspec.Core.Tree.Leaf
+                   @ (Test.Hspec.Core.Example.ActionWith
+                        (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+                   @ (Test.Hspec.Core.Tree.Item
+                        (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+                   Main.main11) -}
+2869ce974372641920da4bbc53c6b0b4
+  main100 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 8#) -}
+7863570f02dcd46f445bae3d820d454a
+  main101 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main105
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main102) -}
+4ed180e48ec8a2ea3da287b070daff84
+  main102 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main100
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main103) -}
+54e9e3e6882088e9d1896f974f7a2a5f
+  main103 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main72
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main104) -}
+13b0f7c4f86963a8d42d2c56d6faba1e
+  main104 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main80
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main70) -}
+134d34b8f6ee2e8983b7a319ec8701a0
+  main105 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+72bb69aa2883b876e524f3aaa113ad46
+  main106 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main80
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main107) -}
+696e7b718920ac1c7fa3e91efc628d0a
+  main107 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main105
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main108) -}
+e3b1a5d751d2aad30f019bd75dfaa617
+  main108 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main100
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main109) -}
+8e7ed69d1884f86e49492a5506157554
+  main109 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main72
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main99) -}
+f7941dc7a6a1a906702c710d9980976e
+  main11 ::
+    Test.Hspec.Core.Tree.Item
+      (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+  {- Strictness: m,
+     Unfolding: (Test.Hspec.Core.Tree.Item
+                   @ (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+                   Main.main47
+                   Main.main36
+                   (GHC.Base.Nothing @ GHC.Types.Bool)
+                   Main.main12
+                     `cast`
+                   (<Test.Hspec.Core.Example.Params>_R
+                    ->_R <Test.Hspec.Core.Example.ActionWith
+                            (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+                          -> GHC.Types.IO ()>_R
+                    ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <Test.Hspec.Core.Example.Result>_R))) -}
+124de954b0e83f7aeec0fbe6b465f485
+  main110 :: GHC.Base.Maybe Test.Hspec.Core.Example.Location.Location
+  {- Unfolding: (Test.Hspec.Core.Tree.location11 Main.main111) -}
+3d1631e238c7b794f0425e033748c7ac
+  main111 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.location9
+                   Test.Hspec.Core.Tree.location1
+                   Main.main112) -}
+5f78ae4f89cf4036d319248bf3929fac
+  main112 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.specItem14
+                   Test.Hspec.Core.Tree.specItem11
+                   Main.main113) -}
+38daba406f9c990ef29439df46707db8
+  main113 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Spec.it6
+                   Test.Hspec.Core.Spec.it2
+                   Main.main114) -}
+03c07521bf41b9712d494e0c31d0e4ff
+  main114 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Main.main45
+                   Main.main115
+                   GHC.Stack.Types.EmptyCallStack) -}
+8cc0c37cc8031cd1ceae845cfd422724
+  main115 :: GHC.Stack.Types.SrcLoc
+  {- Strictness: m,
+     Unfolding: (GHC.Stack.Types.SrcLoc
+                   Main.main32
+                   Main.main31
+                   Main.main29
+                   Main.main27
+                   Main.main43
+                   Main.main27
+                   Main.main116) -}
+0087d97afae918f8c5f62ad165c49405
+  main116 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 33#) -}
+c8a48749889cb063274fca165a238ae5
+  main117 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main50
+                   Main.main118) -}
+e4e89ac5c11143adec6d5a4dff8e8f81
+  main118 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main119) -}
+6e3dc3f65751ffb18e7ccfcce5f93fcb
+  main119 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("lices of a long series"#) -}
+0686f9cab1bc3936dd58b8bf4c5485e7
+  main12 ::
+    Test.Hspec.Core.Example.Params
+    -> (Test.Hspec.Core.Example.ActionWith
+          (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+        -> GHC.Types.IO ())
+    -> Test.Hspec.Core.Example.ProgressCallback
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Test.Hspec.Core.Example.Result #)
+  {- Arity: 4,
+     Unfolding: (Test.Hspec.Core.Example.safeEvaluateExample1
+                   @ (GHC.Types.IO ())
+                   Test.Hspec.Core.Example.$fExampleIO1
+                     `cast`
+                   ((<Test.Hspec.Expectations.Expectation>_R
+                     ->_R <Test.Hspec.Core.Example.Params>_R
+                     ->_R <(Test.Hspec.Core.Example.Arg
+                              Test.Hspec.Expectations.Expectation
+                            -> GHC.Types.IO ())
+                           -> GHC.Types.IO ()>_R
+                     ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                     ->_R Sym (GHC.Types.N:IO[0]
+                                   <Test.Hspec.Core.Example.Result>_R)) ; Sym (Test.Hspec.Core.Example.N:Example[0]
+                                                                                   <Test.Hspec.Expectations.Expectation>_N))
+                   Main.main13 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+9c84ef74a81a82f8b4a4bd3e3fd1725a
+  main120 ::
+    [Test.Hspec.Core.Tree.SpecTree
+       (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.Hspec.Core.Tree.SpecTree
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main121
+                   (GHC.Types.[]
+                      @ (Test.Hspec.Core.Tree.SpecTree
+                           (Test.Hspec.Core.Example.Arg
+                              Test.Hspec.Expectations.Expectation)))) -}
+6389941e88059d8dc92fea0d7a65a205
+  main121 ::
+    Test.Hspec.Core.Tree.Tree
+      (Test.Hspec.Core.Example.ActionWith
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+      (Test.Hspec.Core.Tree.Item
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+  {- Strictness: m3,
+     Unfolding: (Test.Hspec.Core.Tree.Leaf
+                   @ (Test.Hspec.Core.Example.ActionWith
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   @ (Test.Hspec.Core.Tree.Item
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main122) -}
+b998b937e4d7ec9b6d0272a3d14bd73a
+  main122 ::
+    Test.Hspec.Core.Tree.Item
+      (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+  {- Strictness: m,
+     Unfolding: (Test.Hspec.Core.Tree.Item
+                   @ (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                   Main.main141
+                   Main.main135
+                   (GHC.Base.Nothing @ GHC.Types.Bool)
+                   Main.main123
+                     `cast`
+                   (<Test.Hspec.Core.Example.Params>_R
+                    ->_R <Test.Hspec.Core.Example.ActionWith
+                            (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                          -> GHC.Types.IO ()>_R
+                    ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <Test.Hspec.Core.Example.Result>_R))) -}
+ca7e6bfc973906fe22821f90a189304a
+  main123 ::
+    Test.Hspec.Core.Example.Params
+    -> (Test.Hspec.Core.Example.ActionWith
+          (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+        -> GHC.Types.IO ())
+    -> Test.Hspec.Core.Example.ProgressCallback
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Test.Hspec.Core.Example.Result #)
+  {- Arity: 4,
+     Unfolding: (Test.Hspec.Core.Example.safeEvaluateExample1
+                   @ Test.Hspec.Expectations.Expectation
+                   Test.Hspec.Core.Example.$fExampleIO1
+                     `cast`
+                   ((<Test.Hspec.Expectations.Expectation>_R
+                     ->_R <Test.Hspec.Core.Example.Params>_R
+                     ->_R <(Test.Hspec.Core.Example.Arg
+                              Test.Hspec.Expectations.Expectation
+                            -> GHC.Types.IO ())
+                           -> GHC.Types.IO ()>_R
+                     ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                     ->_R Sym (GHC.Types.N:IO[0]
+                                   <Test.Hspec.Core.Example.Result>_R)) ; Sym (Test.Hspec.Core.Example.N:Example[0]
+                                                                                   <Test.Hspec.Expectations.Expectation>_N))
+                   Main.main124 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+41652929a61df2371fa6089d9d322772
+  main124 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 Test.HUnit.Lang.assertEqual1
+                   @ [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+                   Main.main22
+                     `cast`
+                   (Sym (GHC.Classes.N:IP[0]
+                             <"callStack">_N <GHC.Stack.Types.CallStack>_N))
+                   Main.main21
+                   Main.main20
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.main127
+                   Main.main125
+                   eta2) -}
+9393d7f25df667a190ada798ae07fee6
+  main125 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- Unfolding: (GHC.Base.map
+                   @ (GHC.Exts.Item [[GHC.Types.Int]])
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Base.id @ [GHC.Types.Int])
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))
+                    ->_R ([Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                         <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                                  (Sym (GHC.Exts.D:R:Item[][0]
+                                                                            <[GHC.Types.Int]>_N)))_R])_R)
+                   (Series.$wslices 3# (GHC.CString.unpackCString# Main.main126))
+                     `cast`
+                   ([Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))])_R) -}
+4715528abed692535c67a86dd7bc75bb
+  main126 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("777777"#) -}
+600887ab35a5cd653cd3cfda2ff92ba8
+  main127 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main131
+                   Main.main128) -}
+19c2252da2dfe890b8aa926a7a047bfb
+  main128 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main131
+                   Main.main129) -}
+e725ae2a636f829d048c8854f2a380d5
+  main129 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main131
+                   Main.main130) -}
+c653de2750b008cc17460d9991494c68
+  main13 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.Classes.$fEq[]_$c==
+                        @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                        Main.$s$fEq[]
+                        Main.main_eta2
+                        Main.main19 of wild {
+                   GHC.Types.False -> Main.main35 s1
+                   GHC.Types.True
+                   -> Test.HUnit.Lang.assertEqual1
+                        @ [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+                        Main.main22
+                          `cast`
+                        (Sym (GHC.Classes.N:IP[0]
+                                  <"callStack">_N <GHC.Stack.Types.CallStack>_N))
+                        Main.main21
+                        Main.main20
+                        (GHC.Types.[] @ GHC.Types.Char)
+                        Main.main16
+                        Main.main14
+                        s1 }) -}
+8d670bdb11e0cb021e5752569acfe4b5
+  main130 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main131
+                   (GHC.Types.[]
+                      @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])])) -}
+60f9e202b097876c2a5a282fd167173f
+  main131 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main134
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main132) -}
+069bab09b4bea07f1ba18943685ef2d4
+  main132 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main134
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main133) -}
+b2d40f4cce7c9993ce68f0c0be926e78
+  main133 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main134
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   (GHC.Types.[]
+                      @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])))) -}
+5cbcfb4ccd3749caad8d622205d6216e
+  main134 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 7#) -}
+38d020e3fa650163ba1d769f4ee22b8e
+  main135 :: GHC.Base.Maybe Test.Hspec.Core.Example.Location.Location
+  {- Unfolding: (Test.Hspec.Core.Tree.location11 Main.main136) -}
+f2b3e12b1665966e2d30765f02f7e01a
+  main136 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.location9
+                   Test.Hspec.Core.Tree.location1
+                   Main.main137) -}
+667acc909d0da2f52ed1ddb3643ae1ed
+  main137 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.specItem14
+                   Test.Hspec.Core.Tree.specItem11
+                   Main.main138) -}
+76f189f8d081572ea7fb856fa3249bbd
+  main138 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Spec.it6
+                   Test.Hspec.Core.Spec.it2
+                   Main.main139) -}
+acdeda4929b3f2e455a5d0e51c9f13c4
+  main139 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Main.main45
+                   Main.main140
+                   GHC.Stack.Types.EmptyCallStack) -}
+91e2a0d7714ee1c2ac8b6c68b4d2eab1
+  main14 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- Unfolding: (GHC.Base.map
+                   @ (GHC.Exts.Item [[GHC.Types.Int]])
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Base.id @ [GHC.Types.Int])
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))
+                    ->_R ([Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                         <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                                  (Sym (GHC.Exts.D:R:Item[][0]
+                                                                            <[GHC.Types.Int]>_N)))_R])_R)
+                   (Series.$wslices 0# (GHC.CString.unpackCString# Main.main15))
+                     `cast`
+                   ([Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))])_R) -}
+6f2d4915312e24fa82c48a23a68b087d
+  main140 :: GHC.Stack.Types.SrcLoc
+  {- Strictness: m,
+     Unfolding: (GHC.Stack.Types.SrcLoc
+                   Main.main32
+                   Main.main31
+                   Main.main29
+                   Main.main116
+                   Main.main43
+                   Main.main116
+                   Main.main27) -}
+2afbb68bf0204002c3e7a8e3fa33c199
+  main141 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main50
+                   Main.main142) -}
+635c179be67800ab0cfcddc0c93f6816
+  main142 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main143) -}
+96bb6f280cf16de10a890549c74b24dd
+  main143 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("lices can have duplicates"#) -}
+9ee43674c7e288d2cc194f8667a0ea42
+  main144 ::
+    [Test.Hspec.Core.Tree.SpecTree
+       (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.Hspec.Core.Tree.SpecTree
+                        (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+                   Main.main145
+                   (GHC.Types.[]
+                      @ (Test.Hspec.Core.Tree.SpecTree
+                           (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))))) -}
+4987715368c438d509023c03fbc33aea
+  main145 ::
+    Test.Hspec.Core.Tree.Tree
+      (Test.Hspec.Core.Example.ActionWith
+         (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+      (Test.Hspec.Core.Tree.Item
+         (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+  {- Strictness: m3,
+     Unfolding: (Test.Hspec.Core.Tree.Leaf
+                   @ (Test.Hspec.Core.Example.ActionWith
+                        (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+                   @ (Test.Hspec.Core.Tree.Item
+                        (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+                   Main.main146) -}
+f58d7f68fe49a8061814087b21532e06
+  main146 ::
+    Test.Hspec.Core.Tree.Item
+      (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+  {- Strictness: m,
+     Unfolding: (Test.Hspec.Core.Tree.Item
+                   @ (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+                   Main.main170
+                   Main.main162
+                   (GHC.Base.Nothing @ GHC.Types.Bool)
+                   Main.main147
+                     `cast`
+                   (<Test.Hspec.Core.Example.Params>_R
+                    ->_R <Test.Hspec.Core.Example.ActionWith
+                            (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+                          -> GHC.Types.IO ()>_R
+                    ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <Test.Hspec.Core.Example.Result>_R))) -}
+49655df78f750c6e121013c31f5cbb41
+  main147 ::
+    Test.Hspec.Core.Example.Params
+    -> (Test.Hspec.Core.Example.ActionWith
+          (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+        -> GHC.Types.IO ())
+    -> Test.Hspec.Core.Example.ProgressCallback
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Test.Hspec.Core.Example.Result #)
+  {- Arity: 4,
+     Unfolding: (Test.Hspec.Core.Example.safeEvaluateExample1
+                   @ (GHC.Types.IO ())
+                   Test.Hspec.Core.Example.$fExampleIO1
+                     `cast`
+                   ((<Test.Hspec.Expectations.Expectation>_R
+                     ->_R <Test.Hspec.Core.Example.Params>_R
+                     ->_R <(Test.Hspec.Core.Example.Arg
+                              Test.Hspec.Expectations.Expectation
+                            -> GHC.Types.IO ())
+                           -> GHC.Types.IO ()>_R
+                     ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                     ->_R Sym (GHC.Types.N:IO[0]
+                                   <Test.Hspec.Core.Example.Result>_R)) ; Sym (Test.Hspec.Core.Example.N:Example[0]
+                                                                                   <Test.Hspec.Expectations.Expectation>_N))
+                   Main.main148 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+972c4c38dd087c189259fa20ad9a706c
+  main148 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.Classes.$fEq[]_$c==
+                        @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                        Main.$s$fEq[]
+                        Main.main_eta3
+                        (GHC.Types.[]
+                           @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]) of wild {
+                   GHC.Types.False -> Main.main160 s1
+                   GHC.Types.True
+                   -> case GHC.Classes.$fEq[]_$c==
+                             @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                             Main.$s$fEq[]
+                             Main.main_eta1
+                             Main.main159 of wild1 {
+                        GHC.Types.False
+                        -> case GHC.Show.$wshowSignedInt
+                                  0#
+                                  0#
+                                  Main.main158 of ww2 { (#,#) ww3 ww4 ->
+                           Main.main157 s1 ww4 ww3 }
+                        GHC.Types.True
+                        -> Test.HUnit.Lang.assertEqual1
+                             @ [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+                             Main.main22
+                               `cast`
+                             (Sym (GHC.Classes.N:IP[0]
+                                       <"callStack">_N <GHC.Stack.Types.CallStack>_N))
+                             Main.main21
+                             Main.main20
+                             (GHC.Types.[] @ GHC.Types.Char)
+                             Main.main151
+                             Main.main149
+                             s1 } }) -}
+aea47e59230176b750481acbac3098ab
+  main149 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- Unfolding: (GHC.Base.map
+                   @ (GHC.Exts.Item [[GHC.Types.Int]])
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Base.id @ [GHC.Types.Int])
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))
+                    ->_R ([Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                         <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                                  (Sym (GHC.Exts.D:R:Item[][0]
+                                                                            <[GHC.Types.Int]>_N)))_R])_R)
+                   (Series.$wslices 3# (GHC.CString.unpackCString# Main.main150))
+                     `cast`
+                   ([Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))])_R) -}
+cdea8103f2b91627d5b70cbabd6916b0
+  main15 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("012"#) -}
+9d1107cf0834872b816c630319a7dd72
+  main150 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("0123"#) -}
+73aa9781daa1a1e95b737307fe2a367d
+  main151 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main155
+                   Main.main152) -}
+16245f63928e1215fd0cad418bb1c233
+  main152 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main153
+                   (GHC.Types.[]
+                      @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])])) -}
+6a92844b22ada21e98a3fa96b68e9877
+  main153 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main105
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main154) -}
+4140002d1c99c33a3039132845f9463e
+  main154 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main73
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main70) -}
+ed2482bdff147383c25374ee18129e5b
+  main155 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main74
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main156) -}
+8cc02ce2be4fa71f4d7eace5656c4595
+  main156 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main105
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main85) -}
+ccdb21a49fb317148d975e4b56134a2c
+  main157 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> [GHC.Types.Char]
+    -> GHC.Types.Char
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <B,U><B,U><B,U>x -}
+2eca807243147a4fe098169d055c2ec0
+  main158 :: GHC.Base.String
+  {- Unfolding: (Main.main_showl
+                   Main.main156
+                     `cast`
+                   ([(GHC.Exts.Item
+                        (GHC.Exts.D:R:Item[][0]
+                             <[GHC.Types.Int]>_N))_R ; Sub (GHC.Exts.D:R:Item[][0]
+                                                                <GHC.Types.Int>_N)])_R) -}
+cafb56071d4f88c1d4ac7e00f3b5cf90
+  main159 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main155
+                   (GHC.Types.[]
+                      @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])])) -}
+68e6522b7c1e907844a1d57e422f1698
+  main16 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Types.[] @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])))
+                   Main.main17) -}
+75ff885c9d3787cab60b1b8cdf29bd9a
+  main160 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <B,U>x -}
+81b149876bd3a274534457950e457464
+  main161 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("01"#) -}
+b501fc121c164dd3d6e374645e81bed8
+  main162 :: GHC.Base.Maybe Test.Hspec.Core.Example.Location.Location
+  {- Unfolding: (Test.Hspec.Core.Tree.location11 Main.main163) -}
+a58d0cff3c6c6476f28112f73c877539
+  main163 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.location9
+                   Test.Hspec.Core.Tree.location1
+                   Main.main164) -}
+1a7821f88333aa9071b42dde97bbebe2
+  main164 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.specItem14
+                   Test.Hspec.Core.Tree.specItem11
+                   Main.main165) -}
+3e0d5cd3be121ed23e76647a39cb4dd3
+  main165 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Spec.it6
+                   Test.Hspec.Core.Spec.it2
+                   Main.main166) -}
+e174de12b289afc154c1a2712a1c07c3
+  main166 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Main.main45
+                   Main.main167
+                   GHC.Stack.Types.EmptyCallStack) -}
+a801be203135dca634a9d4cc96bacfcc
+  main167 :: GHC.Stack.Types.SrcLoc
+  {- Strictness: m,
+     Unfolding: (GHC.Stack.Types.SrcLoc
+                   Main.main32
+                   Main.main31
+                   Main.main29
+                   Main.main169
+                   Main.main43
+                   Main.main169
+                   Main.main168) -}
+750a7068c596b808028af7ec29b7b8a8
+  main168 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 25#) -}
+7119bc21a442349b1cb677bf57d1eeec
+  main169 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 28#) -}
+e2221bc2dc495a9d771025bc26744840
+  main17 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Types.[] @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])))
+                   Main.main18) -}
+418fa0c5267f3455a1e0a02bffaa3493
+  main170 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main50
+                   Main.main171) -}
+2b72428cdc9544600e163e43f39884e7
+  main171 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main172) -}
+326f9a5e2ef2a09e09a643bcd57cbf84
+  main172 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("lices of three"#) -}
+07b6f16cb545fd1df84dd74901f7da66
+  main173 ::
+    [Test.Hspec.Core.Tree.SpecTree
+       (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.Hspec.Core.Tree.SpecTree
+                        (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+                   Main.main174
+                   (GHC.Types.[]
+                      @ (Test.Hspec.Core.Tree.SpecTree
+                           (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))))) -}
+4830a18cf3ca0651ccc4dba3f671a8f3
+  main174 ::
+    Test.Hspec.Core.Tree.Tree
+      (Test.Hspec.Core.Example.ActionWith
+         (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+      (Test.Hspec.Core.Tree.Item
+         (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+  {- Strictness: m3,
+     Unfolding: (Test.Hspec.Core.Tree.Leaf
+                   @ (Test.Hspec.Core.Example.ActionWith
+                        (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+                   @ (Test.Hspec.Core.Tree.Item
+                        (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+                   Main.main175) -}
+18dffdb925e46d1ec7cfe00c32c98b91
+  main175 ::
+    Test.Hspec.Core.Tree.Item
+      (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+  {- Strictness: m,
+     Unfolding: (Test.Hspec.Core.Tree.Item
+                   @ (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+                   Main.main198
+                   Main.main191
+                   (GHC.Base.Nothing @ GHC.Types.Bool)
+                   Main.main176
+                     `cast`
+                   (<Test.Hspec.Core.Example.Params>_R
+                    ->_R <Test.Hspec.Core.Example.ActionWith
+                            (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+                          -> GHC.Types.IO ()>_R
+                    ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <Test.Hspec.Core.Example.Result>_R))) -}
+3d257fc16704afc736f00bc18d8edc00
+  main176 ::
+    Test.Hspec.Core.Example.Params
+    -> (Test.Hspec.Core.Example.ActionWith
+          (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+        -> GHC.Types.IO ())
+    -> Test.Hspec.Core.Example.ProgressCallback
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Test.Hspec.Core.Example.Result #)
+  {- Arity: 4,
+     Unfolding: (Test.Hspec.Core.Example.safeEvaluateExample1
+                   @ (GHC.Types.IO ())
+                   Test.Hspec.Core.Example.$fExampleIO1
+                     `cast`
+                   ((<Test.Hspec.Expectations.Expectation>_R
+                     ->_R <Test.Hspec.Core.Example.Params>_R
+                     ->_R <(Test.Hspec.Core.Example.Arg
+                              Test.Hspec.Expectations.Expectation
+                            -> GHC.Types.IO ())
+                           -> GHC.Types.IO ()>_R
+                     ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                     ->_R Sym (GHC.Types.N:IO[0]
+                                   <Test.Hspec.Core.Example.Result>_R)) ; Sym (Test.Hspec.Core.Example.N:Example[0]
+                                                                                   <Test.Hspec.Expectations.Expectation>_N))
+                   Main.main177 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+2d4c28fe5b243e904d8ad32a6005a92e
+  main177 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.Classes.$fEq[]_$c==
+                        @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                        Main.$s$fEq[]
+                        Main.main_eta5
+                        (GHC.Types.[]
+                           @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]) of wild {
+                   GHC.Types.False -> Main.main190 s1
+                   GHC.Types.True
+                   -> case GHC.Classes.$fEq[]_$c==
+                             @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                             Main.$s$fEq[]
+                             Main.main_eta4
+                             Main.main189 of wild1 {
+                        GHC.Types.False
+                        -> case GHC.Show.$wshowSignedInt
+                                  0#
+                                  0#
+                                  Main.main188 of ww2 { (#,#) ww3 ww4 ->
+                           Main.main187 s1 ww4 ww3 }
+                        GHC.Types.True
+                        -> Test.HUnit.Lang.assertEqual1
+                             @ [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+                             Main.main22
+                               `cast`
+                             (Sym (GHC.Classes.N:IP[0]
+                                       <"callStack">_N <GHC.Stack.Types.CallStack>_N))
+                             Main.main21
+                             Main.main20
+                             (GHC.Types.[] @ GHC.Types.Char)
+                             Main.main180
+                             Main.main178
+                             s1 } }) -}
+fe819c78ed8bf834652d0a55cde332c9
+  main178 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- Unfolding: (GHC.Base.map
+                   @ (GHC.Exts.Item [[GHC.Types.Int]])
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Base.id @ [GHC.Types.Int])
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))
+                    ->_R ([Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                         <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                                  (Sym (GHC.Exts.D:R:Item[][0]
+                                                                            <[GHC.Types.Int]>_N)))_R])_R)
+                   (Series.$wslices 2# (GHC.CString.unpackCString# Main.main179))
+                     `cast`
+                   ([Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))])_R) -}
+20342ab43a4c5146ca8d79139e0bef78
+  main179 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("01234"#) -}
+5afefdb62bea3ce06a2b31ae6b56d48e
+  main18 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Types.[] @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])))
+                   Main.main19) -}
+d00d0fac73927dd77a563fef42e9ebcd
+  main180 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main185
+                   Main.main181) -}
+34b68107d3bddf4d7b2aebbc1cf32153
+  main181 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main156
+                   Main.main182) -}
+bf5d61ff3d2f6f7c3e9589844b2eb33b
+  main182 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main154
+                   Main.main183) -}
+d0ca1b6b7037966a6a5002340af49f64
+  main183 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main184
+                   (GHC.Types.[]
+                      @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])])) -}
+af1a34d3c2f52736d60ed32f4d5c080c
+  main184 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main71
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main79) -}
+9fdc0cca9fe4c0450361cbdb2588fb2e
+  main185 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main74
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main186) -}
+a29c63274151656a535da67a671db14b
+  main186 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main105
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   (GHC.Types.[]
+                      @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])))) -}
+94123978c76275730e2d70fa1b02066b
+  main187 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> [GHC.Types.Char]
+    -> GHC.Types.Char
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <B,U><B,U><B,U>x -}
+a6a7bf7b9f935f0a8f63cac02a659a9f
+  main188 :: GHC.Base.String
+  {- Unfolding: (Main.main_showl
+                   Main.main186
+                     `cast`
+                   ([(GHC.Exts.Item
+                        (GHC.Exts.D:R:Item[][0]
+                             <[GHC.Types.Int]>_N))_R ; Sub (GHC.Exts.D:R:Item[][0]
+                                                                <GHC.Types.Int>_N)])_R) -}
+ff270827fa2652f4ac282ffe46332ffe
+  main189 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main185
+                   (GHC.Types.[]
+                      @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])])) -}
+e5c5389b96850dbf419df4e5d6d7203a
+  main19 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Types.[] @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])))
+                   (GHC.Types.[]
+                      @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])])) -}
+9189f1b523343c4d0b89012cf20483e6
+  main190 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <B,U>x -}
+4e42e7c4fbbd5f67197167c2b015333d
+  main191 :: GHC.Base.Maybe Test.Hspec.Core.Example.Location.Location
+  {- Unfolding: (Test.Hspec.Core.Tree.location11 Main.main192) -}
+b5ff896b3aca7ae5ff20bc0d793293ca
+  main192 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.location9
+                   Test.Hspec.Core.Tree.location1
+                   Main.main193) -}
+8bedfd565ecd31626691230bf33791c8
+  main193 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.specItem14
+                   Test.Hspec.Core.Tree.specItem11
+                   Main.main194) -}
+320c1b739b284b87c1c7a423f0ebd56b
+  main194 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Spec.it6
+                   Test.Hspec.Core.Spec.it2
+                   Main.main195) -}
+9e2c81aaeb7b7fd11bcfce9afa025447
+  main195 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Main.main45
+                   Main.main196
+                   GHC.Stack.Types.EmptyCallStack) -}
+8d7791338937b677364902a04c3bac0e
+  main196 :: GHC.Stack.Types.SrcLoc
+  {- Strictness: m,
+     Unfolding: (GHC.Stack.Types.SrcLoc
+                   Main.main32
+                   Main.main31
+                   Main.main29
+                   Main.main197
+                   Main.main43
+                   Main.main197
+                   Main.main197) -}
+2f84a465677defabb9f8bb47f331bb8a
+  main197 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 23#) -}
+253945d97aa9b24493747935fb60f293
+  main198 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main50
+                   Main.main199) -}
+9f30038e8907691205d48ed28f599014
+  main199 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main200) -}
+b7397a8ef0eb4ed080ce50c286d8a586
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 (# s1, Main.main3 #)) -}
+74ff631dcf95764d67cdc106bed8903b
+  main20 ::
+    GHC.Show.Show [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- Unfolding: (GHC.Show.$fShow[]
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.$s$fShow[]) -}
+f88a51f0fb85fba4eaf64b8b9dc6388a
+  main200 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("lices of two"#) -}
+5ec45c55e75b69bafff7acb148d9ed5c
+  main201 ::
+    [Test.Hspec.Core.Tree.SpecTree
+       (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.Hspec.Core.Tree.SpecTree
+                        (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+                   Main.main202
+                   (GHC.Types.[]
+                      @ (Test.Hspec.Core.Tree.SpecTree
+                           (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))))) -}
+149beaebfe20037a5ea1dcac09a18eb0
+  main202 ::
+    Test.Hspec.Core.Tree.Tree
+      (Test.Hspec.Core.Example.ActionWith
+         (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+      (Test.Hspec.Core.Tree.Item
+         (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+  {- Strictness: m3,
+     Unfolding: (Test.Hspec.Core.Tree.Leaf
+                   @ (Test.Hspec.Core.Example.ActionWith
+                        (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+                   @ (Test.Hspec.Core.Tree.Item
+                        (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+                   Main.main203) -}
+cb73ff2a3a7c9c41f646657eedba38aa
+  main203 ::
+    Test.Hspec.Core.Tree.Item
+      (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+  {- Strictness: m,
+     Unfolding: (Test.Hspec.Core.Tree.Item
+                   @ (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+                   Main.main220
+                   Main.main213
+                   (GHC.Base.Nothing @ GHC.Types.Bool)
+                   Main.main204
+                     `cast`
+                   (<Test.Hspec.Core.Example.Params>_R
+                    ->_R <Test.Hspec.Core.Example.ActionWith
+                            (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+                          -> GHC.Types.IO ()>_R
+                    ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <Test.Hspec.Core.Example.Result>_R))) -}
+41238ee89d64c3da55225e053e50e545
+  main204 ::
+    Test.Hspec.Core.Example.Params
+    -> (Test.Hspec.Core.Example.ActionWith
+          (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))
+        -> GHC.Types.IO ())
+    -> Test.Hspec.Core.Example.ProgressCallback
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Test.Hspec.Core.Example.Result #)
+  {- Arity: 4,
+     Unfolding: (Test.Hspec.Core.Example.safeEvaluateExample1
+                   @ (GHC.Types.IO ())
+                   Test.Hspec.Core.Example.$fExampleIO1
+                     `cast`
+                   ((<Test.Hspec.Expectations.Expectation>_R
+                     ->_R <Test.Hspec.Core.Example.Params>_R
+                     ->_R <(Test.Hspec.Core.Example.Arg
+                              Test.Hspec.Expectations.Expectation
+                            -> GHC.Types.IO ())
+                           -> GHC.Types.IO ()>_R
+                     ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                     ->_R Sym (GHC.Types.N:IO[0]
+                                   <Test.Hspec.Core.Example.Result>_R)) ; Sym (Test.Hspec.Core.Example.N:Example[0]
+                                                                                   <Test.Hspec.Expectations.Expectation>_N))
+                   Main.main205 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+109b44a0a3115b04606dcc952b98913c
+  main205 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.Classes.$fEq[]_$c==
+                        @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                        Main.$s$fEq[]
+                        Main.main_eta6
+                        (GHC.Types.[]
+                           @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]) of wild {
+                   GHC.Types.False -> Main.main212 s1
+                   GHC.Types.True
+                   -> Test.HUnit.Lang.assertEqual1
+                        @ [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+                        Main.main22
+                          `cast`
+                        (Sym (GHC.Classes.N:IP[0]
+                                  <"callStack">_N <GHC.Stack.Types.CallStack>_N))
+                        Main.main21
+                        Main.main20
+                        (GHC.Types.[] @ GHC.Types.Char)
+                        Main.main207
+                        Main.main206
+                        s1 }) -}
+644e3ec98a01102c1a944e905a80d6da
+  main206 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- Unfolding: (GHC.Base.map
+                   @ (GHC.Exts.Item [[GHC.Types.Int]])
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Base.id @ [GHC.Types.Int])
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))
+                    ->_R ([Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                         <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                                  (Sym (GHC.Exts.D:R:Item[][0]
+                                                                            <[GHC.Types.Int]>_N)))_R])_R)
+                   (Series.$wslices 1# (GHC.CString.unpackCString# Main.main179))
+                     `cast`
+                   ([Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))])_R) -}
+87244397b7ec4fe9ecf425a57b4b142c
+  main207 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main94
+                   Main.main208) -}
+3c120ff0f8d2c614b48084ba13c70a7a
+  main208 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main186
+                   Main.main209) -}
+e2256e380b0d09a2c1b93376d7a2bf13
+  main209 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main85
+                   Main.main210) -}
+30b7486aa72366e7d15e49b7e2cdec22
+  main21 ::
+    GHC.Classes.Eq [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- Unfolding: (GHC.Classes.$fEq[]
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.$s$fEq[]) -}
+f91082bb4f809a39cda18f6412eaf5b9
+  main210 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main70
+                   Main.main211) -}
+9c8ffef36e0799d77274370fde23b2d1
+  main211 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main79
+                   (GHC.Types.[]
+                      @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])])) -}
+c256d7711ced18540d056e3398446d0f
+  main212 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <B,U>x -}
+f286603f4da95940bb617faf1a719ea6
+  main213 :: GHC.Base.Maybe Test.Hspec.Core.Example.Location.Location
+  {- Unfolding: (Test.Hspec.Core.Tree.location11 Main.main214) -}
+146a0a766d1ac10a85ec6fbc86bbf933
+  main214 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.location9
+                   Test.Hspec.Core.Tree.location1
+                   Main.main215) -}
+7a0e5620f5a7a98fb5218e4594899061
+  main215 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.specItem14
+                   Test.Hspec.Core.Tree.specItem11
+                   Main.main216) -}
+99a96b43eac664d896063e1ffbd78670
+  main216 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Spec.it6
+                   Test.Hspec.Core.Spec.it2
+                   Main.main217) -}
+3f0e9271c364c14b5d8c4d8bc511205c
+  main217 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Main.main45
+                   Main.main218
+                   GHC.Stack.Types.EmptyCallStack) -}
+7eb3b2cf0d8e1d31b8c2404497f1fa9a
+  main218 :: GHC.Stack.Types.SrcLoc
+  {- Strictness: m,
+     Unfolding: (GHC.Stack.Types.SrcLoc
+                   Main.main32
+                   Main.main31
+                   Main.main29
+                   Main.main219
+                   Main.main43
+                   Main.main219
+                   Main.main197) -}
+01d9c3b9074f9b8509705f7c78f334c1
+  main219 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 19#) -}
+e2ad04f993e548f4a8cad4cb18473bae
+  main22 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.HUnit.Base.@=?6
+                   Test.HUnit.Base.@?=2
+                   Main.main23) -}
+784983b3154477ad585cbf3cc419f4a6
+  main220 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main50
+                   Main.main221) -}
+182e4e04d65844e36e86264e5c3ae763
+  main221 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main222) -}
+7026947f5e87fc1d11267d76e038a38d
+  main222 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("lices of one"#) -}
+a4a0d34492bf95f367639cfbbdf7183a
+  main223 :: Test.Hspec.Core.Config.Options.Config
+  {- Unfolding: (Test.Hspec.Core.Config.Options.Config
+                   GHC.Types.False
+                   GHC.Types.False
+                   GHC.Types.False
+                   GHC.Types.True
+                   (GHC.Base.Nothing @ GHC.IO.FilePath)
+                   GHC.Types.False
+                   GHC.Types.False
+                   (GHC.Base.Nothing @ (Test.Hspec.Core.Util.Path -> GHC.Types.Bool))
+                   (GHC.Base.Nothing @ (Test.Hspec.Core.Util.Path -> GHC.Types.Bool))
+                   (GHC.Base.Nothing @ GHC.Integer.Type.Integer)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   Test.Hspec.Core.Example.defaultParams1
+                   Test.Hspec.Core.Config.Options.ColorAuto
+                   GHC.Types.True
+                   (GHC.Base.Nothing @ Test.Hspec.Core.Formatters.Monad.Formatter)
+                   GHC.Types.False
+                   Test.Hspec.Core.Config.Options.defaultConfig1
+                   (GHC.Base.Nothing @ GHC.Types.Int)) -}
+3c1bca1bc821a9f89952d2e418634ea6
+  main224 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+4c44b9c70d532066e0ae9c3ac0d2eaae
+  main23 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Expectations.shouldBe6
+                   Test.Hspec.Expectations.shouldBe2
+                   Main.main24) -}
+ddb20187cd5184468ff7dbf64d61815d
+  main24 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Main.main33
+                   Main.main25
+                   GHC.Stack.Types.EmptyCallStack) -}
+1311183dd1512be07b3e952d0da6dd09
+  main25 :: GHC.Stack.Types.SrcLoc
+  {- Strictness: m,
+     Unfolding: (GHC.Stack.Types.SrcLoc
+                   Main.main32
+                   Main.main31
+                   Main.main29
+                   Main.main28
+                   Main.main27
+                   Main.main28
+                   Main.main26) -}
+de81fc6c33a43e3e3889997eff170ea1
+  main26 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 74#) -}
+7dc451743d73acbb19a3dddae6311276
+  main27 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 36#) -}
+fa3505e4e7ac66b18a4c4b200134156f
+  main28 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 17#) -}
+fe3f2176fca538b42cff6d138c177cdb
+  main29 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main30) -}
+ac98812af3a40de93bef83e2f72647de
+  main3 :: ((), [Test.Hspec.Core.Tree.SpecTree ()])
+  {- Strictness: m, Unfolding: ((GHC.Tuple.(), Main.main4)) -}
+3db6f63d0f71cd0c324ea6234340376b
+  main30 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("test/Tests.hs"#) -}
+a9767ab37e19eb76d1aa6f26915a42dd
+  main31 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$trModule2) -}
+ef84fdaf6aae58a52dad6bac8daf38b8
+  main32 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$trModule4) -}
+5727b448b758a238878d7ffc227b7d17
+  main33 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main34) -}
+182cde34e53f17bc58cb3346cbf46d8a
+  main34 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("shouldBe"#) -}
+7639dc504c0df28cf61d2054da90f263
+  main35 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <B,U>x -}
+559e2b823c973a34b2ffe962816d79cd
+  main36 :: GHC.Base.Maybe Test.Hspec.Core.Example.Location.Location
+  {- Unfolding: (Test.Hspec.Core.Tree.location11 Main.main37) -}
+1687b9bfa66fd343502daa732de099b8
+  main37 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.location9
+                   Test.Hspec.Core.Tree.location1
+                   Main.main38) -}
+d099b62763c1c5aa3bf1e8c1a5ba2ab9
+  main38 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.specItem14
+                   Test.Hspec.Core.Tree.specItem11
+                   Main.main39) -}
+29924ab517823457068deff423fc071f
+  main39 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Spec.it6
+                   Test.Hspec.Core.Spec.it2
+                   Main.main40) -}
+992569bb19c9957932a5d583f151b39e
+  main4 ::
+    [Test.Hspec.Core.Tree.Tree
+       (Test.Hspec.Core.Example.ActionWith ())
+       (Test.Hspec.Core.Tree.Item ())]
+  {- Unfolding: (GHC.Base.++
+                   @ (Test.Hspec.Core.Tree.Tree
+                        (Test.Hspec.Core.Example.ActionWith ())
+                        (Test.Hspec.Core.Tree.Item ()))
+                   Main.main201
+                     `cast`
+                   ([(Test.Hspec.Core.Tree.Tree
+                        (Sub (Test.Hspec.Core.Example.D:R:ArgIO[0])
+                         ->_R <GHC.Types.IO ()>_R)
+                        (Test.Hspec.Core.Tree.Item
+                           (Sub (Test.Hspec.Core.Example.D:R:ArgIO[0])))_R)_R])_R
+                   Main.main5) -}
+ab1442bd5321c7543749da8d774b5a49
+  main40 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Main.main45
+                   Main.main41
+                   GHC.Stack.Types.EmptyCallStack) -}
+5b155074e0c7a24c060ea09fd8e7bbad
+  main41 :: GHC.Stack.Types.SrcLoc
+  {- Strictness: m,
+     Unfolding: (GHC.Stack.Types.SrcLoc
+                   Main.main32
+                   Main.main31
+                   Main.main29
+                   Main.main44
+                   Main.main43
+                   Main.main44
+                   Main.main42) -}
+dda14c3b890d30395b0570b856c5540d
+  main42 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 24#) -}
+35eaed2e0868786f81f6b562a35d2152
+  main43 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5#) -}
+e978a60d5ddf8bfd2026ee580a6b6d98
+  main44 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 48#) -}
+7b00718debc15d0ebfc2a867564a7dd5
+  main45 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main46) -}
+948980edccf48a88452f27c2379f0771
+  main46 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("it"#) -}
+76ff56e28ad01e1402f1fa49f27f6602
+  main47 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main50
+                   Main.main48) -}
+4c8ede29ac582ee373a8de3fbce41bbe
+  main48 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main49) -}
+3fb7dc945c9eb1fbcef931dfe7a440af
+  main49 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("lices of zero"#) -}
+fe206c84d04a027870522612e7325553
+  main5 ::
+    [Test.Hspec.Core.Tree.Tree
+       (Test.Hspec.Core.Example.ActionWith ())
+       (Test.Hspec.Core.Tree.Item ())]
+  {- Unfolding: (GHC.Base.++
+                   @ (Test.Hspec.Core.Tree.Tree
+                        (Test.Hspec.Core.Example.ActionWith ())
+                        (Test.Hspec.Core.Tree.Item ()))
+                   Main.main173
+                     `cast`
+                   ([(Test.Hspec.Core.Tree.Tree
+                        (Sub (Test.Hspec.Core.Example.D:R:ArgIO[0])
+                         ->_R <GHC.Types.IO ()>_R)
+                        (Test.Hspec.Core.Tree.Item
+                           (Sub (Test.Hspec.Core.Example.D:R:ArgIO[0])))_R)_R])_R
+                   Main.main6) -}
+92bffa85c008cad9d164383f6182ca68
+  main50 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 's'#) -}
+b25307a64bd1b7afa041681a9914723a
+  main51 ::
+    [Test.Hspec.Core.Tree.SpecTree
+       (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.Hspec.Core.Tree.SpecTree
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main52
+                   (GHC.Types.[]
+                      @ (Test.Hspec.Core.Tree.SpecTree
+                           (Test.Hspec.Core.Example.Arg
+                              Test.Hspec.Expectations.Expectation)))) -}
+84871e419635aafee052b6a83f153cbb
+  main52 ::
+    Test.Hspec.Core.Tree.Tree
+      (Test.Hspec.Core.Example.ActionWith
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+      (Test.Hspec.Core.Tree.Item
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+  {- Strictness: m3,
+     Unfolding: (Test.Hspec.Core.Tree.Leaf
+                   @ (Test.Hspec.Core.Example.ActionWith
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   @ (Test.Hspec.Core.Tree.Item
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main53) -}
+e972df384fe2ea29d2cc9c056020366d
+  main53 ::
+    Test.Hspec.Core.Tree.Item
+      (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+  {- Strictness: m,
+     Unfolding: (Test.Hspec.Core.Tree.Item
+                   @ (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                   Main.main117
+                   Main.main110
+                   (GHC.Base.Nothing @ GHC.Types.Bool)
+                   Main.main54
+                     `cast`
+                   (<Test.Hspec.Core.Example.Params>_R
+                    ->_R <Test.Hspec.Core.Example.ActionWith
+                            (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                          -> GHC.Types.IO ()>_R
+                    ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <Test.Hspec.Core.Example.Result>_R))) -}
+5c6cb10c92fb97eb56d524c2cb4b5a1f
+  main54 ::
+    Test.Hspec.Core.Example.Params
+    -> (Test.Hspec.Core.Example.ActionWith
+          (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+        -> GHC.Types.IO ())
+    -> Test.Hspec.Core.Example.ProgressCallback
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Test.Hspec.Core.Example.Result #)
+  {- Arity: 4,
+     Unfolding: (Test.Hspec.Core.Example.safeEvaluateExample1
+                   @ Test.Hspec.Expectations.Expectation
+                   Test.Hspec.Core.Example.$fExampleIO1
+                     `cast`
+                   ((<Test.Hspec.Expectations.Expectation>_R
+                     ->_R <Test.Hspec.Core.Example.Params>_R
+                     ->_R <(Test.Hspec.Core.Example.Arg
+                              Test.Hspec.Expectations.Expectation
+                            -> GHC.Types.IO ())
+                           -> GHC.Types.IO ()>_R
+                     ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                     ->_R Sym (GHC.Types.N:IO[0]
+                                   <Test.Hspec.Core.Example.Result>_R)) ; Sym (Test.Hspec.Core.Example.N:Example[0]
+                                                                                   <Test.Hspec.Expectations.Expectation>_N))
+                   Main.main55 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+6c7dc9a52410ee7ca26b9191632a6ef4
+  main55 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 Test.HUnit.Lang.assertEqual1
+                   @ [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+                   Main.main22
+                     `cast`
+                   (Sym (GHC.Classes.N:IP[0]
+                             <"callStack">_N <GHC.Stack.Types.CallStack>_N))
+                   Main.main21
+                   Main.main20
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.main58
+                   Main.main56
+                   eta2) -}
+10a1c055db619720519065e8a2b05644
+  main56 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- Unfolding: (GHC.Base.map
+                   @ (GHC.Exts.Item [[GHC.Types.Int]])
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Base.id @ [GHC.Types.Int])
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))
+                    ->_R ([Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                         <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                                  (Sym (GHC.Exts.D:R:Item[][0]
+                                                                            <[GHC.Types.Int]>_N)))_R])_R)
+                   (Series.$wslices 5# (GHC.CString.unpackCString# Main.main57))
+                     `cast`
+                   ([Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))])_R) -}
+ade79d3f69993ac945db62fcb723c77f
+  main57 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("918493904243"#) -}
+2033939b483074a7ad7bc5a1876bd06a
+  main58 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main106
+                   Main.main59) -}
+0c09585356c3e2e1a1d2140eb818eecb
+  main59 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main101
+                   Main.main60) -}
+fca3c16183ef78da971ae5a40e94d88f
+  main6 ::
+    [Test.Hspec.Core.Tree.Tree
+       (Test.Hspec.Core.Example.ActionWith ())
+       (Test.Hspec.Core.Tree.Item ())]
+  {- Unfolding: (GHC.Base.++
+                   @ (Test.Hspec.Core.Tree.Tree
+                        (Test.Hspec.Core.Example.ActionWith ())
+                        (Test.Hspec.Core.Tree.Item ()))
+                   Main.main144
+                     `cast`
+                   ([(Test.Hspec.Core.Tree.Tree
+                        (Sub (Test.Hspec.Core.Example.D:R:ArgIO[0])
+                         ->_R <GHC.Types.IO ()>_R)
+                        (Test.Hspec.Core.Tree.Item
+                           (Sub (Test.Hspec.Core.Example.D:R:ArgIO[0])))_R)_R])_R
+                   Main.main7) -}
+484aee67b95a52b5a98bcf974f1a1efe
+  main60 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main95
+                   Main.main61) -}
+7b8df7a6f54f9e9cb27af12b012691a6
+  main61 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main90
+                   Main.main62) -}
+32ed523eb67aa0eae287e26714ed2a21
+  main62 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main86
+                   Main.main63) -}
+31e40047cc2a1614ce932e19b96296b6
+  main63 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main81
+                   Main.main64) -}
+c39fa16f2938f82592bafe347a41a7aa
+  main64 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main75
+                   Main.main65) -}
+9dd33d2ca908d37782a499247035beac
+  main65 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   Main.main66
+                   (GHC.Types.[]
+                      @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])])) -}
+ee36709615f0f3f22ce927f845a1490f
+  main66 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main74
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main67) -}
+9b727622ba288516eb43338d4a0eda88
+  main67 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main72
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main68) -}
+76474336a8b21ca538aa3c1315b9729a
+  main68 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main73
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main69) -}
+9d35144e0b03300c8133bb2621ae89ae
+  main69 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main72
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main70) -}
+8154a4bd988ba3a852329a58d946a100
+  main7 ::
+    [Test.Hspec.Core.Tree.Tree
+       (Test.Hspec.Core.Example.ActionWith ())
+       (Test.Hspec.Core.Tree.Item ())]
+  {- Unfolding: (GHC.Base.++
+                   @ (Test.Hspec.Core.Tree.Tree
+                        (Test.Hspec.Core.Example.ActionWith ())
+                        (Test.Hspec.Core.Tree.Item ()))
+                   Main.main120
+                     `cast`
+                   ([(Test.Hspec.Core.Tree.Tree
+                        (Sub (Test.Hspec.Core.Example.D:R:ArgIO[0])
+                         ->_R <GHC.Types.IO ()>_R)
+                        (Test.Hspec.Core.Tree.Item
+                           (Sub (Test.Hspec.Core.Example.D:R:ArgIO[0])))_R)_R])_R
+                   Main.main8) -}
+9da500ca7e06b6034b340600455d85c5
+  main70 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main71
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   (GHC.Types.[]
+                      @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])))) -}
+17e071b5fdad0fef0bb2790c1c86c1ab
+  main71 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
+6c62dc00e25933eaafd09f6ed49261d7
+  main72 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 4#) -}
+800477f8a415e84feae21a8130b0f26a
+  main73 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
+f8ac1ac230135d7601da0dbbe02d0c6c
+  main74 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+0e51d7684d78060bd503c0dfcad93da4
+  main75 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main80
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main76) -}
+23c6e2bd5071408df33a778da1bbba46
+  main76 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main74
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main77) -}
+a0b87152c4aac0e8bc4791146e12b271
+  main77 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main72
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main78) -}
+71209f041beceed0fe40d7f8756f2c7e
+  main78 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main73
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main79) -}
+c74535eea496beb1e1ec4c3aee8e4cac
+  main79 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main72
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   (GHC.Types.[]
+                      @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])))) -}
+f74960c0476871d9c3e9fb2fc55767a2
+  main8 ::
+    [Test.Hspec.Core.Tree.Tree
+       (Test.Hspec.Core.Example.ActionWith ())
+       (Test.Hspec.Core.Tree.Item ())]
+  {- Unfolding: (GHC.Base.++
+                   @ (Test.Hspec.Core.Tree.Tree
+                        (Test.Hspec.Core.Example.ActionWith ())
+                        (Test.Hspec.Core.Tree.Item ()))
+                   Main.main51
+                     `cast`
+                   ([(Test.Hspec.Core.Tree.Tree
+                        (Sub (Test.Hspec.Core.Example.D:R:ArgIO[0])
+                         ->_R <GHC.Types.IO ()>_R)
+                        (Test.Hspec.Core.Tree.Item
+                           (Sub (Test.Hspec.Core.Example.D:R:ArgIO[0])))_R)_R])_R
+                   Main.main9
+                     `cast`
+                   ([(Test.Hspec.Core.Tree.Tree
+                        (Sub (Test.Hspec.Core.Example.D:R:ArgIO[0])
+                         ->_R <GHC.Types.IO ()>_R)
+                        (Test.Hspec.Core.Tree.Item
+                           (Sub (Test.Hspec.Core.Example.D:R:ArgIO[0])))_R)_R])_R) -}
+6c75f1287265fd5ca868170dc368df97
+  main80 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 9#) -}
+146d5aa896cad91a4e6a60e4b83f3b4c
+  main81 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main71
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main82) -}
+7bc3f6a911ac14f5d6c38840c67de3bd
+  main82 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main80
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main83) -}
+fa741e51f5d7ce6a878f14af37698db6
+  main83 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main74
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main84) -}
+c8d09e4d776f64acca561d17879cc4a3
+  main84 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main72
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main85) -}
+0eddf3726a5bc2677d9c4aab90bcc961
+  main85 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main73
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   (GHC.Types.[]
+                      @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])))) -}
+d5dd5f520dfc185944ac054b07d7c709
+  main86 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main80
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main87) -}
+3ff78960c832c50823c0b0bfdf8ee582
+  main87 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main71
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main88) -}
+be8fde2a494840cc3c0a637355dc829e
+  main88 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main80
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main89) -}
+b44d13238210b41654122fe030a2a4e6
+  main89 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main74
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main79) -}
+f98c696ce1f5e890d74a0aa819e87324
+  main9 ::
+    [Test.Hspec.Core.Tree.SpecTree
+       (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.Hspec.Core.Tree.SpecTree
+                        (Test.Hspec.Core.Example.Arg (GHC.Types.IO ())))
+                   Main.main10
+                   (GHC.Types.[]
+                      @ (Test.Hspec.Core.Tree.SpecTree
+                           (Test.Hspec.Core.Example.Arg (GHC.Types.IO ()))))) -}
+f3b3a07ecbcfcc57bb3d26d05f153d8d
+  main90 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main72
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main91) -}
+e6aa278fb93491ed794f2188d6ca35fd
+  main91 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main80
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main92) -}
+b81ef52774cbe4d509488ff4b1c23ba4
+  main92 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main71
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main93) -}
+81945c9dab7eafacc0b3caa5043bbe4f
+  main93 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main80
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main94) -}
+56f2aa586a80d03febfd12de41be72d2
+  main94 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main74
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   (GHC.Types.[]
+                      @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])))) -}
+4a79e997534e68073ea64a13e5f50bad
+  main95 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main100
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main96) -}
+391ae7ff735d3a308eeaa6932f87fda8
+  main96 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main72
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main97) -}
+a99c661e53ade2bb6cbc62122f5d9ee8
+  main97 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main80
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main98) -}
+9fcd9392f14bc232f366bc7c743d3643
+  main98 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main71
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   Main.main99) -}
+678eb0e279d1542cab0776a478c3cd3f
+  main99 :: [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]]))
+                   Main.main80
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                  <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                           (Sym (GHC.Exts.D:R:Item[][0]
+                                                                     <[GHC.Types.Int]>_N)))_R)
+                   (GHC.Types.[]
+                      @ (GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])))) -}
+7c0e3574ae854423bca147b0da8f59c1
+  main_eta1 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- Unfolding: (GHC.Base.map
+                   @ (GHC.Exts.Item [[GHC.Types.Int]])
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Base.id @ [GHC.Types.Int])
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))
+                    ->_R ([Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                         <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                                  (Sym (GHC.Exts.D:R:Item[][0]
+                                                                            <[GHC.Types.Int]>_N)))_R])_R)
+                   (Series.$wslices 3# (GHC.CString.unpackCString# Main.main15))
+                     `cast`
+                   ([Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))])_R) -}
+19163ad131a361159bc386aa31630fc2
+  main_eta2 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- Unfolding: (GHC.Base.map
+                   @ (GHC.Exts.Item [[GHC.Types.Int]])
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Base.id @ [GHC.Types.Int])
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))
+                    ->_R ([Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                         <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                                  (Sym (GHC.Exts.D:R:Item[][0]
+                                                                            <[GHC.Types.Int]>_N)))_R])_R)
+                   (Series.$wslices 0# (GHC.Types.[] @ GHC.Types.Char))
+                     `cast`
+                   ([Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))])_R) -}
+a6d5ddba9259f294993d9ce8e37cc0e8
+  main_eta3 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- Unfolding: (GHC.Base.map
+                   @ (GHC.Exts.Item [[GHC.Types.Int]])
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Base.id @ [GHC.Types.Int])
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))
+                    ->_R ([Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                         <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                                  (Sym (GHC.Exts.D:R:Item[][0]
+                                                                            <[GHC.Types.Int]>_N)))_R])_R)
+                   (Series.$wslices 3# (GHC.CString.unpackCString# Main.main161))
+                     `cast`
+                   ([Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))])_R) -}
+c31561ec643bacca0d5f76020521691e
+  main_eta4 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- Unfolding: (GHC.Base.map
+                   @ (GHC.Exts.Item [[GHC.Types.Int]])
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Base.id @ [GHC.Types.Int])
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))
+                    ->_R ([Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                         <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                                  (Sym (GHC.Exts.D:R:Item[][0]
+                                                                            <[GHC.Types.Int]>_N)))_R])_R)
+                   (Series.$wslices 2# (GHC.CString.unpackCString# Main.main161))
+                     `cast`
+                   ([Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))])_R) -}
+c7ecc35e3a15213ecb1902d3a0039f78
+  main_eta5 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- Unfolding: (GHC.Base.map
+                   @ (GHC.Exts.Item [[GHC.Types.Int]])
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Base.id @ [GHC.Types.Int])
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))
+                    ->_R ([Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                         <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                                  (Sym (GHC.Exts.D:R:Item[][0]
+                                                                            <[GHC.Types.Int]>_N)))_R])_R)
+                   (Series.$wslices 2# (GHC.Types.[] @ GHC.Types.Char))
+                     `cast`
+                   ([Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))])_R) -}
+77cda720bd7650405152ba13dbe2514b
+  main_eta6 :: [[GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]]
+  {- Unfolding: (GHC.Base.map
+                   @ (GHC.Exts.Item [[GHC.Types.Int]])
+                   @ [GHC.Exts.Item (GHC.Exts.Item [[GHC.Types.Int]])]
+                   (GHC.Base.id @ [GHC.Types.Int])
+                     `cast`
+                   (Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))
+                    ->_R ([Sub (Sym (GHC.Exts.D:R:Item[][0]
+                                         <GHC.Types.Int>_N)) ; (GHC.Exts.Item
+                                                                  (Sym (GHC.Exts.D:R:Item[][0]
+                                                                            <[GHC.Types.Int]>_N)))_R])_R)
+                   (Series.$wslices 1# (GHC.Types.[] @ GHC.Types.Char))
+                     `cast`
+                   ([Sub (Sym (GHC.Exts.D:R:Item[][0] <[GHC.Types.Int]>_N))])_R) -}
+c385dff405cd15a32798f47807e2e25a
+  main_showl :: [GHC.Types.Int] -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>m2 -}
+"SPEC/Main $fEq[] @ (Item (Item [[Int]]))" [orphan] forall (v :: GHC.Classes.Eq
+                                                                   (GHC.Exts.Item
+                                                                      (GHC.Exts.Item
+                                                                         [[GHC.Types.Int]])))
+  GHC.Classes.$fEq[] @ (GHC.Exts.Item
+                          (GHC.Exts.Item [[GHC.Types.Int]]))
+                     v
+  = Main.$s$fEq[]
+"SPEC/Main $fEq[]_$c/= @ (Item (Item [[Int]]))" [orphan] forall ($dEq :: GHC.Classes.Eq
+                                                                           (GHC.Exts.Item
+                                                                              (GHC.Exts.Item
+                                                                                 [[GHC.Types.Int]])))
+  GHC.Classes.$fEq[]_$c/= @ (GHC.Exts.Item
+                               (GHC.Exts.Item [[GHC.Types.Int]]))
+                          $dEq
+  = Main.$s$fEq[]_$s$fEq[]_$c/=
+"SPEC/Main $fShow[] @ (Item (Item [[Int]]))" [orphan] forall (v :: GHC.Show.Show
+                                                                     (GHC.Exts.Item
+                                                                        (GHC.Exts.Item
+                                                                           [[GHC.Types.Int]])))
+  GHC.Show.$fShow[] @ (GHC.Exts.Item
+                         (GHC.Exts.Item [[GHC.Types.Int]]))
+                    v
+  = Main.$s$fShow[]
+"SPEC/Main $fShow[]_$cshow @ (Item (Item [[Int]]))" [orphan] forall ($dShow :: GHC.Show.Show
+                                                                                 (GHC.Exts.Item
+                                                                                    (GHC.Exts.Item
+                                                                                       [[GHC.Types.Int]])))
+  GHC.Show.$fShow[]_$cshow @ (GHC.Exts.Item
+                                (GHC.Exts.Item [[GHC.Types.Int]]))
+                           $dShow
+  = Main.$s$fShow[]_$cshow
+"SPEC/Main $fShow[]_$cshowList @ (Item (Item [[Int]]))" [orphan] forall ($dShow :: GHC.Show.Show
+                                                                                     (GHC.Exts.Item
+                                                                                        (GHC.Exts.Item
+                                                                                           [[GHC.Types.Int]])))
+  GHC.Show.$fShow[]_$cshowList @ (GHC.Exts.Item
+                                    (GHC.Exts.Item [[GHC.Types.Int]]))
+                               $dShow
+  = Main.$s$fShow[]_$cshowList
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,101 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-20 03:33:34.430176848 UTC
+
+interface atbash-cipher-1.2.0.6-1bJP7wWcmCO2m9BiK6O1xU:Atbash 8043
+  interface hash: 31116eb8e5a5b34c14a8fe2b62cf973e
+  ABI hash: 006be4ee8217bf89e487bf944299848a
+  export-list hash: 2710355450ea3bef168923f0e14f4486
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Atbash.decode
+  Atbash.encode
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0 split-0.2.3.3
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Char 3e89818e2b8ef1a2cc5393163484da72
+import  -/  base-4.11.1.0:Data.List 83dc843e47bfc0c5af51e19c6f3476d5
+import  -/  base-4.11.1.0:Data.OldList 1b35aa3c6805ff7c8887a35a866fe006
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Char df8a8e058e3141ae6822492094eb6689
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Unicode 8234c40b59f035e845832a42e8725a00
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+import  -/  split-0.2.3.3:Data.List.Split 5324097c17aea95e263e86195d8f4cf4
+import  -/  split-0.2.3.3:Data.List.Split.Internals 5b68cd2231dc71aa99e1db1b43dd9a13
+df2a61d1d0b4c64a67e45995a1560d52
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Atbash.$trModule3
+                   Atbash.$trModule1) -}
+043cea62278875ffd54ae221eb1a11a8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Atbash.$trModule2) -}
+9d6bf6e5375752dba28218b276470dfd
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Atbash"#) -}
+bc962f0d7a7af2efb2412c7b6e1c0b13
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Atbash.$trModule4) -}
+b9bff592104e82affe028208b33e6ade
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("atbash-cipher-1.2.0.6-1bJP7wWcmCO2m9BiK6O1xU"#) -}
+24df25b0a43355d9f7069e590efee415
+  decode :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: GHC.Base.String) -> Atbash.decode_go x) -}
+4f26d66ba0693c6461e9ba68ad8e7628
+  decode_go :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U> -}
+f19b1d8caa08323df42b710f6bbd2c6d
+  encode :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: GHC.Base.String) ->
+                 case Data.List.Split.Internals.chunksOf
+                        @ GHC.Types.Char
+                        Atbash.encode2
+                        (Atbash.decode_go x) of wild {
+                   [] -> GHC.Types.[] @ GHC.Types.Char
+                   : x1 xs1
+                   -> Data.OldList.intercalate_$spoly_go
+                        @ GHC.Types.Char
+                        x1
+                        (Data.OldList.prependToAll
+                           @ [GHC.Types.Char]
+                           Atbash.encode_xs
+                           xs1) }) -}
+cceae491cd347f9c5d5005f87e929eba
+  encode1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" "#) -}
+f4d58502bb762434f87ff3bfcf92d228
+  encode2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5#) -}
+f1b43d9ed1001f132a535b8b0ad40853
+  encode_xs :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Atbash.encode1) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

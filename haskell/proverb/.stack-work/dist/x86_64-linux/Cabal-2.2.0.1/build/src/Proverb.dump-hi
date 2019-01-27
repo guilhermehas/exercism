@@ -1,0 +1,143 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-20 03:00:02.258444853 UTC
+
+interface proverb-1.1.0.2-GbenLyzQBdo1buZ8qc3jiz:Proverb 8043
+  interface hash: a39ac1d63ce6bccb30dcd26c16ed9127
+  ABI hash: 4b58bcef133e30dc4c7394db4c176f47
+  export-list hash: 302831bd2e4b20282c461128cce289f8
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Proverb.recite
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.List 83dc843e47bfc0c5af51e19c6f3476d5
+import  -/  base-4.11.1.0:Data.OldList 1b35aa3c6805ff7c8887a35a866fe006
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+51fd32ee4fb38851cdba53a5086db706
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Proverb.$trModule3
+                   Proverb.$trModule1) -}
+435930e17c05e7d10c13aa7726205bb0
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Proverb.$trModule2) -}
+f3729023d8ff9386b38de99b58968fe9
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Proverb"#) -}
+487b2a5dcda64f1a144d6afdb3507051
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Proverb.$trModule4) -}
+400385e9fd14d1829b722361ab7da7f7
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("proverb-1.1.0.2-GbenLyzQBdo1buZ8qc3jiz"#) -}
+96edf8c50ccdba24b417333fcaa2dd2e
+  recite :: [GHC.Base.String] -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: [GHC.Base.String]) ->
+                 case ds of wild {
+                   [] -> GHC.Types.[] @ GHC.Types.Char
+                   : ipv ipv1
+                   -> let {
+                        z :: [GHC.Types.Char]
+                        = GHC.CString.unpackAppendCString#
+                            Proverb.recite9
+                            (GHC.Base.++ @ GHC.Types.Char ipv Proverb.recite7)
+                      } in
+                      let {
+                        z1 :: [[GHC.Types.Char]]
+                        = GHC.Types.:
+                            @ [GHC.Types.Char]
+                            z
+                            (GHC.Types.[] @ [GHC.Types.Char])
+                      } in
+                      letrec {
+                        go2 :: [[GHC.Types.Char]]
+                               -> [[GHC.Types.Char]] -> [[GHC.Types.Char]]
+                          {- Arity: 2, Strictness: <S,1*U><L,1*U> -}
+                        = \ (ds1 :: [[GHC.Types.Char]]) (_ys :: [[GHC.Types.Char]]) ->
+                          case ds1 of wild1 {
+                            [] -> z1
+                            : ipv2 ipv3
+                            -> case _ys of wild2 {
+                                 [] -> z1
+                                 : ipv4 ipv5
+                                 -> GHC.Types.:
+                                      @ [GHC.Types.Char]
+                                      (GHC.CString.unpackAppendCString#
+                                         Proverb.recite6
+                                         (GHC.Base.++
+                                            @ GHC.Types.Char
+                                            ipv2
+                                            (GHC.CString.unpackAppendCString#
+                                               Proverb.recite5
+                                               (GHC.Base.++
+                                                  @ GHC.Types.Char
+                                                  ipv4
+                                                  Proverb.recite3))))
+                                      (go2 ipv3 ipv5) } }
+                      } in
+                      case go2 wild ipv1 of wild1 {
+                        [] -> GHC.Types.[] @ GHC.Types.Char
+                        : x xs1
+                        -> Data.OldList.intercalate_$spoly_go
+                             @ GHC.Types.Char
+                             x
+                             (Data.OldList.prependToAll
+                                @ [GHC.Types.Char]
+                                Proverb.recite1
+                                xs1) } }) -}
+7939010165eb7603a1f5bde42c533374
+  recite1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Proverb.recite2) -}
+24e28d27652d04208b6f8022e7ca0b04
+  recite2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("\n"#) -}
+3d9fe5f49a0001b7af692f4b3304cf9b
+  recite3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Proverb.recite4) -}
+d3713f9f4ade83061e47639dbf642d8f
+  recite4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" was lost."#) -}
+6649e8a8cf337b79a85813a0807804c4
+  recite5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" the "#) -}
+ec01c8148f3e9236e5270b06bb4b43a6
+  recite6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("For want of a "#) -}
+f4375149da479d06004721373b00cd66
+  recite7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Proverb.recite8) -}
+9fa01955735e7cb6b190044fb19132b8
+  recite8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("."#) -}
+73cb3c66c160f2caab3bf9fb6a80e3dc
+  recite9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("And all for the want of a "#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

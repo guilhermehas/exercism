@@ -1,0 +1,104 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-20 02:12:23.33819866 UTC
+
+interface sieve-1.1.0.5-FqQhnI4XHMG9ZYuI9iVfON:Sieve 8043
+  interface hash: dfdbaa1bf4a48435e5f90c4048942f93
+  ABI hash: 2d1ef271cbea0308f4931a7d07679ff8
+  export-list hash: 34e3c9d26525a7ba0e2d9474a447fb78
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Sieve.primesUpTo
+module dependencies:
+package dependencies: array-0.5.2.0 base-4.11.1.0 deepseq-1.4.3.0
+                      ghc-prim-0.5.2.0 integer-gmp-1.0.2.0 primitive-0.6.3.0
+                      transformers-0.5.5.0 vector-0.12.0.1
+orphans: vector-0.12.0.1:Data.Vector.Fusion.Bundle
+         transformers-0.5.5.0:Control.Monad.Trans.Error
+         base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Complex base-4.11.1.0:Data.Functor.Compose
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity
+                         base-4.11.1.0:Data.Functor.Product base-4.11.1.0:Data.Functor.Sum
+                         base-4.11.1.0:Data.Monoid base-4.11.1.0:Data.Semigroup
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:Data.Void base-4.11.1.0:GHC.Exts
+                         base-4.11.1.0:GHC.Generics base-4.11.1.0:GHC.IO.Exception
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         primitive-0.6.3.0:Data.Primitive.Array vector-0.12.0.1:Data.Vector
+import  -/  base-4.11.1.0:Data.Tuple 3af66f3ac61ed95ba8a3a3f68ebc5003
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  integer-gmp-1.0.2.0:GHC.Integer.Type f3d5169c3d3830854b19f6565b265403
+import  -/  vector-0.12.0.1:Data.Vector 2d379e1a38b7a9709cc44e2d568778e9
+a55781c23598f0f53f2becfc4355f221
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Sieve.$trModule3 Sieve.$trModule1) -}
+85cef47337083e815a8f063061d41f5e
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sieve.$trModule2) -}
+2cdc10b64d290765513c14c6312436c5
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Sieve"#) -}
+db3fc4fcbd6bc5b64b0bc573a15ea58f
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sieve.$trModule4) -}
+cd9a5b3fe42ebecb76b8eddd41e3c2c7
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("sieve-1.1.0.5-FqQhnI4XHMG9ZYuI9iVfON"#) -}
+a854552d1ccea7017f0f495716143b98
+  notPrimes ::
+    GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer -> Data.Vector.Vector GHC.Types.Bool
+  {- Arity: 2, Strictness: <S,U><S,U> -}
+b3b2e070340464f769ea0dd6be85c881
+  primesUpTo ::
+    GHC.Integer.Type.Integer -> [GHC.Integer.Type.Integer]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (n1 :: GHC.Integer.Type.Integer) ->
+                 case Sieve.notPrimes
+                        n1
+                        n1 of v2 { Data.Vector.Vector ipv ipv1 ipv2 ->
+                 letrec {
+                   $wgo :: GHC.Prim.Int#
+                           -> GHC.Prim.Int# -> [GHC.Integer.Type.Integer]
+                     {- Arity: 2, Strictness: <S,U><L,U>, Inline: [0] -}
+                   = \ (ww :: GHC.Prim.Int#) (ww1 :: GHC.Prim.Int#) ->
+                     case GHC.Prim.>=# ww ipv1 of lwild {
+                       DEFAULT
+                       -> case GHC.Prim.indexArray#
+                                 @ GHC.Types.Bool
+                                 ipv2
+                                 (GHC.Prim.+# ipv ww) of ds3 { Unit# ipv3 ->
+                          case ipv3 of wild {
+                            GHC.Types.False -> $wgo (GHC.Prim.+# ww 1#) (GHC.Prim.+# ww1 1#)
+                            GHC.Types.True
+                            -> GHC.Types.:
+                                 @ GHC.Integer.Type.Integer
+                                 (GHC.Integer.Type.smallInteger ww1)
+                                 ($wgo (GHC.Prim.+# ww 1#) (GHC.Prim.+# ww1 1#)) } }
+                       1# -> GHC.Types.[] @ GHC.Integer.Type.Integer }
+                 } in
+                 $wgo 0# 0# }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,100 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-17 02:16:49.862635545 UTC
+
+interface series-1.0.0.4:Series 8043
+  interface hash: b48a035fd8544ed73c3fb391db999039
+  ABI hash: 387395cd5e9a739cb76b4136acc8109c
+  export-list hash: 4cddb367e3a9f91086f1af3fb49c44cf
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Series.slices
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Char 3e89818e2b8ef1a2cc5393163484da72
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:Data.List 83dc843e47bfc0c5af51e19c6f3476d5
+import  -/  base-4.11.1.0:Data.Maybe 409c3da2b142470b68be39ce1d97a9f7
+import  -/  base-4.11.1.0:Data.OldList 1b35aa3c6805ff7c8887a35a866fe006
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+5a106d08b787916d0b54bac63be6a084
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Series.$trModule3
+                   Series.$trModule1) -}
+7f0a4be3d59671d563164d0256954ded
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Series.$trModule2) -}
+4c5ca7701fbb4da2b23062ed4e069400
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Series"#) -}
+dba4d461bf0fe153a721dd6f962f6ecc
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Series.$trModule4) -}
+9ce66ad3041f2a64bfdb5a413e1a8794
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("series-1.0.0.4-RpS2xHi4IqLNPwd6Z9j8Y"#) -}
+a797c1843f8c2acb18cb65ea272f688a
+  $wgo :: [GHC.Types.Char] -> GHC.Prim.Int# -> [GHC.Types.Int]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0] -}
+679f4c4afd217a7615de9d10aeb1687c
+  $wslices :: GHC.Prim.Int# -> GHC.Base.String -> [[GHC.Types.Int]]
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) (w :: GHC.Base.String) ->
+                 let {
+                   lvl :: GHC.Types.Bool
+                   = GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.<# 0# ww)
+                 } in
+                 letrec {
+                   tailsGo :: [GHC.Types.Char] -> [[GHC.Types.Int]]
+                     {- Arity: 1, Strictness: <S,U> -}
+                   = \ (xs :: [GHC.Types.Char]) ->
+                     case GHC.List.$wlenAcc @ GHC.Types.Char xs 0# of ww2 { DEFAULT ->
+                     case GHC.Prim.>=# ww2 ww of lwild {
+                       DEFAULT
+                       -> case xs of wild {
+                            [] -> GHC.Types.[] @ [GHC.Types.Int] : ds xs' -> tailsGo xs' }
+                       1#
+                       -> GHC.Types.:
+                            @ [GHC.Types.Int]
+                            (case lvl of wild {
+                               GHC.Types.False -> GHC.Types.[] @ GHC.Types.Int
+                               GHC.Types.True -> Series.$wgo xs ww })
+                            (case xs of wild {
+                               [] -> GHC.Types.[] @ [GHC.Types.Int] : ds xs' -> tailsGo xs' }) } }
+                 } in
+                 tailsGo w) -}
+e07ca1ad1f225ae596ff23f516184985
+  slices :: GHC.Types.Int -> GHC.Base.String -> [[GHC.Types.Int]]
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,U>, Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Types.Int) (w1 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 -> Series.$wslices ww1 w1 }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

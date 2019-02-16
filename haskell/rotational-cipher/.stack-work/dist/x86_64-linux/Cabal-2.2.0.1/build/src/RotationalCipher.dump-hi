@@ -1,0 +1,121 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-30 22:39:44.08376599 UTC
+
+interface rotational-cipher-1.2.0.3-1SWhbx9Y92tBrGowxbrywk:RotationalCipher 8043
+  interface hash: cbf1c56a7fc2fbb7cf6e6bfa80f15e89
+  ABI hash: 544f4d830c8d0be01bc7c113d5bc0df0
+  export-list hash: aec24e7ea5637070bc39d55f356939c6
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  RotationalCipher.rotate
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Char 3e89818e2b8ef1a2cc5393163484da72
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Char df8a8e058e3141ae6822492094eb6689
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+c7b4f5c22497eac1828136fb817489b6
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   RotationalCipher.$trModule3
+                   RotationalCipher.$trModule1) -}
+72346fd2ff195877f4489f8e6377491a
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS RotationalCipher.$trModule2) -}
+71039b8097a6ae7b4d12eec2140217d9
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("RotationalCipher"#) -}
+ee873629f62be86bcd393d9f20040027
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS RotationalCipher.$trModule4) -}
+37e3719594611642ada5e5080f026f89
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("rotational-cipher-1.2.0.3-1SWhbx9Y92tBrGowxbrywk"#) -}
+108563d56efdb7bc707384a66a36806e
+  rotate :: GHC.Types.Int -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(U)><S,1*U>,
+     Unfolding: (\ (n :: GHC.Types.Int) (eta :: [GHC.Types.Char]) ->
+                 GHC.Base.map
+                   @ GHC.Types.Char
+                   @ GHC.Types.Char
+                   (\ (x :: GHC.Types.Char) ->
+                    case x of wild { GHC.Types.C# c# ->
+                    let {
+                      y :: GHC.Prim.Int# = GHC.Prim.ord# c#
+                    } in
+                    let {
+                      $j :: GHC.Types.Char <join 0> {- Strictness: m -}
+                      = case GHC.Prim.<=# 97# y of lwild {
+                          DEFAULT
+                          -> case GHC.Prim.leWord#
+                                    (GHC.Prim.int2Word# y)
+                                    1114111## of lwild1 {
+                               DEFAULT -> GHC.Char.$wlvl y 1# -> GHC.Types.C# (GHC.Prim.chr# y) }
+                          1#
+                          -> case GHC.Prim.># 123# y of lwild1 {
+                               DEFAULT
+                               -> case GHC.Prim.leWord#
+                                         (GHC.Prim.int2Word# y)
+                                         1114111## of lwild2 {
+                                    DEFAULT -> GHC.Char.$wlvl y
+                                    1# -> GHC.Types.C# (GHC.Prim.chr# y) }
+                               1#
+                               -> case n of wild1 { GHC.Types.I# y1 ->
+                                  case GHC.Classes.modInt#
+                                         (GHC.Prim.-# (GHC.Prim.+# (GHC.Prim.+# y y1) 26#) 97#)
+                                         26# of ww2 { DEFAULT ->
+                                  let {
+                                    i# :: GHC.Prim.Int# = GHC.Prim.+# ww2 97#
+                                  } in
+                                  case GHC.Prim.leWord#
+                                         (GHC.Prim.int2Word# i#)
+                                         1114111## of lwild2 {
+                                    DEFAULT -> GHC.Char.$wlvl i#
+                                    1# -> GHC.Types.C# (GHC.Prim.chr# i#) } } } } }
+                    } in
+                    case GHC.Prim.<=# 65# y of lwild {
+                      DEFAULT -> $j
+                      1#
+                      -> case GHC.Prim.># 91# y of lwild1 {
+                           DEFAULT -> $j
+                           1#
+                           -> case n of wild1 { GHC.Types.I# y1 ->
+                              case GHC.Classes.modInt#
+                                     (GHC.Prim.-# (GHC.Prim.+# (GHC.Prim.+# y y1) 26#) 65#)
+                                     26# of ww2 { DEFAULT ->
+                              let {
+                                i# :: GHC.Prim.Int# = GHC.Prim.+# ww2 65#
+                              } in
+                              case GHC.Prim.leWord# (GHC.Prim.int2Word# i#) 1114111## of lwild2 {
+                                DEFAULT -> GHC.Char.$wlvl i#
+                                1# -> GHC.Types.C# (GHC.Prim.chr# i#) } } } } } })
+                   eta) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

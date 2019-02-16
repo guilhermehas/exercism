@@ -1,0 +1,36 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 1d0646b99c5ebf4213abbc58fc29283c829bb12261c0e5c08f6f84a4a5527d49
+
+name:           linked-list
+version:        0.1.0.3
+build-type:     Simple
+
+library
+  exposed-modules:
+      Deque
+  other-modules:
+      Paths_linked_list
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base
+  default-language: Haskell2010
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: Tests.hs
+  other-modules:
+      Paths_linked_list
+  hs-source-dirs:
+      test
+  build-depends:
+      base
+    , hspec
+    , linked-list
+  default-language: Haskell2010

@@ -1,0 +1,63 @@
+
+==================== FINAL INTERFACE ====================
+2019-02-02 15:49:31.574675633 UTC
+
+interface simple-cipher-1.2.0.5-Biosgw1hJMFGv1AYK7r7FA:Cipher 8043
+  interface hash: 04ebcfa97bc0bfd4db053352dc757468
+  ABI hash: 0c4e0373a0dfe63f83ee985b9302b2c6
+  export-list hash: c670a8c92540336401cc7c5bdb171ccc
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 005c77f6bddcd10eeb0d62578234fd28
+  opt_hash: 45d5e266c9ab751696f96731a7429711
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Cipher.myf
+  Cipher.LL{Cipher.::- Cipher.LZ}
+  Cipher.N{Cipher.S Cipher.Z}
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+1e3a7e73a690f2696997ad02623e7978
+  $tc'::- :: GHC.Types.TyCon
+60aa9f4fb8de1dba690465c61f47702c
+  $tc'LZ :: GHC.Types.TyCon
+83984f4d31195cecb6c07cc229fa22f4
+  $tc'S :: GHC.Types.TyCon
+c2c33216d04ebf665d06bc2bd827bdf5
+  $tc'Z :: GHC.Types.TyCon
+3b09fa236c5d96f0db1cfb2d4c47335f
+  $tcLL :: GHC.Types.TyCon
+562dde0a1cca87232ee501d2157f6c3f
+  $tcN :: GHC.Types.TyCon
+99c1cb3c2a660da435025fc3240aad9a
+  $trModule :: GHC.Types.Module
+fe058a16893a1f1bd5805459b43fe463
+  type role LL nominal representational
+  data LL (n :: Cipher.N) a where
+    LZ :: LL 'Cipher.Z a
+    (::-) :: a -> (Cipher.LL n1 a) -> LL ('Cipher.S n1) a
+c521a2b4dcee18ac92a3c96800424432
+  data N = Z | S Cipher.N
+288790e284e9c2c628129fddac8f2c62
+  myf ::
+    Cipher.LL n GHC.Types.Int
+    -> Cipher.LL n GHC.Types.Int -> Cipher.LL n GHC.Types.Int
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

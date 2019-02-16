@@ -1,0 +1,36 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 0c58e68e7d73484659ff4a7db9acd398f044ee3160c58db4e0eba406fa872e48
+
+name:           bank-account
+version:        0.1.0.3
+build-type:     Simple
+
+library
+  exposed-modules:
+      BankAccount
+  other-modules:
+      Paths_bank_account
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base
+  default-language: Haskell2010
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: Tests.hs
+  other-modules:
+      Paths_bank_account
+  hs-source-dirs:
+      test
+  build-depends:
+      bank-account
+    , base
+    , hspec
+  default-language: Haskell2010

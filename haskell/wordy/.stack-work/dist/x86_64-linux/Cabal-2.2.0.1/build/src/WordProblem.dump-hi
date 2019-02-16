@@ -1,0 +1,792 @@
+
+==================== FINAL INTERFACE ====================
+2019-02-16 03:02:03.252254045 UTC
+
+interface wordy-1.5.0.8-3ZznahysVX98VaN6GNQI1X:WordProblem 8043
+  interface hash: 10fae108daf6bc7ffaa03c10b8060511
+  ABI hash: 68c32db89b8d00d2d8177494b30c10ad
+  export-list hash: 596ec3b3d5698c5abeb2dc2be5cae202
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  WordProblem.answer
+module dependencies:
+package dependencies: base-4.11.1.0* exceptions-0.10.0
+                      ghc-boot-th-8.4.3 ghc-prim-0.5.2.0 integer-gmp-1.0.2.0
+                      listsafe-0.1.0.1 mtl-2.2.2 split-0.2.3.3 stm-2.4.5.0
+                      template-haskell-2.13.0.0 transformers-0.5.5.0
+orphans: stm-2.4.5.0:Control.Monad.STM
+         transformers-0.5.5.0:Control.Monad.Trans.Error
+         base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:GHC.Exts base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+                         ghc-boot-th-8.4.3:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.4.3:GHC.LanguageExtensions.Type
+                         template-haskell-2.13.0.0:Language.Haskell.TH.Syntax
+import  -/  base-4.11.1.0:Control.Applicative 55d9b3a7491623b0362290e162d67308
+import  -/  base-4.11.1.0:Control.Monad c5f960c67d822497578bffbd3e4c01cf
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:Data.Functor f522c3501272159820fd6f242510732f
+import  -/  base-4.11.1.0:Data.Maybe 409c3da2b142470b68be39ce1d97a9f7
+import  -/  base-4.11.1.0:Data.OldList 1b35aa3c6805ff7c8887a35a866fe006
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  base-4.11.1.0:Text.Read 6c02630607b565ffcb34e8127673989b
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+import  -/  integer-gmp-1.0.2.0:GHC.Integer.Type f3d5169c3d3830854b19f6565b265403
+import  -/  listsafe-0.1.0.1:Data.List.Safe 27e717e4fd62ad15d5b33e70efd549e6
+import  -/  split-0.2.3.3:Data.List.Split 5324097c17aea95e263e86195d8f4cf4
+import  -/  split-0.2.3.3:Data.List.Split.Internals 5b68cd2231dc71aa99e1db1b43dd9a13
+9a7db7f86695d20c451f95f28d69041b
+  $fEqOperator :: GHC.Classes.Eq WordProblem.Operator
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ WordProblem.Operator
+                  WordProblem.$fEqOperator_$c==
+                  WordProblem.$fEqOperator_$c/= -}
+9a7db7f86695d20c451f95f28d69041b
+  $fEqOperator_$c/= ::
+    WordProblem.Operator -> WordProblem.Operator -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: WordProblem.Operator) (y :: WordProblem.Operator) ->
+                 case x of wild {
+                   WordProblem.Plus
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True WordProblem.Plus -> GHC.Types.False }
+                   WordProblem.Sub
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True WordProblem.Sub -> GHC.Types.False }
+                   WordProblem.Mult
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True WordProblem.Mult -> GHC.Types.False }
+                   WordProblem.Div
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        WordProblem.Div -> GHC.Types.False } }) -}
+9a7db7f86695d20c451f95f28d69041b
+  $fEqOperator_$c== ::
+    WordProblem.Operator -> WordProblem.Operator -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: WordProblem.Operator)
+                   (ds1 :: WordProblem.Operator) ->
+                 case ds of wild {
+                   WordProblem.Plus
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False WordProblem.Plus -> GHC.Types.True }
+                   WordProblem.Sub
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False WordProblem.Sub -> GHC.Types.True }
+                   WordProblem.Mult
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False WordProblem.Mult -> GHC.Types.True }
+                   WordProblem.Div
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        WordProblem.Div -> GHC.Types.True } }) -}
+b03a578eaa08108728d446ad8bc06b56
+  $fEqToken :: GHC.Classes.Eq WordProblem.Token
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ WordProblem.Token
+                  WordProblem.$fEqToken_$c==
+                  WordProblem.$fEqToken_$c/= -}
+b03a578eaa08108728d446ad8bc06b56
+  $fEqToken_$c/= ::
+    WordProblem.Token -> WordProblem.Token -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: WordProblem.Token) (y :: WordProblem.Token) ->
+                 case x of wild {
+                   WordProblem.Number' a1
+                   -> case y of wild1 {
+                        WordProblem.Number' b1
+                        -> case GHC.Integer.Type.eqInteger# a1 b1 of wild2 {
+                             DEFAULT -> GHC.Types.True 1# -> GHC.Types.False }
+                        WordProblem.Operator ipv -> GHC.Types.True }
+                   WordProblem.Operator a1
+                   -> case y of wild1 {
+                        WordProblem.Number' ipv -> GHC.Types.True
+                        WordProblem.Operator b1
+                        -> case a1 of wild2 {
+                             WordProblem.Plus
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True WordProblem.Plus -> GHC.Types.False }
+                             WordProblem.Sub
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True WordProblem.Sub -> GHC.Types.False }
+                             WordProblem.Mult
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True WordProblem.Mult -> GHC.Types.False }
+                             WordProblem.Div
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True
+                                  WordProblem.Div -> GHC.Types.False } } } }) -}
+b03a578eaa08108728d446ad8bc06b56
+  $fEqToken_$c== ::
+    WordProblem.Token -> WordProblem.Token -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: WordProblem.Token)
+                   (ds1 :: WordProblem.Token) ->
+                 case ds of wild {
+                   WordProblem.Number' a1
+                   -> case ds1 of wild1 {
+                        WordProblem.Number' b1 -> GHC.Integer.Type.eqInteger a1 b1
+                        WordProblem.Operator ipv -> GHC.Types.False }
+                   WordProblem.Operator a1
+                   -> case ds1 of wild1 {
+                        WordProblem.Number' ipv -> GHC.Types.False
+                        WordProblem.Operator b1
+                        -> WordProblem.$fEqOperator_$c== a1 b1 } }) -}
+9a7db7f86695d20c451f95f28d69041b
+  $fShowOperator :: GHC.Show.Show WordProblem.Operator
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ WordProblem.Operator
+                  WordProblem.$fShowOperator_$cshowsPrec
+                  WordProblem.$fShowOperator_$cshow
+                  WordProblem.$fShowOperator_$cshowList -}
+0a680bdbbe21cf8237f2c0eead0f5075
+  $fShowOperator1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   WordProblem.$fShowOperator2) -}
+bb6bea307fea38430904a22183cd6a75
+  $fShowOperator2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Div"#) -}
+0437ab24e8209e5963412557bb28a1c7
+  $fShowOperator3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   WordProblem.$fShowOperator4) -}
+f0b9b1d6a93a8041ff0013dd0e5c3714
+  $fShowOperator4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Mult"#) -}
+986e57c938e248c6ab7fd112445d6393
+  $fShowOperator5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   WordProblem.$fShowOperator6) -}
+eac4ad97d0b68456e90d08cc3e288e0f
+  $fShowOperator6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Sub"#) -}
+4e5b228ae037095825168e6262fa919f
+  $fShowOperator7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   WordProblem.$fShowOperator8) -}
+0bfd2b2f86095df308521899ea48888d
+  $fShowOperator8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Plus"#) -}
+9a7db7f86695d20c451f95f28d69041b
+  $fShowOperator_$cshow :: WordProblem.Operator -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: WordProblem.Operator) ->
+                 case x of wild {
+                   WordProblem.Plus -> WordProblem.$fShowOperator7
+                   WordProblem.Sub -> WordProblem.$fShowOperator5
+                   WordProblem.Mult -> WordProblem.$fShowOperator3
+                   WordProblem.Div -> WordProblem.$fShowOperator1 }) -}
+9a7db7f86695d20c451f95f28d69041b
+  $fShowOperator_$cshowList ::
+    [WordProblem.Operator] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [WordProblem.Operator]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ WordProblem.Operator
+                   WordProblem.$w$cshowsPrec
+                   ls
+                   s) -}
+9a7db7f86695d20c451f95f28d69041b
+  $fShowOperator_$cshowsPrec ::
+    GHC.Types.Int -> WordProblem.Operator -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: [0],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: WordProblem.Operator)
+                   (w2 :: GHC.Base.String) ->
+                 WordProblem.$w$cshowsPrec w1 w2) -}
+b03a578eaa08108728d446ad8bc06b56
+  $fShowToken :: GHC.Show.Show WordProblem.Token
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ WordProblem.Token
+                  WordProblem.$fShowToken_$cshowsPrec
+                  WordProblem.$fShowToken_$cshow
+                  WordProblem.$fShowToken_$cshowList -}
+b03a578eaa08108728d446ad8bc06b56
+  $fShowToken1 :: WordProblem.Token -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (w :: WordProblem.Token) (w1 :: GHC.Base.String) ->
+                 WordProblem.$w$cshowsPrec1 0# w w1) -}
+ecfcab452c72ada6880cc210c3b480aa
+  $fShowToken2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   WordProblem.$fShowToken3) -}
+0b4f06a3942850960fb2b3cd7611c2c7
+  $fShowToken3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Operator "#) -}
+b121571cbe58b2ad3a09c3e3242e283e
+  $fShowToken4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Number' "#) -}
+b03a578eaa08108728d446ad8bc06b56
+  $fShowToken_$cshow :: WordProblem.Token -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: WordProblem.Token) ->
+                 case x of wild {
+                   WordProblem.Number' b1
+                   -> GHC.CString.unpackAppendCString#
+                        WordProblem.$fShowToken4
+                        (case GHC.Show.$w$cshowsPrec4
+                                11#
+                                b1
+                                (GHC.Types.[] @ GHC.Types.Char) of ww2 { (#,#) ww3 ww4 ->
+                         GHC.Types.: @ GHC.Types.Char ww3 ww4 })
+                   WordProblem.Operator b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        WordProblem.$fShowToken2
+                        (WordProblem.$w$cshowsPrec
+                           b1
+                           (GHC.Types.[] @ GHC.Types.Char)) }) -}
+b03a578eaa08108728d446ad8bc06b56
+  $fShowToken_$cshowList :: [WordProblem.Token] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [WordProblem.Token]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ WordProblem.Token
+                   WordProblem.$fShowToken1
+                   ls
+                   s) -}
+b03a578eaa08108728d446ad8bc06b56
+  $fShowToken_$cshowsPrec ::
+    GHC.Types.Int -> WordProblem.Token -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U><L,U>, Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: WordProblem.Token)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 WordProblem.$w$cshowsPrec1 ww1 w1 w2 }) -}
+8bbed619530ccf98bca048083edee507
+  $tc'Div :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14663029649904985644##
+                   17812131893639527464##
+                   WordProblem.$trModule
+                   WordProblem.$tc'Div2
+                   0#
+                   WordProblem.$tc'Div1) -}
+9b46584c5d977fafffa7c0ff3da48cb3
+  $tc'Div1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+04391f5c39ab5a787461e74efae3e939
+  $tc'Div2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS WordProblem.$tc'Div3) -}
+bc5f5379cf8f953a6167d38f980427e8
+  $tc'Div3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Div"#) -}
+4bb41316b115c72e87621d8ef86e6bb6
+  $tc'Mult :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10494427916256749599##
+                   13998689420051334378##
+                   WordProblem.$trModule
+                   WordProblem.$tc'Mult1
+                   0#
+                   WordProblem.$tc'Div1) -}
+80a0fe5f37062ce1256d0b4dd323373e
+  $tc'Mult1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS WordProblem.$tc'Mult2) -}
+612fdf8b7bf413693f2c89701822a556
+  $tc'Mult2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Mult"#) -}
+dea141fe121db03f1f49fc0a84ab37ca
+  $tc'Number' :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9981754303774202611##
+                   10830285420523620961##
+                   WordProblem.$trModule
+                   WordProblem.$tc'Number'2
+                   0#
+                   WordProblem.$tc'Number'1) -}
+886b9314763a0deeaf7d3629ae3b2853
+  $tc'Number'1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+a49d6c416ceae7b81a834acda1501681
+  $tc'Number'2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS WordProblem.$tc'Number'3) -}
+e1ea7b1b4d2b11418cf16d34def8b0bb
+  $tc'Number'3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Number'"#) -}
+780547cbccbcf8c2bcaa764e35a9d460
+  $tc'Operator :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8779192517149334435##
+                   9107741237607218126##
+                   WordProblem.$trModule
+                   WordProblem.$tc'Operator2
+                   0#
+                   WordProblem.$tc'Operator1) -}
+53aacb6752b68998a5ae2cee672d8289
+  $tc'Operator1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+1c4cb8dfec49de5c514d5dc2fd0c4f19
+  $tc'Operator2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS WordProblem.$tc'Operator3) -}
+7db081a2f31296c851c637994d2ad691
+  $tc'Operator3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Operator"#) -}
+911d590b13d9b31cb7f27a282347b913
+  $tc'Plus :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12362419979109217813##
+                   15132194183469333099##
+                   WordProblem.$trModule
+                   WordProblem.$tc'Plus1
+                   0#
+                   WordProblem.$tc'Div1) -}
+fc8dffab9b2f7d4663a04a38d9cc23a4
+  $tc'Plus1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS WordProblem.$tc'Plus2) -}
+a70849eb905dec69740d07dfe73f21ef
+  $tc'Plus2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Plus"#) -}
+3caaef737bbca337b4d4542acd1826b4
+  $tc'Sub :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11256034208984046119##
+                   15371807828811099626##
+                   WordProblem.$trModule
+                   WordProblem.$tc'Sub1
+                   0#
+                   WordProblem.$tc'Div1) -}
+02cbf3ae6c16019e88958057b46baf72
+  $tc'Sub1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS WordProblem.$tc'Sub2) -}
+e013e222daf61de1e48a885740978334
+  $tc'Sub2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Sub"#) -}
+ac9861050622c07da70d650344153c9c
+  $tcOperator :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2832220308626688584##
+                   7770153923050883767##
+                   WordProblem.$trModule
+                   WordProblem.$tcOperator1
+                   0#
+                   GHC.Types.krep$*) -}
+d25a5565dcbe727bc7ee9486459b1875
+  $tcOperator1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS WordProblem.$tcOperator2) -}
+c74cdb6f868a512d39f89bd480af4b4d
+  $tcOperator2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Operator"#) -}
+48ebe9df34abda9f03743976644845d3
+  $tcToken :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4547536213929193610##
+                   12772657698450880804##
+                   WordProblem.$trModule
+                   WordProblem.$tcToken1
+                   0#
+                   GHC.Types.krep$*) -}
+7389d9f5c12cb3ed183b4a9e222cfab9
+  $tcToken1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS WordProblem.$tcToken2) -}
+e85f61f53fb8200adec830246f263c3c
+  $tcToken2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Token"#) -}
+0d9202191969f51f73b66aa4b2f2332d
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   WordProblem.$trModule3
+                   WordProblem.$trModule1) -}
+ecca9aba50f1890a2ce228a5c7a1a150
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS WordProblem.$trModule2) -}
+8d46716fe15732d3b4d6254f30125c48
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("WordProblem"#) -}
+e28b32f90b964b4751d57bd64b7bd211
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS WordProblem.$trModule4) -}
+8e9cec663468f20ca5650bca4412abaf
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("wordy-1.5.0.8-3ZznahysVX98VaN6GNQI1X"#) -}
+9a7db7f86695d20c451f95f28d69041b
+  $w$cshowsPrec ::
+    WordProblem.Operator -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (w :: WordProblem.Operator)
+                   (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   WordProblem.Plus
+                   -> GHC.Base.++ @ GHC.Types.Char WordProblem.$fShowOperator7 w1
+                   WordProblem.Sub
+                   -> GHC.Base.++ @ GHC.Types.Char WordProblem.$fShowOperator5 w1
+                   WordProblem.Mult
+                   -> GHC.Base.++ @ GHC.Types.Char WordProblem.$fShowOperator3 w1
+                   WordProblem.Div
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        WordProblem.$fShowOperator1
+                        w1 }) -}
+b03a578eaa08108728d446ad8bc06b56
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int#
+    -> WordProblem.Token -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: WordProblem.Token)
+                   (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   WordProblem.Number' b1
+                   -> case GHC.Prim.>=# ww 11# of lwild {
+                        DEFAULT
+                        -> GHC.CString.unpackAppendCString#
+                             WordProblem.$fShowToken4
+                             (case GHC.Show.$w$cshowsPrec4 11# b1 w1 of ww2 { (#,#) ww3 ww4 ->
+                              GHC.Types.: @ GHC.Types.Char ww3 ww4 })
+                        1#
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.CString.unpackAppendCString#
+                                WordProblem.$fShowToken4
+                                (case GHC.Show.$w$cshowsPrec4
+                                        11#
+                                        b1
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.$fShow(,)2
+                                           w1) of ww2 { (#,#) ww3 ww4 ->
+                                 GHC.Types.: @ GHC.Types.Char ww3 ww4 })) }
+                   WordProblem.Operator b1
+                   -> case GHC.Prim.>=# ww 11# of lwild {
+                        DEFAULT
+                        -> GHC.Base.++
+                             @ GHC.Types.Char
+                             WordProblem.$fShowToken2
+                             (WordProblem.$w$cshowsPrec b1 w1)
+                        1#
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                WordProblem.$fShowToken2
+                                (WordProblem.$w$cshowsPrec
+                                   b1
+                                   (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1))) } }) -}
+9a7db7f86695d20c451f95f28d69041b
+  data Operator = Plus | Sub | Mult | Div
+b03a578eaa08108728d446ad8bc06b56
+  data Token
+    = Number' GHC.Integer.Type.Integer | Operator WordProblem.Operator
+f3e95bc946ef00ca4be7053bea80eb0e
+  answer ::
+    GHC.Base.String -> GHC.Base.Maybe GHC.Integer.Type.Integer
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (problem :: GHC.Base.String) ->
+                 case problem of wild {
+                   [] -> GHC.Base.Nothing @ GHC.Integer.Type.Integer
+                   : ipv ipv1
+                   -> case Data.List.Safe.last1
+                             @ GHC.Types.Char
+                             wild
+                             (GHC.List.lastError @ GHC.Types.Char) of wild1 { GHC.Types.C# x ->
+                      case x of wild2 {
+                        DEFAULT -> GHC.Base.Nothing @ GHC.Integer.Type.Integer
+                        '?'#
+                        -> let {
+                             x1 :: [GHC.Base.String]
+                             = Data.OldList.words (GHC.List.init1 @ GHC.Types.Char ipv ipv1)
+                           } in
+                           case Data.List.Safe.!!
+                                  @ GHC.Base.Maybe
+                                  @ GHC.Types.Int
+                                  @ GHC.Base.String
+                                  Control.Monad.Catch.$fMonadThrowMaybe
+                                  GHC.Real.$fIntegralInt
+                                  x1
+                                  WordProblem.answer27 of wild3 {
+                             GHC.Base.Nothing -> GHC.Base.Nothing @ GHC.Integer.Type.Integer
+                             GHC.Base.Just a1
+                             -> case GHC.Base.eqString a1 WordProblem.answer25 of wild4 {
+                                  GHC.Types.False -> GHC.Base.Nothing @ GHC.Integer.Type.Integer
+                                  GHC.Types.True
+                                  -> case Data.List.Safe.!!
+                                            @ GHC.Base.Maybe
+                                            @ GHC.Types.Int
+                                            @ GHC.Base.String
+                                            Control.Monad.Catch.$fMonadThrowMaybe
+                                            GHC.Real.$fIntegralInt
+                                            x1
+                                            WordProblem.answer24 of wild5 {
+                                       GHC.Base.Nothing
+                                       -> GHC.Base.Nothing @ GHC.Integer.Type.Integer
+                                       GHC.Base.Just a2
+                                       -> case GHC.Base.eqString a2 WordProblem.answer22 of wild6 {
+                                            GHC.Types.False
+                                            -> GHC.Base.Nothing @ GHC.Integer.Type.Integer
+                                            GHC.Types.True
+                                            -> case x1 of wild7 {
+                                                 [] -> GHC.Base.Nothing @ GHC.Integer.Type.Integer
+                                                 : ipv2 ipv3
+                                                 -> case ipv3 of wild8 {
+                                                      []
+                                                      -> GHC.Base.Nothing @ GHC.Integer.Type.Integer
+                                                      : ipv4 ipv5
+                                                      -> let {
+                                                           $j :: GHC.Base.Maybe
+                                                                   GHC.Integer.Type.Integer
+                                                             <join 0>
+                                                           = let {
+                                                               x2 :: [WordProblem.Token]
+                                                               = WordProblem.answer_go1 ipv5
+                                                             } in
+                                                             case WordProblem.correctSentence
+                                                                    x2 of wild9 {
+                                                               GHC.Types.False
+                                                               -> GHC.Base.Nothing
+                                                                    @ GHC.Integer.Type.Integer
+                                                               GHC.Types.True
+                                                               -> GHC.Base.Just
+                                                                    @ GHC.Integer.Type.Integer
+                                                                    (case x2 of wild10 {
+                                                                       [] -> WordProblem.answer21
+                                                                       : ds xs
+                                                                       -> case ds of wild11 {
+                                                                            WordProblem.Number' firstNumber
+                                                                            -> WordProblem.answer_go
+                                                                                 (Data.List.Split.Internals.chunksOf
+                                                                                    @ WordProblem.Token
+                                                                                    WordProblem.answer20
+                                                                                    xs)
+                                                                                 firstNumber
+                                                                            WordProblem.Operator ipv6
+                                                                            -> WordProblem.answer21 } }) }
+                                                         } in
+                                                         letrec {
+                                                           go :: [GHC.Base.String]
+                                                                 -> GHC.Base.Maybe
+                                                                      GHC.Integer.Type.Integer
+                                                             <join 1> {- Arity: 1,
+                                                                         Strictness: <S,1*U> -}
+                                                           = \ (ds :: [GHC.Base.String]) ->
+                                                             case ds of wild9 {
+                                                               [] -> $j
+                                                               : y ys
+                                                               -> case GHC.Base.eqString
+                                                                         y
+                                                                         WordProblem.answer18 of wild10 {
+                                                                    GHC.Types.False
+                                                                    -> case WordProblem.parseWord
+                                                                              y of wild11 {
+                                                                         GHC.Base.Nothing
+                                                                         -> GHC.Base.Nothing
+                                                                              @ GHC.Integer.Type.Integer
+                                                                         GHC.Base.Just ipv6
+                                                                         -> go ys }
+                                                                    GHC.Types.True -> go ys } }
+                                                         } in
+                                                         go ipv5 } } } } } } } } }) -}
+01ffe7fffc15eba744fdaf8f3f27c4d3
+  answer1 :: Text.ParserCombinators.ReadP.P GHC.Integer.Type.Integer
+  {- Unfolding: (GHC.Read.$fReadInteger_$sreadNumber
+                   GHC.Read.$fReadInteger2
+                   Text.ParserCombinators.ReadPrec.minPrec
+                   @ GHC.Integer.Type.Integer
+                   (Text.Read.readEither7 @ GHC.Integer.Type.Integer)) -}
+c8151363f13668c0e95853b7d73763be
+  answer10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# WordProblem.answer11) -}
+3448a1715f5b8c65949439e29b298e25
+  answer11 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("plus"#) -}
+62e7fbcb4b5f99ba3895948ae97bb20f
+  answer12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# WordProblem.answer13) -}
+4db7a83e8bda76e5bed4d870a93f3f39
+  answer13 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("multiplied"#) -}
+b8d63eafdb80a0f7fe668f08b21b8fc2
+  answer14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# WordProblem.answer15) -}
+d1a7231b7cdaf562625d5879814bdba4
+  answer15 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("minus"#) -}
+f6930f45992cbe83c633bc188420aca5
+  answer16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# WordProblem.answer17) -}
+933e48d9ad575d91655e48dbaa5ddc98
+  answer17 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("divided"#) -}
+4a29c82682e68563c9ae4df0de3c5448
+  answer18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# WordProblem.answer19) -}
+7a09808936a0c1ed0a04cc92bd2ac454
+  answer19 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("by"#) -}
+36ec448176927c523906223cf9ee32f5
+  answer2 :: GHC.Base.Maybe WordProblem.Token
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ WordProblem.Token
+                   WordProblem.answer3) -}
+9a0780bb24d84c582b2824959b094a08
+  answer20 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
+c6ba67d05d0e047c75f819c548257f75
+  answer21 :: GHC.Integer.Type.Integer
+  {- Strictness: x -}
+f60be007e059ad7939669f2981fefe0b
+  answer22 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# WordProblem.answer23) -}
+e5579e8e7e193141c73e0f16286a82af
+  answer23 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("is"#) -}
+39ac2538f61eb1d62f4db262583f353d
+  answer24 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+f80b0322d59a758f3b99715ade45cb6e
+  answer25 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# WordProblem.answer26) -}
+7be096ef04a0930eb10f169edab17d69
+  answer26 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("What"#) -}
+74ddc6f243de434e53d48fd99fd4478f
+  answer27 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+31ef64879d94cc7549af72fd36ed70be
+  answer3 :: WordProblem.Token
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (WordProblem.Operator WordProblem.Div) -}
+0ce7796c01acd2333ed7c07962cac1e2
+  answer4 :: GHC.Base.Maybe WordProblem.Token
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ WordProblem.Token
+                   WordProblem.answer5) -}
+f71673d2c27989bca225bd3ed8a45157
+  answer5 :: WordProblem.Token
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (WordProblem.Operator WordProblem.Sub) -}
+c24397d93996303f8a54e519d241c79d
+  answer6 :: GHC.Base.Maybe WordProblem.Token
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ WordProblem.Token
+                   WordProblem.answer7) -}
+ab6dbdec39239c1a067a2a6106b4fb5c
+  answer7 :: WordProblem.Token
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (WordProblem.Operator WordProblem.Mult) -}
+a21727e8a4fc69074e99be2c8836031d
+  answer8 :: GHC.Base.Maybe WordProblem.Token
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ WordProblem.Token
+                   WordProblem.answer9) -}
+e3fc05495457aea9d8c1bb99e735ea5c
+  answer9 :: WordProblem.Token
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (WordProblem.Operator WordProblem.Plus) -}
+af72ce47a7c77b28e23ea5c95f2e8f55
+  answer_go ::
+    [[WordProblem.Token]]
+    -> GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer
+  {- Arity: 2, Strictness: <S,1*U><S,U> -}
+5b7e129e17681efa80294270a8e846b9
+  answer_go1 :: [[GHC.Types.Char]] -> [WordProblem.Token]
+  {- Arity: 1, Strictness: <S,1*U> -}
+975f4e79966a1e8dbe14888ca58a9baf
+  correctSentence :: [WordProblem.Token] -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+9747aef76bd926345236cbe9e69e2bff
+  parseWord :: GHC.Base.String -> GHC.Base.Maybe WordProblem.Token
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (s :: GHC.Base.String) ->
+                 let {
+                   $w$j :: GHC.Prim.Void# -> GHC.Base.Maybe WordProblem.Token
+                     <join 1> {- Arity: 1, Strictness: <L,A>, Inline: [0] -}
+                   = \ (void :: GHC.Prim.Void#)[OneShot] ->
+                     case GHC.Base.eqString s WordProblem.answer16 of wild {
+                       GHC.Types.False
+                       -> case GHC.Base.eqString s WordProblem.answer14 of wild1 {
+                            GHC.Types.False
+                            -> case GHC.Base.eqString s WordProblem.answer12 of wild2 {
+                                 GHC.Types.False
+                                 -> case GHC.Base.eqString s WordProblem.answer10 of wild3 {
+                                      GHC.Types.False -> GHC.Base.Nothing @ WordProblem.Token
+                                      GHC.Types.True -> WordProblem.answer8 }
+                                 GHC.Types.True -> WordProblem.answer6 }
+                            GHC.Types.True -> WordProblem.answer4 }
+                       GHC.Types.True -> WordProblem.answer2 }
+                 } in
+                 case Text.Read.readEither8
+                        @ GHC.Integer.Type.Integer
+                        (Text.ParserCombinators.ReadP.run
+                           @ GHC.Integer.Type.Integer
+                           WordProblem.answer1
+                           s) of wild {
+                   [] -> $w$j GHC.Prim.void#
+                   : x ds
+                   -> case ds of wild1 {
+                        [] -> GHC.Base.Just @ WordProblem.Token (WordProblem.Number' x)
+                        : ipv ipv1 -> $w$j GHC.Prim.void# } }) -}
+instance [safe] GHC.Classes.Eq [WordProblem.Operator]
+  = WordProblem.$fEqOperator
+instance [safe] GHC.Classes.Eq [WordProblem.Token]
+  = WordProblem.$fEqToken
+instance [safe] GHC.Show.Show [WordProblem.Operator]
+  = WordProblem.$fShowOperator
+instance [safe] GHC.Show.Show [WordProblem.Token]
+  = WordProblem.$fShowToken
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

@@ -1,0 +1,229 @@
+
+==================== FINAL INTERFACE ====================
+2019-01-30 03:41:16.339614114 UTC
+
+interface ocr-numbers-1.2.0.6-FhYYQPvmR0y5kQSeOMyyrH:OCR 8043
+  interface hash: 624bda7b3409ea1e3724f37fcf1e4c7f
+  ABI hash: 53f04ee765be051085b8dfe8c5172f4d
+  export-list hash: fdf74c082bab82e0adf40490500aa8bb
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  OCR.convert
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0 split-0.2.3.3
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Char 3e89818e2b8ef1a2cc5393163484da72
+import  -/  base-4.11.1.0:Data.List 83dc843e47bfc0c5af51e19c6f3476d5
+import  -/  base-4.11.1.0:Data.Maybe 409c3da2b142470b68be39ce1d97a9f7
+import  -/  base-4.11.1.0:Data.OldList 1b35aa3c6805ff7c8887a35a866fe006
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  split-0.2.3.3:Data.List.Split 5324097c17aea95e263e86195d8f4cf4
+import  -/  split-0.2.3.3:Data.List.Split.Internals 5b68cd2231dc71aa99e1db1b43dd9a13
+ece6189927189fea1682f4eba815e299
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module OCR.$trModule3 OCR.$trModule1) -}
+b1b21adf9aea35309f2b40554641cf33
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS OCR.$trModule2) -}
+b2995fa36908fc097f1ee8f17eeb5604
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("OCR"#) -}
+fbf68df99759501d4bbb72156802e8ce
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS OCR.$trModule4) -}
+94bd361953ae64b2244463e7c8faad15
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("ocr-numbers-1.2.0.6-FhYYQPvmR0y5kQSeOMyyrH"#) -}
+64ee1c60751021d0a1c8ada38c8a964f
+  $wf :: [GHC.Base.String] -> GHC.Prim.Char#
+  {- Arity: 1, Strictness: <L,U>, Inline: [0],
+     Unfolding: (\ (w :: [GHC.Base.String]) ->
+                 letrec {
+                   go :: [[GHC.Base.String]] -> GHC.Prim.Int# -> GHC.Prim.Char#
+                     <join 2> {- Arity: 2, Strictness: <S,1*U><L,U> -}
+                   = \ (ds :: [[GHC.Base.String]]) (eta :: GHC.Prim.Int#) ->
+                     case ds of wild {
+                       [] -> '?'#
+                       : y ys
+                       -> case GHC.Classes.$fEq[]_$s$c==1 w y of wild1 {
+                            GHC.Types.False -> go ys (GHC.Prim.+# eta 1#)
+                            GHC.Types.True -> GHC.Show.$wintToDigit eta } }
+                 } in
+                 go OCR.convert_numbers 0#) -}
+6059f8fe3af4d4e6d5c3d40070ae4703
+  convert :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: GHC.Base.String) ->
+                 case GHC.Base.map
+                        @ [[GHC.Types.Char]]
+                        @ [GHC.Types.Char]
+                        OCR.convert3
+                        (Data.List.Split.Internals.chunksOf
+                           @ [GHC.Types.Char]
+                           OCR.convert2
+                           (Data.OldList.lines x)) of wild {
+                   [] -> GHC.Types.[] @ GHC.Types.Char
+                   : x1 xs1
+                   -> Data.OldList.intercalate_$spoly_go
+                        @ GHC.Types.Char
+                        x1
+                        (Data.OldList.prependToAll
+                           @ [GHC.Types.Char]
+                           OCR.convert_xs
+                           xs1) }) -}
+c275834ec5fb6580cb2d287f300a1644
+  convert1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (","#) -}
+72fb190d13179093414c3786df5b8d44
+  convert10 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   OCR.convert11
+                   (GHC.Types.[] @ GHC.Base.String)) -}
+3d7b4a0a46f4e4a044a5f49c55c0078c
+  convert11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# OCR.convert12) -}
+a0518194e336feaa026b4160b40e22ab
+  convert12 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("                              "#) -}
+73afa0bb6b0c8554344ee6b8895909fb
+  convert13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# OCR.convert14) -}
+e56801afa2b2c289b69356b4d32df2f9
+  convert14 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("|_|  ||_  _|  | _||_|  ||_| _|"#) -}
+7b51e54b918d3fff7d8c18df86bb7a81
+  convert15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# OCR.convert16) -}
+2b8cd8d23f2ee05deea3e34fa393eaaf
+  convert16 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("| |  | _| _||_||_ |_   ||_||_|"#) -}
+5a838a18390dd47dc84448b6366d8df1
+  convert17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# OCR.convert18) -}
+19ff6b506981ef957f794603b652eebf
+  convert18 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" _     _  _     _  _  _  _  _ "#) -}
+7c783a7d834f4d5b371c0a216fe5dc61
+  convert2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 4#) -}
+7d207371ceee1a87fa889a91873ec982
+  convert3 :: [[GHC.Types.Char]] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: [[GHC.Types.Char]]) ->
+                 GHC.Base.build
+                   @ GHC.Types.Char
+                   (\ @ b1
+                      (c :: GHC.Types.Char -> b1 -> b1)[OneShot]
+                      (n :: b1)[OneShot] ->
+                    GHC.Base.foldr
+                      @ [GHC.Base.String]
+                      @ b1
+                      (GHC.Base.mapFB
+                         @ GHC.Types.Char
+                         @ b1
+                         @ [GHC.Base.String]
+                         c
+                         OCR.convert6)
+                      n
+                      (Data.OldList.transpose
+                         @ [GHC.Types.Char]
+                         (GHC.Base.build
+                            @ [[GHC.Types.Char]]
+                            (\ @ b2
+                               (c1 :: [[GHC.Types.Char]] -> b2 -> b2)[OneShot]
+                               (n1 :: b2)[OneShot] ->
+                             GHC.Base.foldr
+                               @ [GHC.Types.Char]
+                               @ b2
+                               (GHC.Base.mapFB
+                                  @ [[GHC.Types.Char]]
+                                  @ b2
+                                  @ [GHC.Types.Char]
+                                  c1
+                                  OCR.convert4)
+                               n1
+                               x))))) -}
+253cde60b6aac8660b0df1111429e8a9
+  convert4 :: [GHC.Types.Char] -> [[GHC.Types.Char]]
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (Data.List.Split.Internals.chunksOf
+                   @ GHC.Types.Char
+                   OCR.convert5) -}
+fc8f576f3c1b35b9b3b4bd6323f1488f
+  convert5 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
+8c556028bf6e0b4f8725ff3d7c05ab19
+  convert6 :: [GHC.Base.String] -> GHC.Types.Char
+  {- Arity: 1, Strictness: <L,U>m, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: [GHC.Base.String]) ->
+                 case OCR.$wf w of ww { DEFAULT -> GHC.Types.C# ww }) -}
+2b2d3ea6745553c8ba856bd53a6e7aca
+  convert7 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   OCR.convert17
+                   OCR.convert8) -}
+6c8ca2d8a2faee034341122d016d26f1
+  convert8 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   OCR.convert15
+                   OCR.convert9) -}
+903be4ff2c9b95d5fa73e4a72bb0b7bb
+  convert9 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   OCR.convert13
+                   OCR.convert10) -}
+b0bce4941b98e1b4999f463a53582374
+  convert_numbers :: [[GHC.Base.String]]
+  {- Unfolding: (case Data.List.Split.Internals.chunksOf
+                        @ [GHC.Types.Char]
+                        OCR.convert2
+                        OCR.convert7 of wild {
+                   [] -> GHC.List.badHead @ [[GHC.Base.String]]
+                   : y ys
+                   -> Data.OldList.transpose
+                        @ [GHC.Types.Char]
+                        (GHC.Base.map
+                           @ [GHC.Types.Char]
+                           @ [[GHC.Types.Char]]
+                           OCR.convert4
+                           y) }) -}
+17a513936f53d539faa49e06d39d7f1a
+  convert_xs :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# OCR.convert1) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

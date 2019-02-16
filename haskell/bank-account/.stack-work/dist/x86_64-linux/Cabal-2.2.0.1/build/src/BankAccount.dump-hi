@@ -1,0 +1,289 @@
+
+==================== FINAL INTERFACE ====================
+2019-02-04 00:32:55.654556945 UTC
+
+interface bank-account-0.1.0.3-L69UapFXA7D75sNgBS0A0c:BankAccount 8043
+  interface hash: 37a7ce4f29e20912382241d4a492efad
+  ABI hash: f9a69c7189d22ddb7f9833e19fb2eb5c
+  export-list hash: 396e71e611faddeff2f16ace7054c187
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  BankAccount.closeAccount
+  BankAccount.getBalance
+  BankAccount.incrementBalance
+  BankAccount.openAccount
+  BankAccount.BankAccount
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.IORef 7625124710852387e94dfb3e4df7515e
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.IORef e92b95f2e36bdb5fe155921cbe861044
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Types d9b3023de7feae4a5308d643da5543f7
+import  -/  integer-gmp-1.0.2.0:GHC.Integer.Type f3d5169c3d3830854b19f6565b265403
+df2dd28a0c5fc1e9bd7156f2b4f1e8e4
+  $tc'Bank :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13447736160119515956##
+                   8090025180960285799##
+                   BankAccount.$trModule
+                   BankAccount.$tc'Bank2
+                   0#
+                   BankAccount.$tc'Bank1) -}
+9f07231dbfdd07c313949039aaa354ca
+  $tc'Bank1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+4281ab260a347954526585c3ee63b505
+  $tc'Bank2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS BankAccount.$tc'Bank3) -}
+a3e00271cb93f83f9f8f735f9718d0c0
+  $tc'Bank3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Bank"#) -}
+ea679f3000ded897888ea4fe1c0b9a4e
+  $tcBank :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5173230283674271517##
+                   700644265863651868##
+                   BankAccount.$trModule
+                   BankAccount.$tcBank1
+                   0#
+                   GHC.Types.krep$*) -}
+1bdb9416a4394b7703cd68be42b50e64
+  $tcBank1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS BankAccount.$tcBank2) -}
+50d1ee8e3988562ec94b4830fb2e1b66
+  $tcBank2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Bank"#) -}
+34eb8822f2f3777b41db739906cc7732
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   BankAccount.$trModule3
+                   BankAccount.$trModule1) -}
+ced13b6241c80d0e77cb59e80ccb2324
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS BankAccount.$trModule2) -}
+96a56b4065c9507f7b80e21d6f97d420
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("BankAccount"#) -}
+edf411e3cc9dc6bacd7015b30d3178ca
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS BankAccount.$trModule4) -}
+b3060732b4c65e195cc6802d5513d8a0
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("bank-account-0.1.0.3-L69UapFXA7D75sNgBS0A0c"#) -}
+a2219cc4fa98d9e377db7297d435645d
+  $wincrementBalance ::
+    GHC.Prim.MutVar#
+      GHC.Prim.RealWorld (GHC.Base.Maybe BankAccount.Bank)
+    -> GHC.Integer.Type.Integer
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          GHC.Base.Maybe GHC.Integer.Type.Integer #)
+  {- Arity: 3, Strictness: <S,U><L,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.MutVar#
+                            GHC.Prim.RealWorld (GHC.Base.Maybe BankAccount.Bank))
+                   (w :: GHC.Integer.Type.Integer)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (GHC.Base.Maybe BankAccount.Bank)
+                        ww
+                        w1 of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.Prim.writeMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (GHC.Base.Maybe BankAccount.Bank)
+                        ww
+                        (case ipv1 of wild {
+                           GHC.Base.Nothing -> GHC.Base.Nothing @ BankAccount.Bank
+                           GHC.Base.Just ds
+                           -> case ds of wild1 { BankAccount.Bank s ->
+                              GHC.Base.Just
+                                @ BankAccount.Bank
+                                (BankAccount.Bank (GHC.Integer.Type.plusInteger s w)) } })
+                        ipv of s2# { DEFAULT ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (GHC.Base.Maybe BankAccount.Bank)
+                        ww
+                        s2# of ds2 { (#,#) ipv2 ipv3 ->
+                 case ipv3 of wild {
+                   GHC.Base.Nothing
+                   -> (# ipv2, GHC.Base.Nothing @ GHC.Integer.Type.Integer #)
+                   GHC.Base.Just ds
+                   -> case ds of wild1 { BankAccount.Bank balance ->
+                      (# ipv2,
+                         GHC.Base.Just @ GHC.Integer.Type.Integer balance #) } } } } }) -}
+e5069233101d85eebe18567d2a8a7064
+  data Bank = Bank GHC.Integer.Type.Integer
+6db496890b3f87fa96cb4e6e02e7c18d
+  type BankAccount =
+    GHC.IORef.IORef (GHC.Base.Maybe BankAccount.Bank)
+7dfec300608af3c91c610fb5af5f59a3
+  closeAccount :: BankAccount.BankAccount -> GHC.Types.IO ()
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                BankAccount.closeAccount1
+                  `cast`
+                (<BankAccount.BankAccount>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+f5fae0a676fd5112123126882c21292c
+  closeAccount1 ::
+    BankAccount.BankAccount
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (account :: BankAccount.BankAccount)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case account
+                        `cast`
+                      (GHC.IORef.N:IORef[0] <GHC.Base.Maybe
+                                               BankAccount.Bank>_N) of wild { GHC.STRef.STRef var# ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (GHC.Base.Maybe BankAccount.Bank)
+                        var#
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.Prim.writeMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (GHC.Base.Maybe BankAccount.Bank)
+                        var#
+                        (GHC.Base.Nothing @ BankAccount.Bank)
+                        ipv of s2# { DEFAULT ->
+                 (# s2#, GHC.Tuple.() #) } } }) -}
+6617e1c37ccfdc5de6097c8d074f407d
+  getBalance ::
+    BankAccount.BankAccount
+    -> GHC.Types.IO (GHC.Base.Maybe GHC.Integer.Type.Integer)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                BankAccount.getBalance1
+                  `cast`
+                (<BankAccount.BankAccount>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <GHC.Base.Maybe GHC.Integer.Type.Integer>_R)) -}
+81d8b327c2bcdd02e797f15cbdfe5eea
+  getBalance1 ::
+    BankAccount.BankAccount
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          GHC.Base.Maybe GHC.Integer.Type.Integer #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (account :: BankAccount.BankAccount)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case account
+                        `cast`
+                      (GHC.IORef.N:IORef[0] <GHC.Base.Maybe
+                                               BankAccount.Bank>_N) of wild { GHC.STRef.STRef var# ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (GHC.Base.Maybe BankAccount.Bank)
+                        var#
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild1 {
+                   GHC.Base.Nothing
+                   -> (# ipv, GHC.Base.Nothing @ GHC.Integer.Type.Integer #)
+                   GHC.Base.Just ds
+                   -> case ds of wild2 { BankAccount.Bank balance ->
+                      (# ipv,
+                         GHC.Base.Just @ GHC.Integer.Type.Integer balance #) } } } }) -}
+28a5105c2c169cf3674540cf4709f139
+  incrementBalance ::
+    BankAccount.BankAccount
+    -> GHC.Integer.Type.Integer
+    -> GHC.Types.IO (GHC.Base.Maybe GHC.Integer.Type.Integer)
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                BankAccount.incrementBalance1
+                  `cast`
+                (<BankAccount.BankAccount>_R
+                 ->_R <GHC.Integer.Type.Integer>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <GHC.Base.Maybe GHC.Integer.Type.Integer>_R)) -}
+0e69db41c87bd27a6b1946ce8b9796b2
+  incrementBalance1 ::
+    BankAccount.BankAccount
+    -> GHC.Integer.Type.Integer
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          GHC.Base.Maybe GHC.Integer.Type.Integer #)
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,U><S,U>, Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: BankAccount.BankAccount)
+                   (w1 :: GHC.Integer.Type.Integer)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w `cast`
+                      (GHC.IORef.N:IORef[0] <GHC.Base.Maybe
+                                               BankAccount.Bank>_N) of ww { GHC.STRef.STRef ww1 ->
+                 BankAccount.$wincrementBalance ww1 w1 w2 }) -}
+23712088c926bce47c055f4b6e0a5dde
+  openAccount :: GHC.Types.IO BankAccount.BankAccount
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                BankAccount.openAccount1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <BankAccount.BankAccount>_R)) -}
+043fb70a09da1ae93f1d836211473715
+  openAccount1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          GHC.IORef.IORef (GHC.Base.Maybe BankAccount.Bank) #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.Prim.newMutVar#
+                        @ (GHC.Base.Maybe BankAccount.Bank)
+                        @ GHC.Prim.RealWorld
+                        BankAccount.openAccount2
+                        s of ds { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    (GHC.STRef.STRef
+                       @ GHC.Prim.RealWorld
+                       @ (GHC.Base.Maybe BankAccount.Bank)
+                       ipv1)
+                      `cast`
+                    (Sym (GHC.IORef.N:IORef[0]) <GHC.Base.Maybe
+                                                   BankAccount.Bank>_N) #) }) -}
+af781bc73d46f5a6cf52abfdd57c348b
+  openAccount2 :: GHC.Base.Maybe BankAccount.Bank
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ BankAccount.Bank
+                   BankAccount.openAccount3) -}
+6e2f303619040d34d0b73997b824faa3
+  openAccount3 :: BankAccount.Bank
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (BankAccount.Bank BankAccount.openAccount4) -}
+a64795f40813dc6983c623a510a36d4b
+  openAccount4 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

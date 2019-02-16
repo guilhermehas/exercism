@@ -1,0 +1,87 @@
+Configuring matrix-0.3.6.1...
+Preprocessing library for matrix-0.3.6.1..
+Building library for matrix-0.3.6.1..
+[1 of 1] Compiling Data.Matrix      ( Data/Matrix.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Data/Matrix.o )
+
+[;1mData/Matrix.hs:79:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m79 |[0m[0m [;1m[35mimport Data.Monoid[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1mData/Matrix.hs:81:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Data.Traversable’ is redundant
+      except perhaps to import instances from ‘Data.Traversable’
+    To import instances alone, use: import Data.Traversable()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m81 |[0m[0m [;1m[35mimport Data.Traversable[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1mData/Matrix.hs:1364:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Winline-rule-shadowing[0m[0m[;1m][0m[0m[;1m
+    Rule "matrix/traceOfSum" may never fire
+      because ‘trace’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for ‘trace’[0m[0m
+[;1m[34m     |[0m[0m
+[;1m[34m1364 |[0m[0m [;1m[35m"matrix/traceOfSum"[0m[0m
+[;1m[34m     |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1mData/Matrix.hs:1364:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Winline-rule-shadowing[0m[0m[;1m][0m[0m[;1m
+    Rule "matrix/traceOfSum" may never fire
+      because rule "Class op +" for ‘+’ might fire first
+    Probable fix: add phase [n] or [~n] to the competing rule[0m[0m
+[;1m[34m     |[0m[0m
+[;1m[34m1364 |[0m[0m [;1m[35m"matrix/traceOfSum"[0m[0m
+[;1m[34m     |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1mData/Matrix.hs:1367:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Winline-rule-shadowing[0m[0m[;1m][0m[0m[;1m
+    Rule "matrix/traceOfScale" may never fire
+      because ‘trace’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for ‘trace’[0m[0m
+[;1m[34m     |[0m[0m
+[;1m[34m1367 |[0m[0m [;1m[35m"matrix/traceOfScale"[0m[0m
+[;1m[34m     |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1mData/Matrix.hs:1367:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Winline-rule-shadowing[0m[0m[;1m][0m[0m[;1m
+    Rule "matrix/traceOfScale" may never fire
+      because ‘scaleMatrix’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for ‘scaleMatrix’[0m[0m
+[;1m[34m     |[0m[0m
+[;1m[34m1367 |[0m[0m [;1m[35m"matrix/traceOfScale"[0m[0m
+[;1m[34m     |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1mData/Matrix.hs:1392:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Winline-rule-shadowing[0m[0m[;1m][0m[0m[;1m
+    Rule "matrix/detLaplaceProduct" may never fire
+      because ‘detLaplace’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for ‘detLaplace’[0m[0m
+[;1m[34m     |[0m[0m
+[;1m[34m1392 |[0m[0m [;1m[35m"matrix/detLaplaceProduct"[0m[0m
+[;1m[34m     |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1mData/Matrix.hs:1392:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Winline-rule-shadowing[0m[0m[;1m][0m[0m[;1m
+    Rule "matrix/detLaplaceProduct" may never fire
+      because rule "Class op *" for ‘*’ might fire first
+    Probable fix: add phase [n] or [~n] to the competing rule[0m[0m
+[;1m[34m     |[0m[0m
+[;1m[34m1392 |[0m[0m [;1m[35m"matrix/detLaplaceProduct"[0m[0m
+[;1m[34m     |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1mData/Matrix.hs:1395:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Winline-rule-shadowing[0m[0m[;1m][0m[0m[;1m
+    Rule "matrix/detLUProduct" may never fire
+      because ‘detLU’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for ‘detLU’[0m[0m
+[;1m[34m     |[0m[0m
+[;1m[34m1395 |[0m[0m [;1m[35m"matrix/detLUProduct"[0m[0m
+[;1m[34m     |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1mData/Matrix.hs:1395:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Winline-rule-shadowing[0m[0m[;1m][0m[0m[;1m
+    Rule "matrix/detLUProduct" may never fire
+      because rule "Class op *" for ‘*’ might fire first
+    Probable fix: add phase [n] or [~n] to the competing rule[0m[0m
+[;1m[34m     |[0m[0m
+[;1m[34m1395 |[0m[0m [;1m[35m"matrix/detLUProduct"[0m[0m
+[;1m[34m     |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0mignoring (possibly broken) abi-depends field for packages
+Installing library in /home/guilherme/.stack/snapshots/x86_64-linux/lts-12.4/8.4.3/lib/x86_64-linux-ghc-8.4.3/matrix-0.3.6.1-H0y1URw6yY46xbcw3HZK5J
+Registering library for matrix-0.3.6.1..

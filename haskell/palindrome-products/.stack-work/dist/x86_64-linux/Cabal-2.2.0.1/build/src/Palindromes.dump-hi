@@ -1,0 +1,140 @@
+
+==================== FINAL INTERFACE ====================
+2019-02-02 23:21:22.106701729 UTC
+
+interface palindrome-products-1.1.0.4-1DbsjdaSsiKdkTK4E9dyd:Palindromes 8043
+  interface hash: 97d1665a9f259ddcbec74f4a76f1790b
+  ABI hash: 9ebe8b43ce06e2e998ed39546a5cb273
+  export-list hash: c854de95095c34b421e497f61fd92905
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1f596daf84c7527444ae092b33472386
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Palindromes.largestPalindrome
+  Palindromes.smallestPalindrome
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:Data.List 83dc843e47bfc0c5af51e19c6f3476d5
+import  -/  base-4.11.1.0:Data.Maybe 409c3da2b142470b68be39ce1d97a9f7
+import  -/  base-4.11.1.0:Data.Tuple 3af66f3ac61ed95ba8a3a3f68ebc5003
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+import  -/  ghc-prim-0.5.2.0:GHC.Types d9b3023de7feae4a5308d643da5543f7
+import  -/  integer-gmp-1.0.2.0:GHC.Integer.Type f3d5169c3d3830854b19f6565b265403
+3b03ff9d420ebc4f5e5882d69eaa8a7a
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Palindromes.$trModule3
+                   Palindromes.$trModule1) -}
+84c8f5ad1db0d6df9712c1c5144c351d
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Palindromes.$trModule2) -}
+529611ac1f6d38436adf42aed9c9ca15
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Palindromes"#) -}
+76cf36ee8fea008476544d400ee1e461
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Palindromes.$trModule4) -}
+5ee7b876d7edda8792586c06e5cbf5d2
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("palindrome-products-1.1.0.4-1DbsjdaSsiKdkTK4E9dyd"#) -}
+efc3033503fcda0c2ddbc477c81c83ef
+  type Prods =
+    (GHC.Integer.Type.Integer,
+     [(GHC.Integer.Type.Integer, GHC.Integer.Type.Integer)])
+b47118009a0a3daaa9ddc4091930ffb9
+  funcPalindrome ::
+    ((Palindromes.Prods -> Palindromes.Prods -> GHC.Types.Ordering)
+     -> [Palindromes.Prods] -> Palindromes.Prods)
+    -> GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer
+    -> GHC.Base.Maybe Palindromes.Prods
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(1*U,A)))><S,U><S,U> -}
+b2b7bc6409f6465ed9d078d598796a86
+  largestPalindrome ::
+    GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer -> GHC.Base.Maybe Palindromes.Prods
+  {- Arity: 2,
+     Unfolding: (Palindromes.funcPalindrome
+                   Palindromes.largestPalindrome1) -}
+4d788d9392f8e327cb8e3d17394656be
+  largestPalindrome1 ::
+    (Palindromes.Prods -> Palindromes.Prods -> GHC.Types.Ordering)
+    -> [Palindromes.Prods] -> Palindromes.Prods
+  {- Arity: 2, Strictness: <L,C(C1(U))><S,1*U>,
+     Unfolding: (\ (cmp :: Palindromes.Prods
+                           -> Palindromes.Prods -> GHC.Types.Ordering)
+                   (eta :: [Palindromes.Prods]) ->
+                 case eta of wild {
+                   [] -> GHC.List.foldl2 @ Palindromes.Prods
+                   : x xs
+                   -> letrec {
+                        go :: [Palindromes.Prods] -> Palindromes.Prods -> Palindromes.Prods
+                          <join 2> {- Arity: 2, Strictness: <S,1*U><L,U(U,U)> -}
+                        = \ (ds :: [Palindromes.Prods]) (eta1 :: Palindromes.Prods) ->
+                          case ds of wild1 {
+                            [] -> eta1
+                            : y ys
+                            -> go
+                                 ys
+                                 (case cmp eta1 y of wild2 { DEFAULT -> y GHC.Types.GT -> eta1 }) }
+                      } in
+                      go xs x }) -}
+7780f17501702d6cbbf7c490e62510f0
+  smallestPalindrome ::
+    GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer -> GHC.Base.Maybe Palindromes.Prods
+  {- Arity: 2,
+     Unfolding: (Palindromes.funcPalindrome
+                   Palindromes.smallestPalindrome1) -}
+d3a597bb82b86becdea5e1fb4349001f
+  smallestPalindrome1 ::
+    (Palindromes.Prods -> Palindromes.Prods -> GHC.Types.Ordering)
+    -> [Palindromes.Prods] -> Palindromes.Prods
+  {- Arity: 2, Strictness: <L,C(C1(U))><S,1*U>,
+     Unfolding: (\ (cmp :: Palindromes.Prods
+                           -> Palindromes.Prods -> GHC.Types.Ordering)
+                   (eta :: [Palindromes.Prods]) ->
+                 case eta of wild {
+                   [] -> GHC.List.foldl2 @ Palindromes.Prods
+                   : x xs
+                   -> letrec {
+                        go :: [Palindromes.Prods] -> Palindromes.Prods -> Palindromes.Prods
+                          <join 2> {- Arity: 2, Strictness: <S,1*U><L,U(U,U)> -}
+                        = \ (ds :: [Palindromes.Prods]) (eta1 :: Palindromes.Prods) ->
+                          case ds of wild1 {
+                            [] -> eta1
+                            : y ys
+                            -> go
+                                 ys
+                                 (case cmp eta1 y of wild2 { DEFAULT -> eta1 GHC.Types.GT -> y }) }
+                      } in
+                      go xs x }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

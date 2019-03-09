@@ -1,0 +1,36 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 71191026174b0525e964904a83faf35847d1baa18805de4c516dbeeb7643e4b9
+
+name:           bowling
+version:        1.2.0.7
+build-type:     Simple
+
+library
+  exposed-modules:
+      Bowling
+  other-modules:
+      Paths_bowling
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base
+  default-language: Haskell2010
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: Tests.hs
+  other-modules:
+      Paths_bowling
+  hs-source-dirs:
+      test
+  build-depends:
+      base
+    , bowling
+    , hspec
+  default-language: Haskell2010
